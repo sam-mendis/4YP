@@ -51,7 +51,7 @@
      difference(){
    cube([x,y,z],center=true);
          {translate([0,0,15+0.001])
-    cube([31,31,1.11],center=true); }
+    cube([31,34,1.11],center=true); }
          
      }
   cube([x+1,y-20,z-20],center = true);
@@ -62,9 +62,15 @@
  
  
  outer_shell(200,100,100,50,25,25);
- substrate_holder(40,40,30);
+ {
+     substrate_holder(40,40,30);
+ }
  
- 
+ //importing and translating substrate layout
+ translate([-15,-15,15])
+ {linear_extrude(height=1.1, center=true, convexity=10)
+import(file = "substrate-layout.dxf");
+}
  
  
  
