@@ -61,7 +61,7 @@
  
  
  
- outer_shell(200,100,100,50,25,25);
+ outer_shell(70,70,70,20,20,20);
  {
      substrate_holder(40,40,30);
  }
