@@ -4,17 +4,16 @@
  d_max = 150; //max diameter of glovebox 
  
  //dimensions
- 
-<<<<<<< Updated upstream
+
  shell_l = 200;
  shell_w = 100;
  shell_h = 100;
  thickness_l = 50;
  thickness_w = 25;
  thichness_h = 25;
-=======
+
  include <Substrate_holder.scad>
->>>>>>> Stashed changes
+
  
  // outer shell
  module outer_shell(shell_l, shell_w, shell_h, thickness_l, thickness_w, thickness_h)
@@ -48,7 +47,7 @@
  cube([thickness_l+1,25,25],center=true);
  }
  }
- //substrate holder
+
 
  
  outer_shell(70,70,70,20,20,20);
