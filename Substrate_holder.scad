@@ -14,10 +14,10 @@
      }
      
       rotate([0,0,0]) 
-    { roundedBox(size=[x+1,y-20,z-20],radius=4,center=true);
+    { roundedBox(size=[x+1,y-20,z-20],radius=4);
     }
  
  }
      }
- 
  Substrate_holder(40,40,30);
+ 
