@@ -30,8 +30,8 @@ module outer_shell(shell_l, shell_w, shell_h, thickness_l, thickness_w, thicknes
     //electronics windows
     
                     rotate([0,90,0])
-                    translate([0,0,0])    
-                    cylinder(r=10,h=(shell_w+1), center=true);}
+                    translate([-5,0,0])    
+                    cylinder(r=15,h=(shell_w+1), center=true);}
 
  //release valve hole
  rotate([90,0,0])
@@ -56,7 +56,7 @@ translate([0,-(shell_w/2-thickness_w/4),shell_h/2])
  cylinder(r=s_d/2,h=s_l, center=true);
 
 }
-cube([20,20,32], center=true);
+cube([40,40,32], center=true);
 
 }
  
