@@ -14,21 +14,22 @@
 //  s_d= screw diameter
 //  s_l= screw length
  include <Substrate_holder.scad>
+ translate([10,0,-5])
+ Substrate_holder(40,40,30);
 
  // outer shell
  include <outer_shell.scad>
+outer_shell(110,100,70,30,30,20,5,10,1);
 
- {
-     Substrate_holder(40,40,30);
- }
- 
- //importing and translating substrate layout
- translate([-15,-15,15])
- {
-linear_extrude(height=1.1, center=true, convexity=10)
-import(file = "substrate-layout.dxf");
-}
- 
- 
- 
- 
+//substrate layout
+include <substratelayout.scad>
+translate([-5,-15,10])
+{
+    substratelayout();
+    }
+    
+    //cell connections window
+    include <cell_contacts.scad>
+    translate([48,0,5])
+    rotate([90,0,90])
+    cell_contacts(1);
