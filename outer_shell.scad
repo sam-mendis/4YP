@@ -36,7 +36,7 @@ module outer_shell(shell_l, shell_w, shell_h, thickness_l, thickness_w, thicknes
     
                     rotate([0,90,0])
                     translate([-5,0,0])    
-                    cylinder(r=15,h=(shell_l+1), center=true);}
+                    cylinder(r=19,h=(shell_l+1), center=true);}
 
  //release valve hole
  rotate([90,0,0])
@@ -62,7 +62,8 @@ translate([0,-(shell_w/2-thickness_w/6),shell_h/2])
 
 }
 //slot for substrate holder
-cube([40,40,32], center=true);
+translate([10,0,0])
+cube([40,40,34], center=true);
 
 }
  //o ring holder
@@ -88,5 +89,5 @@ rotate([0,90,0])
  
  
  }
- outer_shell(110,100,70,35,35,20,5,10,1);
+ //outer_shell(110,100,70,30,30,20,5,10,1)
  
