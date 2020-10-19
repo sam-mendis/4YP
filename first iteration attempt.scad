@@ -4,13 +4,11 @@
  d_max = 150; //max diameter of glovebox 
  
  //dimensions
+// length = 110 mm
+//width   = 100 mm
+//height  = 70 mm
 
- shell_l = 200;
- shell_w = 100;
- shell_h = 100;
- thickness_l = 50;
- thickness_w = 25;
- thichness_h = 25;
+
 //  s_d= screw diameter
 //  s_l= screw length
  include <Substrate_holder.scad>
@@ -24,7 +22,7 @@ outer_shell(110,100,70,30,30,20,5,10,1);
 //substrate layout
 include <substratelayout.scad>
 translate([-5,-15,10])
-{
+    {
     substratelayout();
     }
     
