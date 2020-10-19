@@ -33,3 +33,9 @@ translate([-5,-15,10])
     translate([48,0,5])
     rotate([90,0,90])
     cell_contacts(1);
+    
+    //cell connections window
+    include <elec_contacts.scad>
+    translate([-48,0,5])
+    rotate([90,0,90])
+    elec_contacts(1);
