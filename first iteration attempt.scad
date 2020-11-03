@@ -17,7 +17,7 @@
 
  // outer shell
  include <outer_shell.scad>
-outer_shell(110,100,70,30,30,20,4,10,1);
+outer_shell(110,100,70,30,30,20,4,10,1.3);
 
 //substrate layout
 include <substratelayout.scad>
