@@ -1,5 +1,5 @@
 //Quartz Window model
-module window(x, y, z, t_y,s_d,t){
+module window(x, y, t,s_d){
     difference(){
         difference(){
             difference(){
@@ -25,4 +25,6 @@ translate([0,-(y/2-6),0])
 
 }
 }
-window(110,100,30,30,5,5);
+//window(110,100,1,5);
+
+projection (cut = true) window(110,100,1,5);
