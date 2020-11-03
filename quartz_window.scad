@@ -25,6 +25,4 @@ translate([0,-(y/2-6),0])
 
 }
 }
-//window(110,100,1,5);
-
-projection (cut = true) window(110,100,1,5);
+window(110,100,2,5);
