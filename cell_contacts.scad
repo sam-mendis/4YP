@@ -16,3 +16,4 @@
         cylinder(r=p_rad, h=16, center = true);
         }
 }
+//cell_contacts(1);
