@@ -14,7 +14,11 @@
      }
      
       rotate([0,0,0]) 
+<<<<<<< HEAD
     { roundedBox(size=[x+1,y-20,z-20],radius=4);
+=======
+    { roundedBox(size=[x+1,y-20,z-20],radius=4,, center=true);
+>>>>>>> parent of 2330c59... Update Substrate_holder.scad
     }
  
  }
