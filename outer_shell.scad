@@ -13,7 +13,7 @@ module outer_shell(x, y, z, t_x, t_y, t_z,s_d,s_l,or_rad)
  {
      window_l= x-t_x;
      window_w= y-t_y;
-     difference(){
+     //difference(){
      difference(){
      difference(){
      difference(){
@@ -45,10 +45,10 @@ module outer_shell(x, y, z, t_x, t_y, t_z,s_d,s_l,or_rad)
                     cylinder(r=19,h=(x+1), center=true);}
 
  //release valve hole
- rotate([90,0,0])
- {translate([0,z/5,y/3])
- cylinder(r=2.5,h=((y/2)+1), center=true);}
- }
+ //rotate([90,0,0])
+ //{translate([0,z/5,y/3])
+ //cylinder(r=2.5,h=((y/2)+1), center=true);}
+ //}
  //screws holes for quartz
  //1
  translate([x/2-6,0,z/2])
@@ -95,5 +95,5 @@ rotate([0,90,0])
  
  
  }
- //outer_shell(110,100,70,30,30,20,5,10,1);
+ //outer_shell(110,100,70,30,30,20,5,20,1.3);
  
