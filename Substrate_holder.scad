@@ -14,18 +14,14 @@
      }
      
       rotate([0,0,0]) 
-<<<<<<< Updated upstream
-    { roundedBox(size=[x+1,y-20,z-20],radius=4);
-=======
+
 
     { roundedBox(size=[x+1,y-20,z-20],radius=4);
 
-    { roundedBox(size=[x+1,y-20,z-20],radius=4, center=true);
->>>>>>> Stashed changes
     }
  
  }
      }
- }
- Substrate_holder(40,40,30);
+ 
+ //Substrate_holder(40,40,30);
  
