@@ -1,5 +1,6 @@
     module elec_contacts(p_rad)
     {
+        color("red")
     difference(){
     difference(){
     difference(){

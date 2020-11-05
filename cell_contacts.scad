@@ -4,6 +4,7 @@
     
     module cell_contacts(p_rad)
     {
+        color("red")
     difference(){
     difference(){
     cylinder(r=19,h=15, center = true);

@@ -11,9 +11,12 @@
 
 module outer_shell(x, y, z, t_x, t_y, t_z,s_d,s_l,or_rad)
  {
+    
      window_l= x-t_x;
      window_w= y-t_y;
+    
      //difference(){
+     
      difference(){
      difference(){
      difference(){
@@ -95,5 +98,5 @@ rotate([0,90,0])
  
  
  }
- outer_shell(110,100,70,30,30,20,4,20,1.3);
+ //outer_shell(110,100,70,30,30,20,4,20,1.3);
  

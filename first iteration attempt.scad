@@ -1,5 +1,8 @@
 ////first attempted iteration of design
-
+//// Anything blue is Aluminium
+/// Anything yellow is ABS
+/// ANything red is Acrylic
+///black is imported components
 // all values of length in mm unless specified
  d_max = 150; //max diameter of glovebox 
  
@@ -28,12 +31,13 @@ translate([-5,-15,10])
     
     //cell connections window
     include <cell_contacts.scad>
-    translate([48,0,5])
+    translate([47.5,0,5])
     rotate([90,0,90])
     cell_contacts(1);
     
+    
     //elec connections window
     include <elec_contacts.scad>
-    translate([-48,0,5])
+    translate([-47.5,0,5])
     rotate([90,0,90])
     elec_contacts(1);

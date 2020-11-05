@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.8)  4 NOV 2020 17:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.8)  5 NOV 2020 10:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -259,28 +259,56 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
+<fig1a.png, id=9, 478.78876pt x 479.7925pt>
+File: fig1a.png Graphic file (type png)
+<use fig1a.png>
+Package pdftex.def Info: fig1a.png  used on input line 24.
+(pdftex.def)             Requested size: 225.21626pt x 225.68552pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 27.
+<fig1b.png, id=11, 478.78876pt x 479.7925pt>
+File: fig1b.png Graphic file (type png)
+<use fig1b.png>
+Package pdftex.def Info: fig1b.png  used on input line 29.
+(pdftex.def)             Requested size: 225.21626pt x 225.68552pt.
+
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 23--33
+[]$[]$ $[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--45
 
  []
 
-[2] (./Michaelmas Report.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--45
+
+ []
+
+[2 <./fig1a.png> <./fig1b.png>] [3] (./Michaelmas Report.aux) ) 
 Here is how much of TeX's memory you used:
- 3976 strings out of 480608
- 64321 string characters out of 5903630
- 306678 words of memory out of 5000000
- 19841 multiletter control sequences out of 15000+600000
- 536278 words of font info for 37 fonts, out of 8000000 for 9000
+ 4010 strings out of 480608
+ 64823 string characters out of 5903630
+ 309720 words of memory out of 5000000
+ 19874 multiletter control sequences out of 15000+600000
+ 536894 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,6n,65p,808b,187s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2020/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr17.pfb>
-Output written on "Michaelmas Report.pdf" (2 pages, 55156 bytes).
+ 48i,9n,77p,808b,528s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texl
+ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texli
+ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2
+020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on "Michaelmas Report.pdf" (3 pages, 93699 bytes).
 PDF statistics:
- 27 PDF objects out of 1000 (max. 8388607)
- 18 compressed objects within 1 object stream
+ 35 PDF objects out of 1000 (max. 8388607)
+ 21 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

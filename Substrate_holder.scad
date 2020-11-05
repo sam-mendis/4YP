@@ -5,6 +5,7 @@
 
  module Substrate_holder(x,y,z)
  {
+     color("yellow")
      difference(){
      difference(){
    cube([x,y,z],center=true);
