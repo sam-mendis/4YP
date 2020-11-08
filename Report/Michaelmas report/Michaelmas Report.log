@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.8)  7 NOV 2020 15:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.8)  8 NOV 2020 15:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -810,47 +810,47 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 <fig2.png, id=9, 478.78876pt x 479.7925pt>
 File: fig2.png Graphic file (type png)
 <use fig2.png>
-Package pdftex.def Info: fig2.png  used on input line 34.
+Package pdftex.def Info: fig2.png  used on input line 33.
 (pdftex.def)             Requested size: 175.17244pt x 175.53644pt.
 
-Underfull \hbox (badness 5924) in paragraph at lines 35--35
+Underfull \hbox (badness 5924) in paragraph at lines 34--34
 []\OT1/cmr/m/n/10.95 Figure 1: |Model of Sub-strate
  []
 
 
-Underfull \hbox (badness 1308) in paragraph at lines 36--37
+Underfull \hbox (badness 1308) in paragraph at lines 35--36
 \OT1/cmr/m/n/10.95 ing the open source soft-ware OpenSCAD. Us-ing in-spir-a-tio
 n
  []
 
 
-Underfull \hbox (badness 2005) in paragraph at lines 36--37
+Underfull \hbox (badness 2005) in paragraph at lines 35--36
 \OT1/cmr/m/n/10.95 from X an AMFD re-searcher (who had de-veloped a sim-
  []
 
 
-Underfull \hbox (badness 1383) in paragraph at lines 36--37
+Underfull \hbox (badness 1383) in paragraph at lines 35--36
 \OT1/cmr/m/n/10.95 of the test-ing con-tainer was built and is shown in Fig-ure
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
 
  []
 
 <fig1a.png, id=11, 478.78876pt x 479.7925pt>
 File: fig1a.png Graphic file (type png)
 <use fig1a.png>
-Package pdftex.def Info: fig1a.png  used on input line 40.
+Package pdftex.def Info: fig1a.png  used on input line 39.
 (pdftex.def)             Requested size: 225.21626pt x 225.68552pt.
 <fig1b.png, id=12, 478.78876pt x 479.7925pt>
 File: fig1b.png Graphic file (type png)
 <use fig1b.png>
-Package pdftex.def Info: fig1b.png  used on input line 44.
+Package pdftex.def Info: fig1b.png  used on input line 43.
 (pdftex.def)             Requested size: 225.21626pt x 225.68552pt.
 
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 39--48
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 38--47
 []$[]$ $[]$ 
  []
 
@@ -862,11 +862,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Here is how much of TeX's memory you used:
  9706 strings out of 480608
  186110 string characters out of 5903630
- 419547 words of memory out of 5000000
+ 420547 words of memory out of 5000000
  25459 multiletter control sequences out of 15000+600000
  540364 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,8n,77p,1354b,544s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,8n,77p,1337b,544s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/
 cm-super/cm-super-ts1.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public
@@ -875,7 +875,7 @@ msfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmti10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-sup
 er/sfrm1095.pfb>
-Output written on "Michaelmas Report.pdf" (3 pages, 132094 bytes).
+Output written on "Michaelmas Report.pdf" (3 pages, 132261 bytes).
 PDF statistics:
  46 PDF objects out of 1000 (max. 8388607)
  28 compressed objects within 1 object stream
