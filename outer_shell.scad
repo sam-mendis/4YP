@@ -54,19 +54,19 @@ module outer_shell(x, y, z, t_x, t_y, t_z,s_d,s_l,or_rad)
  //}
  //screws holes for quartz
  //1
- translate([x/2-6,0,z/2])
+ translate([x/2-5,0,z/2])
  cylinder(r=s_d/2,h=s_l, center=true);
  }
 //2
-  translate([-(x/2-6),0,z/2])
+  translate([-(x/2-5),0,z/2])
  cylinder(r=s_d/2,h=s_l, center=true);
 }
 //3
-translate([0,(y/2-6),z/2])
+translate([0,(y/2-5),z/2])
  cylinder(r=s_d/2,h=s_l, center=true);
 }
 //4
-translate([0,-(y/2-6),z/2])
+translate([0,-(y/2-5),z/2])
  cylinder(r=s_d/2,h=s_l, center=true);
 
 }
@@ -77,26 +77,26 @@ cube([40,40,34], center=true);
 }
  //o ring holder
     rotate([90,0,0])
-    translate([x/2-11,z/2,0])   
-    cylinder(r=or_rad,h=(y-20), center=true);
+    translate([x/2-9,z/2,0])   
+    cylinder(r=or_rad,h=(y-16), center=true);
 }                  
 
     rotate([90,0,0])
-    translate([-(x/2-11),z/2,0])   
-    cylinder(r=or_rad,h=(y-20), center=true);
+    translate([-(x/2-9),z/2,0])   
+    cylinder(r=or_rad,h=(y-16), center=true);
 }   
  
 rotate([0,90,0])
-    translate([-z/2,y/2-11,0])   
-    cylinder(r=or_rad,h=(y-10), center=true);
+    translate([-z/2,y/2-9,0])   
+    cylinder(r=or_rad,h=(y-6), center=true);
 }
 rotate([0,90,0])
-    translate([-z/2,-(y/2-11),0])   
-    cylinder(r=or_rad,h=(y-10), center=true);
+    translate([-z/2,-(y/2-9),0])   
+    cylinder(r=or_rad,h=(y-6), center=true);
 
  }
  
  
  }
- //outer_shell(110,100,70,30,30,20,4,20,1.3);
+ outer_shell(110,100,70,30,30,20,4,20,1.3);
  

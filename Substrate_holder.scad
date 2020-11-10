@@ -10,7 +10,7 @@
      difference(){
    cube([x,y,z],center=true);
          {translate([0,0,15+0.001])
-    cube([31,34,1.11],center=true); }
+    cube([31,31,1.11],center=true); }
          
      }
      
@@ -24,5 +24,5 @@
  }
      }
  
- //Substrate_holder(40,40,30);
+ Substrate_holder(40,40,30);
  
