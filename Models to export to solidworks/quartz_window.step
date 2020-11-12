@@ -1,8 +1,9 @@
 ISO-10303-21;
 HEADER;
 FILE_DESCRIPTION(('FreeCAD Model'),'2;1');
-FILE_NAME('/Users/sam/Desktop/Random parts file/quartz_window.step',
-  '2020-11-10T13:34:33',('Author'),(''),
+FILE_NAME(
+'/Users/sam/Documents/work/Finals/4th-Year/4YP/Github/Models to export 
+to solidworks/quartz_window.step','2020-11-12T13:13:50',('Author'),(''),
   'Open CASCADE STEP processor 7.3','FreeCAD','Unknown');
 FILE_SCHEMA(('AUTOMOTIVE_DESIGN { 1 0 10303 214 1 1 1 1 }'));
 ENDSEC;

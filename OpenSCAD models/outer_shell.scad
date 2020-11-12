@@ -77,26 +77,26 @@ cube([40,40,34], center=true);
 }
  //o ring holder
     rotate([90,0,0])
-    translate([x/2-9,z/2,0])   
-    cylinder(r=or_rad,h=(y-16), center=true);
+    translate([x/2-11,z/2,0])   
+    cylinder(r=or_rad,h=(y-20), center=true);
 }                  
 
     rotate([90,0,0])
-    translate([-(x/2-9),z/2,0])   
-    cylinder(r=or_rad,h=(y-16), center=true);
+    translate([-(x/2-11),z/2,0])   
+    cylinder(r=or_rad,h=(y-20), center=true);
 }   
  
 rotate([0,90,0])
-    translate([-z/2,y/2-9,0])   
-    cylinder(r=or_rad,h=(y-6), center=true);
+    translate([-z/2,y/2-11,0])   
+    cylinder(r=or_rad,h=(y-10), center=true);
 }
 rotate([0,90,0])
-    translate([-z/2,-(y/2-9),0])   
-    cylinder(r=or_rad,h=(y-6), center=true);
+    translate([-z/2,-(y/2-11),0])   
+    cylinder(r=or_rad,h=(y-10), center=true);
 
  }
  
  
  }
- outer_shell(110,100,70,30,30,20,4,20,1.3);
+ outer_shell(110,100,70,33,33,20,4,20,1.3);
  
