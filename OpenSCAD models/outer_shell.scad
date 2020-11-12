@@ -33,10 +33,10 @@ module outer_shell(x, y, z, t_x, t_y, t_z,s_d,s_l,or_rad)
                         cube([x,y,z], center=true);
                         rotate([90,0,0])
                         translate([x/4,0,0])   
-                        cylinder(r=5,h=(y+1), center=true);}
+                        cylinder(r=2.5,h=(y+1), center=true);}
                     rotate([90,0,0])
                     translate([-x/4,0,0])    
-                    cylinder(r=5,h=(y+1), center=true);}
+                    cylinder(r=2.5,h=(y+1), center=true);}
     
                  translate([0,0,t_z])
                  {cube ([window_l,window_w,z], center=true);} }
