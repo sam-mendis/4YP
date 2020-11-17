@@ -1,19 +1,36 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{4}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem{RN45}
-G.~P. Smestad, {\em Optoelectronics of solar cells}, vol.~115.
+\bibitem[Smestad(2002)]{RN45}
+Greg~P Smestad.
+\newblock \emph{Optoelectronics of solar cells}, volume 115.
 \newblock SPIE press, 2002.
+\newblock ISBN 0819444405.
 
-\bibitem{RN38}
-M.~Jørgensen, K.~Norrman, and F.~C. Krebs, ``Stability/degradation of polymer
-  solar cells,'' {\em Solar energy materials and solar cells}, vol.~92, no.~7,
-  pp.~686--714, 2008.
+\bibitem[Jørgensen et~al.(2008)Jørgensen, Norrman, and Krebs]{RN38}
+Mikkel Jørgensen, Kion Norrman, and Frederik~C Krebs.
+\newblock Stability/degradation of polymer solar cells.
+\newblock \emph{Solar energy materials and solar cells}, 92\penalty0
+  (7):\penalty0 686--714, 2008.
+\newblock ISSN 0927-0248.
 
-\bibitem{RN47}
-M.~O. Reese, S.~A. Gevorgyan, M.~Jørgensen, E.~Bundgaard, S.~R. Kurtz, D.~S.
-  Ginley, D.~C. Olson, M.~T. Lloyd, P.~Morvillo, and E.~A. Katz, ``Consensus
-  stability testing protocols for organic photovoltaic materials and devices,''
-  {\em Solar Energy Materials and Solar Cells}, vol.~95, no.~5, pp.~1253--1267,
-  2011.
+\bibitem[Reese et~al.(2011)Reese, Gevorgyan, Jørgensen, Bundgaard, Kurtz,
+  Ginley, Olson, Lloyd, Morvillo, and Katz]{RN47}
+Matthew~O Reese, Suren~A Gevorgyan, Mikkel Jørgensen, Eva Bundgaard, Sarah~R
+  Kurtz, David~S Ginley, Dana~C Olson, Matthew~T Lloyd, Pasquale Morvillo, and
+  Eugene~A Katz.
+\newblock Consensus stability testing protocols for organic photovoltaic
+  materials and devices.
+\newblock \emph{Solar Energy Materials and Solar Cells}, 95\penalty0
+  (5):\penalty0 1253--1267, 2011.
+\newblock ISSN 0927-0248.
+
+\bibitem[Repository(Accessed 30/09/2020)]{RN48}
+AFMD Layout~Github Repository, Accessed 30/09/2020.
+\newblock URL \url{https://github.com/AFMD/layouts}.
 
 \end{thebibliography}

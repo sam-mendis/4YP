@@ -15,7 +15,7 @@
 //  s_d= screw diameter
 //  s_l= screw length
  include <Substrate_holder.scad>
- translate([10,0,-5])
+ translate([5,0,-5])
  Substrate_holder(40,40,30);
 
  // outer shell
@@ -41,3 +41,15 @@ translate([-5,-15,10])
     translate([-47.5,0,5])
     rotate([90,0,90])
     elec_contacts(1);
+    
+    
+    //quartz plate
+    include<quartz_window.scad>
+    translate([0,0,37])
+    %window(110,100,3);
+    
+    //metal lide
+    include<metal_lid.scad>
+    translate([0,0,40])
+    rotate([180,0,0])
+    metal_lid(110,100,4,1.3);

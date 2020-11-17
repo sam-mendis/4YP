@@ -16,7 +16,10 @@ module outer_shell(x, y, z, t_x, t_y, t_z,s_d,s_l,or_rad)
      window_w= y-t_y;
     
      //difference(){
-     
+     difference(){
+     difference(){
+     difference(){
+     difference(){
      difference(){
      difference(){
      difference(){
@@ -47,11 +50,7 @@ module outer_shell(x, y, z, t_x, t_y, t_z,s_d,s_l,or_rad)
                     translate([-5,0,0])    
                     cylinder(r=19,h=(x+1), center=true);}
 
- //release valve hole
- //rotate([90,0,0])
- //{translate([0,z/5,y/3])
- //cylinder(r=2.5,h=((y/2)+1), center=true);}
- //}
+ 
  //screws holes for quartz
  //1
  translate([x/2-5,0,z/2])
@@ -71,8 +70,8 @@ translate([0,-(y/2-5),z/2])
 
 }
 //slot for substrate holder
-translate([10,0,0])
-cube([40,40,34], center=true);
+translate([5,0,0])
+cube([41,41,34], center=true);
 
 }
  //o ring holder
@@ -95,6 +94,23 @@ rotate([0,90,0])
     cylinder(r=or_rad,h=(y-10), center=true);
 
  }
+ //guide holes for screwing
+//1
+translate([x/2-4,y/2-4,z/2])
+cylinder(r=1,h=6, center = true);
+}
+//2
+translate([x/2-4,-(y/2-4),z/2])
+cylinder(r=1,h=6, center = true);
+}
+//3
+translate([-(x/2-4),-(y/2-4),z/2])
+cylinder(r=1,h=6, center = true);
+}
+//4
+translate([-(x/2-4),(y/2-4),z/2])
+cylinder(r=1,h=6, center = true);
+}
  
  
  }
