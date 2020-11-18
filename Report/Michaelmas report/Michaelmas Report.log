@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.8)  17 NOV 2020 09:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.8)  18 NOV 2020 09:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1020,12 +1020,12 @@ es/oxford_logo.png>]
 File: ./figures/fig1a.png Graphic file (type png)
 <use ./figures/fig1a.png>
 Package pdftex.def Info: ./figures/fig1a.png  used on input line 44.
-(pdftex.def)             Requested size: 225.21626pt x 225.68552pt.
+(pdftex.def)             Requested size: 200.19435pt x 200.61098pt.
 <./figures/fig1b.png, id=36, 478.78876pt x 479.7925pt>
 File: ./figures/fig1b.png Graphic file (type png)
 <use ./figures/fig1b.png>
 Package pdftex.def Info: ./figures/fig1b.png  used on input line 48.
-(pdftex.def)             Requested size: 225.21626pt x 225.68552pt.
+(pdftex.def)             Requested size: 200.19435pt x 200.61098pt.
 
 Overfull \hbox (2.43332pt too wide) in paragraph at lines 43--52
 []$[]$ $[]$ 
@@ -1035,7 +1035,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 43--52
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2] (./Michaelmas Report.bbl)
-<./figures/gantt.png, id=53, 1341.01pt x 518.93875pt>
+<./figures/gantt.png, id=54, 1341.01pt x 518.93875pt>
 File: ./figures/gantt.png Graphic file (type png)
 <use ./figures/gantt.png>
 Package pdftex.def Info: ./figures/gantt.png  used on input line 66.
@@ -1054,11 +1054,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 69.
 Here is how much of TeX's memory you used:
  14427 strings out of 480608
  261801 string characters out of 5903630
- 522668 words of memory out of 5000000
+ 522667 words of memory out of 5000000
  30033 multiletter control sequences out of 15000+600000
  539655 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,9n,77p,1524b,739s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,9n,77p,1650b,739s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
@@ -1067,10 +1067,10 @@ r/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
 local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/l
 ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/lo
 cal/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on "Michaelmas Report.pdf" (4 pages, 414860 bytes).
+Output written on "Michaelmas Report.pdf" (4 pages, 417602 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
+ 100 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
  15 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

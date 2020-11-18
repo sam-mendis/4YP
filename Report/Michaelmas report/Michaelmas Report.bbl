@@ -5,11 +5,12 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Smestad(2002)]{RN45}
-Greg~P Smestad.
-\newblock \emph{Optoelectronics of solar cells}, volume 115.
-\newblock SPIE press, 2002.
-\newblock ISBN 0819444405.
+\bibitem[Agency(2020)]{RN49}
+International~Energy Agency.
+\newblock \emph{World Energy Outlook 2020}.
+\newblock OECD Publishing, 2020.
+\newblock URL
+  \url{https://www.oecd-ilibrary.org/content/publication/557a761b-en}.
 
 \bibitem[Jørgensen et~al.(2008)Jørgensen, Norrman, and Krebs]{RN38}
 Mikkel Jørgensen, Kion Norrman, and Frederik~C Krebs.

@@ -5,15 +5,15 @@ The style file: unsrtnat.bst
 Database file #1: mtreport1.bib
 You've used 4 entries,
             2481 wiz_defined-function locations,
-            586 strings with 5159 characters,
-and the built_in function-call counts, 1591 in all, are:
-= -- 117
+            585 strings with 5220 characters,
+and the built_in function-call counts, 1581 in all, are:
+= -- 116
 > -- 98
-< -- 3
+< -- 2
 + -- 38
 - -- 30
-* -- 132
-:= -- 271
+* -- 130
+:= -- 270
 add.period$ -- 14
 call.type$ -- 4
 change.case$ -- 6
@@ -22,25 +22,25 @@ cite$ -- 4
 duplicate$ -- 71
 empty$ -- 139
 format.name$ -- 34
-if$ -- 326
+if$ -- 324
 int.to.chr$ -- 1
 int.to.str$ -- 5
 missing$ -- 4
 newline$ -- 30
 num.names$ -- 12
-pop$ -- 34
+pop$ -- 35
 preamble$ -- 1
 purify$ -- 4
 quote$ -- 0
-skip$ -- 46
+skip$ -- 45
 stack$ -- 0
 substring$ -- 56
-swap$ -- 9
-text.length$ -- 1
+swap$ -- 8
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 25
 warning$ -- 0
 while$ -- 10
 width$ -- 0
-write$ -- 62
+write$ -- 61
