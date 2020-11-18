@@ -1,7 +1,7 @@
 ////first attempted iteration of design
 //// Anything blue is Aluminium
 /// Anything yellow is ABS
-/// ANything red is Acrylic
+/// Anything red is Acrylic
 ///black is imported components
 // all values of length in mm unless specified
  d_max = 150; //max diameter of glovebox 
