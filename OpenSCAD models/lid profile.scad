@@ -2,7 +2,7 @@
 
 //quartz plate
     include<quartz_window.scad>
-    translate([0,0,5])
+    translate([0,0,4])
     %window(110,100,3);
     
     //metal lide
