@@ -20,7 +20,7 @@
 
  // outer shell
  include <outer_shell.scad>
-outer_shell(110,100,70,30,30,20,4,10,1.3);
+outer_shell(110,100,70,30,30,20,4,10,1.3,4);
 
 //substrate layout
 include <substratelayout.scad>
@@ -45,11 +45,11 @@ translate([-5,-15,10])
     
     //quartz plate
     include<quartz_window.scad>
-    translate([0,0,37])
+    translate([0,0,36.5])
     %window(110,100,3);
     
-    //metal lide
-    include<metal_lid.scad>
-    translate([0,0,40])
-    rotate([180,0,0])
-    metal_lid(110,100,4,1.3);
+    //metal lid
+    //include<metal_lid.scad>
+    //translate([0,0,41])
+    //rotate([180,0,0])
+    //metal_lid(110,100,4,1.3);
