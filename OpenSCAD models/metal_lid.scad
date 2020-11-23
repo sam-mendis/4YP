@@ -25,20 +25,20 @@ module metal_lid(x,y,s_d, or_rad)
     
     translate([x/2-13,0,2.5]) 
     rotate([90,0,0])  
-    cylinder(r=or_rad,h=(y-23), center=true);
+    cylinder(r=or_rad,h=(y-24), center=true);
 }                  
     translate([-(x/2-13),0,2.5])
     rotate([90,0,0])
-    cylinder(r=or_rad,h=(y-23), center=true);
+    cylinder(r=or_rad,h=(y-24), center=true);
 }   
     translate([0,y/2-13,2.5])  
     rotate([0,90,0])
-    cylinder(r=or_rad,h=(y-13), center=true);
+    cylinder(r=or_rad,h=(y-14), center=true);
 }
 
     translate([0,-(y/2-13),2.5])   
     rotate([0,90,0])
-    cylinder(r=or_rad,h=(y-13), center=true);
+    cylinder(r=or_rad,h=(y-14), center=true);
 
  }
     
@@ -84,4 +84,4 @@ cylinder(r=1,h=6, center = true);
 
 }
 
-//metal_lid(110,100,4, 1.3);
+metal_lid(110,100,4.2,1);

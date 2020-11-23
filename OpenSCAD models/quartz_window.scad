@@ -1,5 +1,5 @@
 //Quartz Window model
-module window(x, y, t,s_d){
+module window(x, y, t){
     //difference(){
        // difference(){
             //difference(){
@@ -26,4 +26,4 @@ module window(x, y, t,s_d){
 //}
 //}
 }
-//window(110,100,2,4.2);
+window(110,100,3);

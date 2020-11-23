@@ -49,7 +49,7 @@ translate([-5,-15,10])
     %window(110,100,3);
     
     //metal lid
-    //include<metal_lid.scad>
-    //translate([0,0,41])
-    //rotate([180,0,0])
-    //metal_lid(110,100,4,1.3);
+    include<metal_lid.scad>
+    translate([0,0,41])
+    rotate([180,0,0])
+    metal_lid(110,100,4,1.3);
