@@ -1,7 +1,7 @@
 //Substrate holder v2
 
 
-module substrate_holder(x1,y1,z1)
+module substrate_holder(x1,y1,z1, s_d)
 {
     
     //substrate dimensions
@@ -34,27 +34,27 @@ module substrate_holder(x1,y1,z1)
     difference(){
     
     //negative y
-    difference(){
-    difference(){
-    difference(){
-    difference(){
-    difference(){
-    difference(){
-    difference(){
-    difference(){
-    difference(){
-    difference(){
+    //difference(){
+    //difference(){
+    //difference(){
+    //difference(){
+    //difference(){
+    //difference(){
+    //difference(){
+    //difference(){
+    //difference(){
+    //difference(){
        // positive y 
-    difference(){
-    difference(){
-    difference(){
-    difference(){
-    difference(){
-    difference(){
-    difference(){
-    difference(){
-    difference(){
-    difference(){
+    //difference(){
+    //difference(){
+    //difference(){
+    //difference(){
+    //difference(){
+    //difference(){
+    //difference(){
+    //difference(){
+    //difference(){
+    //difference(){
         
         //components
             
@@ -70,34 +70,33 @@ module substrate_holder(x1,y1,z1)
             difference(){
             difference(){
             difference(){
-            difference(){
+            //difference(){
         cube ([x1,y1,z1], center = true);
         
         //substrate outline
         translate([0,0,z1/2]) 
-        cube([x,y,0.2], center = true);}
+        cube([x,y,1], center = true);}
             // cartridge heater
                 translate([0,0,-z1/4])
                 rotate([90,0,0])
                 cylinder(r=3, h=x1+1, center = true);}
                 
              // temp sensor
-                translate([0,0,5])
+                translate([0,0,6])
                 rotate([90,0,0])
                 cylinder(r=3, h=x1+1, center = true);} 
              // air flow 
+              
               translate([0,0,z1/2])
-              cube([x-10,y-9,10], center =true);}
-              translate([0,0,z1/2-3])
-              cube([x-10,y-9,5], center =true);}
+              cube([x-10,y-9,7], center =true);}
               
-              translate([0,6,z1/2-3])
+              translate([-15,6,z1/2-2])
               rotate([0,90,0])
-              cylinder(r=2, h=x1+1, center = true);}
+              cylinder(r=1, h=x1+1, center = true);}
               
-              translate([0,-6,z1/2-3])
+              translate([15,-6,z1/2-2])
               rotate([0,90,0])
-              cylinder(r=2, h=x1+1, center = true);}
+              cylinder(r=1, h=x1+1, center = true);}
              
               
                 
@@ -132,88 +131,88 @@ module substrate_holder(x1,y1,z1)
               
         //sideways oriented holes        
         // positive y posiitve x   
-        translate([x/2-3.59,y/2+1,z1/2])
-             rotate([90,0,0])
-        cylinder(r=d/2, h=9, center =true);}
-        
-        translate([x/2-6.09,y/2+1,z1/2])
-         rotate([90,0,0])
-        cylinder(r=d/2, h=9, center =true);}
-        
-          translate([x/2-8.67,y/2+1,z1/2])
-         rotate([90,0,0])
-        cylinder(r=d/2, h=9, center =true);}
-        
-        translate([x/2-11.17,y/2+1,z1/2])
-         rotate([90,0,0])
-        cylinder(r=d/2, h=9, center =true);}
-        
-        translate([x/2-13.75,y/2+1,z1/2])
-         rotate([90,0,0])
-        cylinder(r=d/2, h=9, center =true);}
-        
-        //positive y negative x
-        translate([-(x/2-3.59),y/2+1,z1/2])
-         rotate([90,0,0])
-        cylinder(r=d/2, h=9, center =true);}
-        
-        translate([-(x/2-6.09),y/2+1,z1/2])
-         rotate([90,0,0])
-        cylinder(r=d/2, h=9, center =true);}
-        
-          translate([-(x/2-8.67),y/2+1,z1/2])
-         rotate([90,0,0])
-        cylinder(r=d/2, h=9, center =true);}
-        
-        translate([-(x/2-11.17),y/2+1,z1/2])
-         rotate([90,0,0])
-        cylinder(r=d/2, h=9, center =true);}
-        
-        translate([-(x/2-13.75),y/2+1,z1/2])
-         rotate([90,0,0])
-        cylinder(r=d/2, h=9, center =true);}
-        
-         // negative y positve x   
-        translate([x/2-3.59,-(y/2+1),z1/2])
-         rotate([90,0,0])
-        cylinder(r=d/2, h=9, center =true);}
-        
-        translate([x/2-6.09,-(y/2+1),z1/2])
-         rotate([90,0,0])
-        cylinder(r=d/2, h=9, center =true);}
-        
-          translate([x/2-8.67,-(y/2+1),z1/2])
-         rotate([90,0,0])
-        cylinder(r=d/2, h=9, center =true);}
-        
-        translate([x/2-11.17,-(y/2+1),z1/2])
-         rotate([90,0,0])
-        cylinder(r=d/2, h=9, center =true);}
-        
-        translate([x/2-13.75,-(y/2+1),z1/2])
-         rotate([90,0,0])
-        cylinder(r=d/2, h=9, center =true);}
-        
-        //negative y negative x
-        translate([-(x/2-3.59),-(y/2+1),z1/2])
-         rotate([90,0,0])
-        cylinder(r=d/2, h=9, center =true);}
-        
-        translate([-(x/2-6.09),-(y/2+1),z1/2])
-         rotate([90,0,0])
-        cylinder(r=d/2, h=9, center =true);}
-        
-          translate([-(x/2-8.67),-(y/2+1),z1/2])
-         rotate([90,0,0])
-        cylinder(r=d/2, h=9, center =true);}
-        
-        translate([-(x/2-11.17),-(y/2+1),z1/2])
-         rotate([90,0,0])
-        cylinder(r=d/2, h=9, center =true);}
-        
-        translate([-(x/2-13.75),-(y/2+1),z1/2])
-         rotate([90,0,0])
-        cylinder(r=d/2, h=9, center =true);}
+////        translate([x/2-3.59,y/2+1,z1/2])
+////             rotate([90,0,0])
+////        cylinder(r=d/2, h=9, center =true);}
+////        
+////        translate([x/2-6.09,y/2+1,z1/2])
+////         rotate([90,0,0])
+////        cylinder(r=d/2, h=9, center =true);}
+////        
+////          translate([x/2-8.67,y/2+1,z1/2])
+////         rotate([90,0,0])
+////        cylinder(r=d/2, h=9, center =true);}
+////        
+////        translate([x/2-11.17,y/2+1,z1/2])
+////         rotate([90,0,0])
+////        cylinder(r=d/2, h=9, center =true);}
+////        
+////        translate([x/2-13.75,y/2+1,z1/2])
+////         rotate([90,0,0])
+////        cylinder(r=d/2, h=9, center =true);}
+////        
+////        //positive y negative x
+////        translate([-(x/2-3.59),y/2+1,z1/2])
+////         rotate([90,0,0])
+////        cylinder(r=d/2, h=9, center =true);}
+////        
+////        translate([-(x/2-6.09),y/2+1,z1/2])
+////         rotate([90,0,0])
+////        cylinder(r=d/2, h=9, center =true);}
+////        
+////          translate([-(x/2-8.67),y/2+1,z1/2])
+////         rotate([90,0,0])
+////        cylinder(r=d/2, h=9, center =true);}
+////        
+////        translate([-(x/2-11.17),y/2+1,z1/2])
+////         rotate([90,0,0])
+////        cylinder(r=d/2, h=9, center =true);}
+////        
+////        translate([-(x/2-13.75),y/2+1,z1/2])
+////         rotate([90,0,0])
+////        cylinder(r=d/2, h=9, center =true);}
+////        
+////         // negative y positve x   
+////        translate([x/2-3.59,-(y/2+1),z1/2])
+////         rotate([90,0,0])
+////        cylinder(r=d/2, h=9, center =true);}
+////        
+////        translate([x/2-6.09,-(y/2+1),z1/2])
+////         rotate([90,0,0])
+////        cylinder(r=d/2, h=9, center =true);}
+////        
+////          translate([x/2-8.67,-(y/2+1),z1/2])
+////         rotate([90,0,0])
+////        cylinder(r=d/2, h=9, center =true);}
+////        
+////        translate([x/2-11.17,-(y/2+1),z1/2])
+////         rotate([90,0,0])
+////        cylinder(r=d/2, h=9, center =true);}
+////        
+////        translate([x/2-13.75,-(y/2+1),z1/2])
+////         rotate([90,0,0])
+////        cylinder(r=d/2, h=9, center =true);}
+////        
+////        //negative y negative x
+////        translate([-(x/2-3.59),-(y/2+1),z1/2])
+////         rotate([90,0,0])
+////        cylinder(r=d/2, h=9, center =true);}
+////        
+////        translate([-(x/2-6.09),-(y/2+1),z1/2])
+////         rotate([90,0,0])
+////        cylinder(r=d/2, h=9, center =true);}
+////        
+////          translate([-(x/2-8.67),-(y/2+1),z1/2])
+////         rotate([90,0,0])
+////        cylinder(r=d/2, h=9, center =true);}
+////        
+////        translate([-(x/2-11.17),-(y/2+1),z1/2])
+////         rotate([90,0,0])
+////        cylinder(r=d/2, h=9, center =true);}
+////        
+////        translate([-(x/2-13.75),-(y/2+1),z1/2])
+////         rotate([90,0,0])
+////        cylinder(r=d/2, h=9, center =true);}
     
     
         
