@@ -78,24 +78,24 @@ module substrate_holder(x1,y1,z1, s_d)
         cube([x,y,1], center = true);}
             // cartridge heater
                 translate([0,0,-z1/4])
-                rotate([90,0,0])
+                rotate([0,90,0])
                 cylinder(r=3, h=x1+1, center = true);}
                 
              // temp sensor
                 translate([0,0,6])
-                rotate([90,0,0])
+                rotate([0,90,0])
                 cylinder(r=3, h=x1+1, center = true);} 
              // air flow 
               
               translate([0,0,z1/2])
               cube([x-10,y-9,7], center =true);}
               
-              translate([-15,6,z1/2-2])
-              rotate([0,90,0])
+              translate([-7,10,z1/2-2])
+              rotate([90,0,0])
               cylinder(r=1, h=x1+1, center = true);}
               
-              translate([15,-6,z1/2-2])
-              rotate([0,90,0])
+              translate([7,-10,z1/2-2])
+              rotate([90,0,0])
               cylinder(r=1, h=x1+1, center = true);}
              
               

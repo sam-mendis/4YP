@@ -23,22 +23,22 @@
 outer_shell(110,100,70,30,30,20,4,10,1.3,4);
 
 //substrate layout
-include <substratelayout.scad>
-translate([-5,-15,10])
+include <internal.scad>
+translate([5,0,-5])
     {
-    substratelayout();
+    internal();
     }
     
     //cell connections window
     include <cell_contacts.scad>
-    translate([47.5,0,5])
+    translate([47.6,0,5])
     rotate([90,0,90])
     cell_contacts(1);
     
     
     //elec connections window
     include <elec_contacts.scad>
-    translate([-47.5,0,5])
+    translate([-47.6,0,5])
     rotate([90,0,90])
     elec_contacts(1);
     
@@ -53,3 +53,10 @@ translate([-5,-15,10])
     translate([0,0,41])
     rotate([180,0,0])
     metal_lid(110,100,4,1.3);
+    
+    
+    
+    //light source
+    include<lamp.scad>
+    translate([0,0,-40])
+    lamp(130);
