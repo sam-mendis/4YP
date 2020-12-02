@@ -73,6 +73,8 @@ def next():
     f_templabel = Label(frame_n, text=tempinput)
     f_timelabel = Label(frame_n, text=timeinput)
 
+    f_templabel.grid(row=1, column=1)
+
 
 # creating a labels
 # Creating a button, command calls the function next to command
