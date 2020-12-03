@@ -1,12 +1,28 @@
+import sys
+import os
 from tkinter import *
 
 # need to have this before any tkinter program.
 # this creates the window for the gui
 root = Tk()
+
+
 # Naming the Gui
 root.title("Environmental Controller for Test Cell")
 # Making an icon
 # root.iconbitmap('control.png')
+
+# Atmospheric Temperature
+atm = 20
+
+# Writing a function to restart the program if there is an error
+
+
+def restart_program():
+    python = sys.executable
+    os.execl(python, python, * sys.argv)
+
+
 frame_s = Frame(root)
 frame_s.grid()
 
@@ -51,11 +67,10 @@ e_gas2.grid(row=3, column=5)
 
 # Creating a button, command calls the function next to command
 # remember when using the command button not to but brackets after the function
-button_next = Button(frame_s, text="Next", command=next)
-button_next.grid(row=3, column=6)
+
 
 # Creating entries to input data
-#e_t = Entry(root, width=50, borderwidth=5)
+# e_t = Entry(root, width=50, borderwidth=5)
 # e   _t.grid(row=15, column=0, columnspan=3, padx=10, pady=10)
 # labeling the entry field
 # e_t.insert(
@@ -66,13 +81,42 @@ button_next.grid(row=3, column=6)
 
 
 def next():
-    global temp_i, timed_i, timeh_i, timem_i
-    temp_i = e_temp.get()
+    global temp_i, timed_i, timeh_i, timem_i, gasa_i, gasb_i
+    temp_int = int(e_temp.get())
+    timed_int = int(e_timed.get())
+    timeh_int = int(e_timeh.get())
+    timem_int = int(e_timem.get())
+    gasa_int = int(e_gas1.get())
+    gasb_int = int(e_gas2.get())
+
+    temp_i = (e_temp.get())
     timed_i = e_timed.get()
     timeh_i = e_timeh.get()
     timem_i = e_timem.get()
+    gasa_i = (e_gas1.get())
+    gasb_i = (e_gas2.get())
+
     frame_n = Frame(root)
     frame_n.grid()
+
+    # Creating a restart if statement if Gas A + Gas B doesnt = 100%
+    if (gasa_int+gasb_int) != 100:
+        frame_s.destroy()
+        error_g = Label(
+            frame_n, text="Gas A & Gas B do not add up to 100%, please restart program")
+        error_g.pack()
+        restart = Button(frame_n, text="Restart", command=restart_program)
+        restart.pack()
+
+    # Creating a restart if statement if Gas A + Gas B doesnt = 100%
+    if temp_int < atm or temp_int > 120:
+        frame_s.destroy()
+        error_t = Label(
+            frame_n, text="Temperature is not within" + atm + "\N{DEGREE SIGN}C to 120\N{DEGREE SIGN}C")
+        error_t.pack()
+        restart = Button(frame_n, text="Restart", command=restart_program)
+        restart.pack()
+
     templ = Label(frame_n, text="Temperature for test")
     timel = Label(frame_n, text="Time for test")
     gasl = Label(frame_n, text="Gas % s")
@@ -90,6 +134,7 @@ def next():
 
 
 # creating a labels
-
+button_next = Button(frame_s, text="Next", command=next)
+button_next.grid(row=3, column=6)
 
 root.mainloop()
