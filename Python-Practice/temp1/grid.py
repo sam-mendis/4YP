@@ -1,6 +1,15 @@
+import sys
+import os
+
 from tkinter import *
 
 root = Tk()
+
+
+def restart():
+    python = sys.executable
+    os.execl(python, python, * sys.argv)
+
 
 frame_s = Frame(root)
 frame_s.grid()
@@ -15,6 +24,7 @@ templabel.grid(row=2, column=1)
 
 e_temp = Entry(frame_s, font=" Times 12", width=7, bd=1, relief="solid")
 e_temp.grid(row=3, column=1)
-
+restart = Button(frame_s, text="Restart", command=restart)
+restart.grid(row=4)
 
 root.mainloop()
