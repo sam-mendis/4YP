@@ -3,13 +3,14 @@ from tkinter import *
 # need to have this before any tkinter program.
 # this creates the window for the gui
 root = Tk()
+# Naming the Gui
+root.title("Environmental Controller for Test Cell")
+# Making an icon
+# root.iconbitmap('control.png')
 frame_s = Frame(root)
 frame_s.grid()
 
-frame_n = Frame(root)
-frame_n.grid()
-# Naming the Gui
-root.title("Environmental Controller for Test Cell")
+
 # Creating the input table
 inputlabel = Label(frame_s, text="Manual Input", bd=1,
                    relief="solid", font=" Times 16")
@@ -63,17 +64,29 @@ e_gas2.grid(row=3, column=5)
 # 0, "Enter Desired Temperature, between 25\N{DEGREE SIGN}C and 120\N{DEGREE SIGN}C")
 # Creating a function for the button
 
-
+# making sure you are collecting the entry using e.get
 def next():
-    # making sure you are collecting the entry using e.get
-    frame_s.destroy()
-    tempinput = "Steady State Temp = " + e_temp.get() + "\N{DEGREE SIGN}C"
-    timeinput = e_timed.get() + "Days " + e_timeh.get() + \
-        "h " + e_timem.get() + "min"
+    global temp_i, timed_i, timeh_i, timem_i
+    temp_i = e_temp.get()
+    timed_i = e_timed.get()
+    timeh_i = e_timeh.get()
+    timem_i = e_timem.get()
+    frame_n = Frame(root)
+    frame_n.grid()
+    templ = Label(frame_n, text="Temperature for test")
+    timel = Label(frame_n, text="Time for test")
+    gasl = Label(frame_n, text="Gas % s")
+    tempinput = "Steady State Temp = " + temp_i + "\N{DEGREE SIGN}C"
+    timeinput = timed_i + "Days " + timeh_i +\
+        "H " + timem_i + "min"
     f_templabel = Label(frame_n, text=tempinput)
     f_timelabel = Label(frame_n, text=timeinput)
-
-    f_templabel.grid(row=1, column=1)
+    frame_s.destroy()
+    templ.grid(row=1, column=1)
+    timel.grid(row=1, column=2)
+    gasl.grid(row=1, column=3)
+    f_templabel.grid(row=2, column=1)
+    f_timelabel.grid(row=2, column=2)
 
 
 # creating a labels
