@@ -121,16 +121,23 @@ def next():
     timel = Label(frame_n, text="Time for test")
     gasl = Label(frame_n, text="Gas % s")
     tempinput = "Steady State Temp = " + temp_i + "\N{DEGREE SIGN}C"
-    timeinput = timed_i + "Days " + timeh_i +\
+    timeinput = timed_i + " Days " + timeh_i +\
         "H " + timem_i + "min"
+    gasainput = "Gas A = " + gasa_i + "%, Gas B = " + gasb_i + "%"
     f_templabel = Label(frame_n, text=tempinput)
     f_timelabel = Label(frame_n, text=timeinput)
+    f_gaslabel = Label(frame_n, text=gasainput)
     frame_s.destroy()
     templ.grid(row=1, column=1)
     timel.grid(row=1, column=2)
     gasl.grid(row=1, column=3)
     f_templabel.grid(row=2, column=1)
     f_timelabel.grid(row=2, column=2)
+    f_gaslabel.grid(row=2, column=3)
+
+    # Creating Start button
+    button_start = Button(frame_n, text="Start", command=next)
+    button_start.grid(row=1, column=4, rowspan=2)
 
 
 # creating a labels
