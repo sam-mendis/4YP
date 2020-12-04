@@ -1,5 +1,6 @@
 import sys
 import os
+import time
 from tkinter import *
 
 # need to have this before any tkinter program.
@@ -15,12 +16,24 @@ root.title("Environmental Controller for Test Cell")
 # Atmospheric Temperature
 atm = 20
 
+# Voltage to make 120 deg C
+Vmax = 30
+Vout = 0
+
 # Writing a function to restart the program if there is an error
 
 
 def restart_program():
     python = sys.executable
     os.execl(python, python, * sys.argv)
+
+
+def start(desired_temp, Ratm, Rmax,  timed, timeh, timem, gasa, feedback_temp):
+    global time
+    time = timed*(86400)+timeh*(3600)+timem*(60)
+    output_R = (desired_temp-atm)*((120-atm)/Ratm-Rmax)+Ratm
+    output_v = Vmax*(output_R/Rmax)
+    Vout = output_v
 
 
 frame_s = Frame(root)
@@ -137,7 +150,11 @@ def next():
 
     # Creating Start button
     button_start = Button(frame_n, text="Start", command=next)
-    button_start.grid(row=1, column=4, rowspan=2)
+    button_start.grid(row=2, column=4)
+
+    # Creating a Clear Button
+    button_clear = Button(frame_n, text="Clear", command=restart_program)
+    button_clear.grid(row=1, column=4)
 
 
 # creating a labels
