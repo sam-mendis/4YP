@@ -1,7 +1,14 @@
+# For the resetting
 import sys
 import os
+# for the time part
 import time
+# For the GUI
 from tkinter import *
+
+# Used to generate random numbers
+from random import seed
+from random import randint
 
 # need to have this before any tkinter program.
 # this creates the window for the gui
@@ -15,7 +22,14 @@ root.title("Environmental Controller for Test Cell")
 
 # Atmospheric Temperature
 atm = 20
+# Resistance at atmospheric temp
+Ratm = 100
 
+# Resistance at max temp
+Rmax = 300
+
+# Feedback temp modelled as random number now
+t_feedback = randint(atm, 120)
 # Voltage to make 120 deg C
 Vmax = 30
 Vout = 0
@@ -31,9 +45,13 @@ def restart_program():
 def start(desired_temp, Ratm, Rmax,  timed, timeh, timem, gasa, feedback_temp):
     global time
     time = timed*(86400)+timeh*(3600)+timem*(60)
-    output_R = (desired_temp-atm)*((120-atm)/Ratm-Rmax)+Ratm
-    output_v = Vmax*(output_R/Rmax)
-    Vout = output_v
+    t = 0
+    while t <= time:
+        time.sleep(1)
+        t += 1
+        output_R = (desired_temp-atm)*((120-atm)/Ratm-Rmax)+Ratm
+        output_v = Vmax*(output_R/Rmax)
+        Vout = output_v
 
 
 frame_s = Frame(root)
@@ -149,7 +167,8 @@ def next():
     f_gaslabel.grid(row=2, column=3)
 
     # Creating Start button
-    button_start = Button(frame_n, text="Start", command=next)
+    button_start = Button(frame_n, text="Start", command=start(
+        temp_int, Ratm, Rmax, timed_int, timeh_int, timem_int, gasa_int, t_feedback))
     button_start.grid(row=2, column=4)
 
     # Creating a Clear Button
