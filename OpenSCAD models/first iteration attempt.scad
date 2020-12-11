@@ -57,6 +57,6 @@ translate([5,0,-5])
     
     
     //light source
-    include<lamp.scad>
-    translate([0,0,-40])
-    lamp(130);
+    //include<lamp.scad>
+    //translate([0,0,-40])
+    //lamp(130);

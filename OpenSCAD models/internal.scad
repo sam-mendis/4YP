@@ -11,7 +11,7 @@ module internal(){
     
     
     include<bracket.scad>
-    translate([0,0,17])
+    translate([0,0,30])
     casing(40,40,3,1,2);
     
     
@@ -22,4 +22,4 @@ module internal(){
     
 }
 
-//internal();
+internal();

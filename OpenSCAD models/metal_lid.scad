@@ -1,4 +1,4 @@
-//Lid
+//Metal //Lid
 
 module metal_lid(x,y,s_d, or_rad)
 {
@@ -84,4 +84,4 @@ cylinder(r=1,h=6, center = true);
 
 }
 
-//metal_lid(110,100,4.2,1);
+metal_lid(110,100,4.2,1);
