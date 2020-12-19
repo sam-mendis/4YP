@@ -1,14 +1,21 @@
-# For the resetting
-import sys
-import os
-# for the time part
-import time
+from random import randint
+from random import seed
 # For the GUI
 from tkinter import *
 
-# Used to generate random numbers
-from random import seed
-from random import randint
+
+# For the resetting
+# for the time par
+import time
+import os
+import sys
+
+# Importing Functions in functions.py
+from functions import restart_program
+from functions import model_temp
+# For the resetting
+# for the time part
+
 
 # need to have this before any tkinter program.
 # this creates the window for the gui
@@ -28,30 +35,9 @@ Ratm = 100
 # Resistance at max temp
 Rmax = 300
 
-# Feedback temp modelled as random number now
-t_feedback = randint(atm, 120)
 # Voltage to make 120 deg C
 Vmax = 30
 Vout = 0
-
-# Writing a function to restart the program if there is an error
-
-
-def restart_program():
-    python = sys.executable
-    os.execl(python, python, * sys.argv)
-
-
-def start(desired_temp, Ratm, Rmax,  timed, timeh, timem, gasa, feedback_temp):
-    global time
-    time = timed*(86400)+timeh*(3600)+timem*(60)
-    t = 0
-    while t <= time:
-        time.sleep(1)
-        t += 1
-        output_R = (desired_temp-atm)*((120-atm)/Ratm-Rmax)+Ratm
-        output_v = Vmax*(output_R/Rmax)
-        Vout = output_v
 
 
 frame_s = Frame(root)
@@ -100,23 +86,37 @@ e_gas2.grid(row=3, column=5)
 # remember when using the command button not to but brackets after the function
 
 
-# Creating entries to input data
-# e_t = Entry(root, width=50, borderwidth=5)
-# e   _t.grid(row=15, column=0, columnspan=3, padx=10, pady=10)
-# labeling the entry field
-# e_t.insert(
-# 0, "Enter Desired Temperature, between 25\N{DEGREE SIGN}C and 120\N{DEGREE SIGN}C")
-# Creating a function for the button
+def start(temp, seconds, gasa, atm):
 
-# making sure you are collecting the entry using e.get
+    t_end = time.time()+seconds
+    T = atm
+    while time.time() < t_end:
+        if T > temp:
+            Vout = 0
+        else:
+            Vout = (temp-T)*(0.3)
+            T_m = T+Vout*(30)-(T-atm)*(10)
+
+            T = model_temp(T_m)
+            T1 = str(T)
+
+            # current_temp = Label(
+            # frame_n, text="Current Temp of Substrate = "+T1+"\N{DEGREE SIGN}C")
+            #current_temp.grid(row=5, column=3)
+            print(T1)
+            time.sleep(2)
 
 
 def next():
     global temp_i, timed_i, timeh_i, timem_i, gasa_i, gasb_i
     temp_int = int(e_temp.get())
+
     timed_int = int(e_timed.get())
     timeh_int = int(e_timeh.get())
     timem_int = int(e_timem.get())
+
+    time_s = timed_int*(86400)+timeh_int*(3600)+timem_int*(60)
+    print(time_s)
     gasa_int = int(e_gas1.get())
     gasb_int = int(e_gas2.get())
 
@@ -148,8 +148,8 @@ def next():
         restart = Button(frame_n, text="Restart", command=restart_program)
         restart.pack()
 
-    templ = Label(frame_n, text="Temperature for test")
-    timel = Label(frame_n, text="Time for test")
+    templ = Label(frame_n, text="Temperature for Test")
+    timel = Label(frame_n, text="Time for Test")
     gasl = Label(frame_n, text="Gas % s")
     tempinput = "Steady State Temp = " + temp_i + "\N{DEGREE SIGN}C"
     timeinput = timed_i + " Days " + timeh_i +\
@@ -167,8 +167,8 @@ def next():
     f_gaslabel.grid(row=2, column=3)
 
     # Creating Start button
-    button_start = Button(frame_n, text="Start", command=start(
-        temp_int, Ratm, Rmax, timed_int, timeh_int, timem_int, gasa_int, t_feedback))
+    button_start = Button(frame_n, text="Start",
+                          command=start(temp_int, time_s, gasa_int, atm))
     button_start.grid(row=2, column=4)
 
     # Creating a Clear Button
