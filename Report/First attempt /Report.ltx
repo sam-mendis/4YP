@@ -35,12 +35,13 @@
 \maketitle
 \pagebreak
 \chapter{Mechanical Design}
+\section{Introduction}
 The design of the container was a process that encompassed several months. This chapter will go through the entire mechanical design process, outlining the key aims, decisions and analysis behind the container design. 
 
 During the mechanical design process, there were two different software’s used: OpenSCAD and SOLIDWORKS. OpenSCAD is an open source software which is compatible with all major computer operating systems. This enabled the start of the design process to occur before the beginning of the Michaelmas Term. Furthermore, as mentioned in the introduction, using opensource software is a key tenant of this project as it needs to be replicable for teams worldwide. SOLIDWORKS however, is not open source, but was still used. This is because there is some key functionality in SOLIDWORKS which helps reduces the time needed on a few of the important steps (such as rendering photos, heat simulations and producing engineering drawings). However, as I will lay out further in the chapter, the main designs were completed on OpenSCAD, and they do hold enough information for a group elsewhere to replicate without significant difficulty. 
 
-A key consideration was what processes would be needed for the manufacturing of the container. The engineering department has different facilities which could be useful including: a workshop with a CNC machine, multiple different3D printers, a mechanical workshop which I would be able to use along with an electrical workshop. These all were considered when designing the container and each will be mentioned during this chapter. 
-
+A key consideration was what processes would be needed for the manufacturing of the container. The engineering department has different facilities which could be useful including: a workshop with a CNC machine, multiple different 3D printers, a mechanical workshop which I would be able to use along with an electrical workshop. These all were considered when designing the container and each will be mentioned during this chapter. 
+\section{Specification}
 The first stage of the design process was to outline a specification for the testing container. These specifications were drawn from the project brief, the literature review and discussion with my supervisor Professor Moritz Riede. The specification of the design is outlined below:
 \begin{enumerate}
 \item{The container must be able to accommodate a 30 mm x 30 mm substrate provided by AFMD research group.}
@@ -58,6 +59,12 @@ This specification is a clear guide to what functionality there needs to be with
 
 The gas inlet is another feature to enhance the degradation. This will be used to create a ‘cocktail’ of different gases (guided by the literature) to try and emulate lifetime degradation of the solar cell. The last point on the specification is to ensure the ease of use with the AFMD research group. The gloveboxes they use have a small inlet with a diameter of 150 mm, using this would vastly reduce the time needed to insert the solar cell into the testing container. 
 
-
-
+Along with the specification, some further goals were drawn up to provide aims that would provide important functionality but were not essential for the solar cell. These are shown below: 
+\begin{itemize}
+\item{Build a Python based GUI (Graphical User Interface) to enable programmatic testing of the solar cell}
+\item{Enable a programmable atmosphere for the box which should be embedded into the GUI built.}
+\end{itemize}
+These goals are important to ensure the ease of use of the box, as well as to reduce the amount of time needed for setting up and running the container. The programmatic testing of the cell, along with a programable atmosphere is useful as it enables the researchers to simply input time, temperature and what combination of gases, which then allows the system to run a test, all the time measuring the outputs and logging it for further analysis. 
+\section{Initial Design}
+This specification provided the structure for the testing container. Using work done in the literature review, it was clear that this type of testing container is unusual for the market, thereby requiring innovative design. I was put in contact with Karl-Augustin Zaininger - a Physics researcher who had developed a simplified version of this device – to discuss viable methods for achieving the specifications. This conversation allowed me to create an extremely simple first iteration of the design shown in figure (n). 
 \end{document}
