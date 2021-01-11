@@ -2,7 +2,7 @@
 \usepackage{color}
 \usepackage{pdfpages}
 \usepackage{graphicx}
-\graphicspath{{./figures/}}
+\graphicspath{{./Images/Design_chapter/}}
 \usepackage{subcaption}
 \usepackage{wrapfig}
 \usepackage[export]{adjustbox}
@@ -27,6 +27,7 @@
 \begin{document}
 \setlength{\parindent}{0pt} %No indent in paragraphs
 \setlength{\parskip}{1\baselineskip} % double line spacing at the end or a paragraph
+
 \title{Open Science Hardware Setup for investigating the Stability of Organic Solar Cells - Interim Report}
 \author{Samuel Mendis}
 \affil{Department of Engineering Science, University of Oxford}
@@ -66,5 +67,24 @@ Along with the specification, some further goals were drawn up to provide aims t
 \end{itemize}
 These goals are important to ensure the ease of use of the box, as well as to reduce the amount of time needed for setting up and running the container. The programmatic testing of the cell, along with a programable atmosphere is useful as it enables the researchers to simply input time, temperature and what combination of gases, which then allows the system to run a test, all the time measuring the outputs and logging it for further analysis. 
 \section{Initial Design}
-This specification provided the structure for the testing container. Using work done in the literature review, it was clear that this type of testing container is unusual for the market, thereby requiring innovative design. I was put in contact with Karl-Augustin Zaininger - a Physics researcher who had developed a simplified version of this device – to discuss viable methods for achieving the specifications. This conversation allowed me to create an extremely simple first iteration of the design shown in figure (n). 
+This specification provided the structure for the testing container. Using work done in the literature review, it was clear that this type of testing container is unusual for the market, thereby requiring innovative design. I was put in contact with Karl-Augustin Zaininger - a Physics researcher who had developed a simplified version of this device – to discuss viable methods for achieving the specifications. This conversation allowed me to create an extremely simple first iteration of the design shown in Figures \ref{fig:plan_iteration1} and \ref{fig:iso_iteration1}. 
+\begin{figure}[h]
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\linewidth]{Design_1}
+\caption{Plan View of Model}
+\end{subfigure} \begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\linewidth]{Design_2}
+\caption{Perspective View of Model}
+\end{subfigure}
+\caption{Showing a Plan and Perspective view of the First Iteration}
+\label{fig:plan_iteration1}
+\end{figure}
+\begin{figure}[h!]
+\hfill\includegraphics[width=0.45\linewidth]{Design_3}\hspace*{\fill}
+\caption{Showing Isometric View of the model}
+\label{fig:iso_iteration1}
+\end{figure}
+
+This model was 3D printed to provide a physical representation (with a photo shown in figure (n)), where it became possible to see some of the flaws that were hidden by the virtual design. The first thing was that this design was very small, making it difficult for use within the glovebox. This was a problem as all assembly needed to occur within a glovebox to ensure there would be no unwanted oxygen or water residue able to degrade the cell.  Adding to this, it seemed that there wouldn’t be enough room to wire the components in the container, this would cause significant problems as the modularity of the design would be compromised. This would go against one of the tenants of the project (modularity) which would be a problem when thinking of using this set up on different substrate layouts.
+
 \end{document}
