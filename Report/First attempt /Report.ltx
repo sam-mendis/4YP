@@ -21,6 +21,7 @@
 \usepackage{appendix} %for appendix
 \usepackage[square,numbers]{natbib} %the big one
 \usepackage{titlepic}
+\usepackage[none]{hyphenat}
 \doublespacing
 \geometry{legalpaper, portrait, margin=2cm}
 \begin{document}
@@ -45,10 +46,18 @@ The first stage of the design process was to outline a specification for the tes
 \item{The container must be able to accommodate a 30 mm x 30 mm substrate provided by AFMD research group.}
 \item{The container must be leakproof to outside air.}
 \item{The container must allow electrical connections from outside to connect to the substrate for measurements.}
-\item{The container must enable the substrate to be heated to a given temperature*.}
+\item{The container must enable the substrate to be heated to a given temperature\footnotemark.}
 \item{The container must have a window allowing light to be shone into the box.}
 \item{The container must contain a gas inlet.}
 \item{The container should fit into the small glovebox inlet with diameter 150 mm. }
 \end{enumerate}
+
+\footnotetext{The reason for a none specific temperature}
+
+This specification is a clear guide to what functionality there needs to be within the container, as well as any size limitations. As mentioned in both the introduction and literature review, is is essential for the container to be leakproof, to ensure that the solar cell does not degrade due to atmospheric O2 and water vapour. This would result in flawed results due to the cell having some unmeasured degradation before the experiments even begin. Another important point in the specification is the ability of the cell to be heated to a given temperature*. This functionality is important as its role is to attempt to emulate a lifetime (20 years) of temperature degradation in the space of 3 months. 
+
+The gas inlet is another feature to enhance the degradation. This will be used to create a ‘cocktail’ of different gases (guided by the literature) to try and emulate lifetime degradation of the solar cell. The last point on the specification is to ensure the ease of use with the AFMD research group. The gloveboxes they use have a small inlet with a diameter of 150 mm, using this would vastly reduce the time needed to insert the solar cell into the testing container. 
+
+
 
 \end{document}
