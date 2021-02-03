@@ -90,13 +90,11 @@ module substrate_holder(x1,y1,z1, s_d)
               translate([0,0,z1/2])
               cube([x-10,y-9,7], center =true);}
               
-              translate([-7,10,z1/2-2])
-              rotate([90,0,0])
-              cylinder(r=1, h=x1+1, center = true);}
+              translate([0,15,z1/2-2])
+              cube([x-5,y-19,2], center =true);}
               
-              translate([7,-10,z1/2-2])
-              rotate([90,0,0])
-              cylinder(r=1, h=x1+1, center = true);}
+              translate([0,-15,z1/2-2])
+              cube([x-5,y-19,2], center =true);}
              
               
                 
