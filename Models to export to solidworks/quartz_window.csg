@@ -1,4 +1,0 @@
-group() {
-	cube(size = [94, 84, 3.5], center = true);
-}
-
