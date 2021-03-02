@@ -1,0 +1,29 @@
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Riede et~al.(2021)Riede, Spoltore, and Leo]{RN54}
+Moritz Riede, Donato Spoltore, and Karl Leo.
+\newblock Organic solar cells—the path to commercial success.
+\newblock \emph{Advanced Energy Materials}, 11\penalty0 (1):\penalty0 2002653,
+  2021.
+\newblock ISSN 1614-6832.
+
+\bibitem[Zhao et~al.(2013)Zhao, Ke, Huang, and Sun]{RN58}
+DW~Zhao, L~Ke, W~Huang, and XW~Sun.
+\newblock \emph{Interface Stability of Polymer and Small-Molecule Organic
+  Photovoltaics}, pages 139--176.
+\newblock Springer, 2013.
+
+\bibitem[Ahmad et~al.(2013)Ahmad, Bazaka, Anderson, White, and Jacob]{RN57}
+Jakaria Ahmad, Kateryna Bazaka, Liam~J Anderson, Ronald~D White, and Mohan~V
+  Jacob.
+\newblock Materials and methods for encapsulation of opv: A review.
+\newblock \emph{Renewable and Sustainable Energy Reviews}, 27:\penalty0
+  104--117, 2013.
+\newblock ISSN 1364-0321.
+
+\end{thebibliography}
