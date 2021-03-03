@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{9}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -25,5 +25,56 @@ Jakaria Ahmad, Kateryna Bazaka, Liam~J Anderson, Ronald~D White, and Mohan~V
 \newblock \emph{Renewable and Sustainable Energy Reviews}, 27:\penalty0
   104--117, 2013.
 \newblock ISSN 1364-0321.
+
+\bibitem[Jaffery et~al.(2015)Jaffery, Ali, Khan, Qureshi, Khan, Ahsan, and
+  Khan]{RN59}
+Syed H~Imran Jaffery, Liaqat Ali, Mushtaq Khan, Hamza~Musaddiq Qureshi,
+  Misbahullah Khan, Zeeshan Ahsan, and Hassan~Abbas Khan.
+\newblock Development and testing of a solar cell test chamber for performance
+  evaluation of solar cells.
+\newblock In \emph{2015 50th International Universities Power Engineering
+  Conference (UPEC)}, pages 1--4. IEEE, 2015.
+\newblock ISBN 1467396826.
+
+\bibitem[Lai et~al.(2016)Lai, Potter~Jr, and Simmons-Potter]{RN43}
+T~Lai, BG~Potter~Jr, and K~Simmons-Potter.
+\newblock Analysis of twelve-month degradation in three polycrystalline
+  photovoltaic modules.
+\newblock In \emph{Reliability of Photovoltaic Cells, Modules, Components, and
+  Systems IX}, volume 9938, page 99380O. International Society for Optics and
+  Photonics, 2016.
+
+\bibitem[Pearson et~al.(2016)Pearson, Hopkinson, Couderc, Domanski,
+  Abdi-Jalebi, and Greenham]{RN62}
+Andrew~J Pearson, Paul~E Hopkinson, Elsa Couderc, Konrad Domanski, Mojtaba
+  Abdi-Jalebi, and Neil~C Greenham.
+\newblock Critical light instability in cb/dio processed pbdttt-eft: Pc71bm
+  organic photovoltaic devices.
+\newblock \emph{Organic Electronics}, 30:\penalty0 225--236, 2016.
+\newblock ISSN 1566-1199.
+
+\bibitem[Zhang et~al.(2018)Zhang, Samuel, Wang, and Lidzey]{RN51}
+Yiwei Zhang, Ifor~DW Samuel, Tao Wang, and David~G Lidzey.
+\newblock Current status of outdoor lifetime testing of organic photovoltaics.
+\newblock \emph{Advanced Science}, 5\penalty0 (8):\penalty0 1800434, 2018.
+\newblock ISSN 2198-3844.
+
+\bibitem[Reese et~al.(2011)Reese, Gevorgyan, Jørgensen, Bundgaard, Kurtz,
+  Ginley, Olson, Lloyd, Morvillo, and Katz]{RN53}
+Matthew~O Reese, Suren~A Gevorgyan, Mikkel Jørgensen, Eva Bundgaard, Sarah~R
+  Kurtz, David~S Ginley, Dana~C Olson, Matthew~T Lloyd, Pasquale Morvillo, and
+  Eugene~A Katz.
+\newblock Consensus stability testing protocols for organic photovoltaic
+  materials and devices.
+\newblock \emph{Solar Energy Materials and Solar Cells}, 95\penalty0
+  (5):\penalty0 1253--1267, 2011.
+\newblock ISSN 0927-0248.
+
+\bibitem[Mateker and McGehee(2017)]{RN60}
+William~R Mateker and Michael~D McGehee.
+\newblock Progress in understanding degradation mechanisms and improving
+  stability in organic photovoltaics.
+\newblock \emph{Advanced materials}, 29\penalty0 (10):\penalty0 1603940, 2017.
+\newblock ISSN 0935-9648.
 
 \end{thebibliography}
