@@ -37,8 +37,13 @@
 \date{\today}
 \maketitle
 \pagebreak
+\begin{singlespace}
+\tableofcontents
+
+\pagebreak
 \chapter{Introduction}
 \section{Literature Review}
+\end{singlespace}
 In order to provide a device to add to the field a thorough literature review was conducted and modified throughout the project. The main objective of this project was to provide the AFMD research group with a device that created different conditions to degrade organic photovoltaic cells. 
 
 Currently the market leader in solar cells are Crystalline Silicon photovoltaics which hold a dominant 95 \% market share in the solar energy sector \cite[p.~1]{RN54} . Organic solar cells have the opportunity to disrupt this market by providing versatile light-weight devices which have little material consumption and low temperature processing. However, the current problems with organic solar cells boil down to long term stability, alongside higher power outputs \cite[p.~7]{RN54} . This project looks at creating a method to help solve the issue of long-term stability by providing the AFMD group (and the world) a device which is able to simulate a lifetime (10-20 years) of outdoor degradation in a matter of months. 
@@ -101,15 +106,20 @@ From Figure \ref{fig:HT10_fig1} it is clear to see that the 2 regions that need 
 
 The above research guided the entire project, particularly the specification which will be discussed in the Design chapter.  
 
-
-\chapter{Mechanical Design}
+\begin{singlespace}
+\chapter{Chamber Design}
 \section{Introduction}
-The design of the container was a process that encompassed several months. This chapter will go through the entire mechanical design process, outlining the key aims, decisions and analysis behind the container design. 
+\end{singlespace}
+The design of the container and associated electronics was a process that encompassed several months. This chapter will go through the entire design process, outlining the key aims, decisions and analysis behind the container design. 
 
-During the mechanical design process, there were two different software’s used: OpenSCAD and SOLIDWORKS. OpenSCAD is an open source software which is compatible with all major computer operating systems. This enabled the start of the design process to occur before the beginning of the Michaelmas Term. Furthermore, as mentioned in the introduction, using opensource software is a key tenant of this project as it needs to be replicable for teams worldwide. SOLIDWORKS however, is not open source, but was still used. This is because there is some key functionality in SOLIDWORKS which helps reduces the time needed on a few of the important steps (such as rendering photos, heat simulations and producing engineering drawings). However, as I will lay out further in the chapter, the main designs were completed on OpenSCAD, and they do hold enough information for a group elsewhere to replicate without significant difficulty. 
+During the mechanical design process, there were two different software’s used: OpenSCAD and SOLIDWORKS. OpenSCAD is an open-source software which is compatible with all major computer operating systems. This enabled the start of the design process to occur before the beginning of the Michaelmas Term. Furthermore, as mentioned in the introduction, using opensource software is a key tenant of this project as it needs to be replicable for teams worldwide. SOLIDWORKS however, is not open source, but was still used. This is because there is some key functionality in SOLIDWORKS which helps reduces the time needed on a few of the important steps (such as rendering photos, heat simulations and producing engineering drawings). However, as I will lay out further in the chapter, the main designs were completed on OpenSCAD, and they do hold enough information for a group elsewhere to replicate without significant difficulty. 
 
 A key consideration was what processes would be needed for the manufacturing of the container. The engineering department has different facilities which could be useful including: a workshop with a CNC machine, multiple different 3D printers, a mechanical workshop which I would be able to use along with an electrical workshop. These all were considered when designing the container and each will be mentioned during this chapter. 
-\section{Specification}
+
+During the electrical Design process there was more of a conundrum. Due to COVID-19 regulations the design lab was closed (at the time when I needed to conduct electrical designs), meaning that I was unable to access key software (SOLIDWORKS PCB and Electrical) – the favoured software by the electrical workshop. Therefore, an open-source solution needed to be found, the solution was KiCAD. KiCAD not only ran on my machine, but also had extensive documentation for me to use and learn from while creating these PCBs. 
+
+As I was relatively new to PCB design and manufacture, the process required many iterations, edits and extensive help from both the electrical workshop and Physics department researchers. This will be discussed further in the later section on electrical design.
+\section{Physical Specification}
 The first stage of the design process was to outline a specification for the testing container. These specifications were drawn from the project brief, the literature review and discussion with my supervisor Professor Moritz Riede. The specification of the design is outlined below:
 \begin{enumerate}
 \item{The container must be able to accommodate a 30 mm x 30 mm substrate provided by AFMD research group.}
@@ -133,8 +143,9 @@ Along with the specification, some further goals were drawn up to provide aims t
 \item{Enable a programmable atmosphere for the box which should be embedded into the GUI built.}
 \end{itemize}
 These goals are important to ensure the ease of use of the box, as well as to reduce the amount of time needed for setting up and running the container. The programmatic testing of the cell, along with a programable atmosphere is useful as it enables the researchers to simply input time, temperature and what combination of gases, which then allows the system to run a test, all the time measuring the outputs and logging it for further analysis. 
-\section{Initial Design}
+\section{Initial Mechanical Designs}
 This specification provided the structure for the testing container. Using work done in the literature review, it was clear that this type of testing container is unusual for the market, thereby requiring innovative design. I was put in contact with Karl-Augustin Zaininger - a Physics researcher who had developed a simplified version of this device – to discuss viable methods for achieving the specifications. This conversation allowed me to create an extremely simple first iteration of the outer shell of the design shown in Figures \ref{fig:plan_iteration1} and \ref{fig:iso_iteration1}. 
+
 \begin{figure}[h]
 \begin{subfigure}{0.5\textwidth}
 \includegraphics[width=0.9\linewidth]{Design_1}
@@ -153,6 +164,7 @@ This specification provided the structure for the testing container. Using work 
 \end{figure}
 
 This model is supposed to coincide with a smaller module named the Substrate Holder, which is designed to sit within the outer shell, holding the substrate, temperature sensor and heater, shown in Figure \ref{fig:substrate_holder1}. The substrate holder is designed to be a removable component which can be edited to match the substrate provided. During the design process, this module was designed to be 3D printed to ensure low costs and easy modification. 
+
 \begin{figure}[h]
 \hfill\includegraphics[width=0.45\linewidth]{Design_4}\hspace*{\fill}
 \caption{Showing the Isometric view of the first iteration of the Substrate Holder}
@@ -166,7 +178,7 @@ Both the substrate holder and Outer Shell were 3D printed to provide a physical 
 \label{fig:3D_print1}
 \end{figure}
 
-\section{Final Models}
+\section{Final Container Models}
 
 These problems caused a redesign of the container, resulting in the model shown in figure (n). The Outer Shell is larger in this model with dimensions 100 mm* 110 mm* 77 mm, with a wall thickness 16 mm, resulting in more space within the container. Additionally, there was a rethink of the sealing method, to eliminate the need of directly screwing onto glass, risking a break, therefore a lid was constructed for the substrate holder, which would cause the glass window to be sandwiched between 2 O-rings creating an airtight seal. The changes to the outer shell can be seen in Figure \ref{fig:outer_final}. 
 
@@ -185,7 +197,7 @@ The substrate holder was also modified with the intention of being unique to thi
 \end{figure}
 
 
-As shown in Figure \ref{fig:sub_layout} the substrate has x contact points and y cells, meaning that the substrate holder needs to provide a method to cleanly contact the contact points, without hindering the flow of air around the cell, or blocking the light incident on the cell surface. The solution was to develop a small lid which would be screwed into the substrate holder, thereby providing downward pressure onto the substrate to ensure clean contacts with the pins. This lid was designed so that the outline did not block any light being incident on the cells.The lid can be seen on top of the substrate holder in Figure \ref{fig:sub_lid}.
+As shown in Figure \ref{fig:sub_layout} the substrate has x contact points and y cells, meaning that the substrate holder needs to provide a method to cleanly contact the contact points, without hindering the flow of air around the cell, or blocking the light incident on the cell surface. The solution was to develop a small lid which would be screwed into the substrate holder, thereby providing downward pressure onto the substrate to ensure clean contacts with the pins. This lid was designed so that the outline did not block any light being incident on the cells. The lid can be seen on top of the substrate holder in Figure \ref{fig:sub_lid}.
 
 \begin{figure}[h]
 \hfill\includegraphics[width=0.45\linewidth]{Design_8}\hspace*{\fill}
@@ -193,16 +205,17 @@ As shown in Figure \ref{fig:sub_layout} the substrate has x contact points and y
 \label{fig:sub_lid}
 \end{figure}
 
-Another important consideration was the ability for the substrate holder to be easily attached to the outer shell within the glovebox. Therefore, the substrate holder needs to have electrical wiring within it, to easily connect up the solar cell with the monitoring device. This process required more time than planned as it was surprisingly difficult to come up with a viable idea. However, conversations with the electrical workshop helped me come up with a simple idea of creating a ‘plug’ which would enable the substrate holder to be connected to wiring that in turn would be connected with the monitoring device. This will be spoken about in the later chapter on electrical design, however, required the altering of the substrate holder so that pins could be placed at the top and the bottom with wires running through the container. 
+Another important consideration was the ability for the substrate holder to be easily attached to the outer shell within the glovebox. Therefore, the substrate holder needs to have electrical wiring within it, to easily connect up the solar cell with the monitoring device. This process required more time than planned as it was surprisingly difficult to come up with a viable idea. However, conversations with the electrical workshop helped me come up with a simple idea of creating a ‘plug’ which would enable the substrate holder to be connected to wiring that in turn would be connected with the monitoring device. This will be spoken about in the later chapter on electrical design, however, required the altering of the substrate holder so that pins could be placed at the top with space for wires to then be soldered onto them. 
 
-Moreover, when speaking to Professor Riede, he pointed out that there needs to be air flow below the substrate for the mixture of gases to have any substantial effect on the degradation of the solar cell. This led to a slight change which can be seen in figure n of 2 holes below where the substrate is meant to sit, which lead to empty space where there can be a good range of mixing to encourage degradation. Another issue was where the heater and temperature sensor would sit. This lead be to place the two holes running through the substrate holder one on top of the other to place the sensor and the heater. These holes were positioned there tactically so that the sensor temperature could be correlated with the predicted substrate temperature by modelling and testing \emph{Link to different chapter}. These changes are shown and labelled in Figure \ref{fig:sub_final}. 
+Moreover, when speaking to Professor Riede, he pointed out that there needs to be air flow below the substrate for the mixture of gases to have any substantial effect on the degradation of the solar cell. This led to a slight change which can be seen in figure n of 2 holes below where the substrate is meant to sit, which lead to empty space where there can be a good range of mixing to encourage degradation. Another issue was where the heater and temperature sensor would sit. This lead be to place the two holes running through the substrate holder one on top of the other to place the sensor and the heater. These holes were positioned there tactically so that the sensor temperature could be correlated with the predicted substrate temperature by modelling and testing \emph{Link to different chapter}. These changes are shown and labelled in Figure \ref{fig:sub_final}.
+
 
 \begin{figure}[h!]
 \hfill\includegraphics[width=0.3\linewidth]{Design_9}\hspace*{\fill}
 \caption{The Final Substrate Layout}
 \label{fig:sub_final}
 \end{figure}
-
+\pagebreak
 \begin{singlespace}
 \bibliographystyle{unsrtnat} %also the big one 
 \bibliography{References}
