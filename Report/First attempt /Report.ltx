@@ -2,7 +2,7 @@
 \usepackage{color}
 \usepackage{pdfpages}
 \usepackage{graphicx}
-\graphicspath{{./Images/Design_chapter/}{./Images/Intro/}}
+\graphicspath{{./Images/Design_chapter/}{./Images/Intro/}{./Images/Appendix/}}
 \usepackage{subcaption}
 \usepackage{wrapfig}
 \usepackage[export]{adjustbox}
@@ -199,7 +199,7 @@ The substrate holder was also modified with the intention of being unique to thi
 
 As shown in Figure \ref{fig:sub_layout} the substrate has x contact points and y cells, meaning that the substrate holder needs to provide a method to cleanly contact the contact points, without hindering the flow of air around the cell, or blocking the light incident on the cell surface. The solution was to develop a small lid which would be screwed into the substrate holder, thereby providing downward pressure onto the substrate to ensure clean contacts with the pins. This lid was designed so that the outline did not block any light being incident on the cells. The lid can be seen on top of the substrate holder in Figure \ref{fig:sub_lid}.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \hfill\includegraphics[width=0.45\linewidth]{Design_8}\hspace*{\fill}
 \caption{Showing the lid used to exert downward pressure on the substrate.}
 \label{fig:sub_lid}
@@ -209,12 +209,68 @@ Another important consideration was the ability for the substrate holder to be e
 
 Moreover, when speaking to Professor Riede, he pointed out that there needs to be air flow below the substrate for the mixture of gases to have any substantial effect on the degradation of the solar cell. This led to a slight change which can be seen in figure n of 2 holes below where the substrate is meant to sit, which lead to empty space where there can be a good range of mixing to encourage degradation. Another issue was where the heater and temperature sensor would sit. This lead be to place the two holes running through the substrate holder one on top of the other to place the sensor and the heater. These holes were positioned there tactically so that the sensor temperature could be correlated with the predicted substrate temperature by modelling and testing \emph{Link to different chapter}. These changes are shown and labelled in Figure \ref{fig:sub_final}.
 
-
 \begin{figure}[h!]
 \hfill\includegraphics[width=0.3\linewidth]{Design_9}\hspace*{\fill}
 \caption{The Final Substrate Layout}
 \label{fig:sub_final}
 \end{figure}
+\pagebreak
+\section{Electrical Specification}
+
+This section will take a more in depth look at the electrical requirements of the chamber. From the substrate layout it is clear that there are 6 solar cells to contact, each with 2 pins, meaning a total of 12 wires will be connected to the cell itself. This means a PCB needs to be manufactured which is able to connect 12 wires to the cells. From there each cell needs to be measured and the value of the Voc and Jsc recorded with the time, temperature and gas composition the substrate is subjected to. 
+
+Adding to this, a measurement device needed to be chosen, along with a controller to run and record the data. After discussion with the AFMD group, Dr. Christophoro and my supervisors Professors Riede and Morris the following electrical specification was drawn up:
+
+\begin{itemize}
+\item[-] The set-up requires a method of differentiating the cell voltages and currents (ideally through the use of a multiplexer
+\item[-] The set-up requires a method of controlling the heat and gas composition within the chamber as well as  the measurement intervals.
+\item[-] The set-up requires a method to record the many* Voc and Jsc measurements.
+\item[-] The set-up requires a method of measuring the Voc and Jsc.
+\item[-] The set-up requires a method of measuring the temperature conditions within the container.
+\end{itemize}
+
+
+This specification is non-exhaustive but does provide a clear structure to what is needed for the successful manufacturing of the set-up
+
+
+\section{Electrical Design}
+
+For the control systems, there were two options: a Raspberry Pi or an Arduino. Both have extensive documentation and are relatively inexpensive given their power. To decide which would be more suitable a Multi-Criteria analysis was undertaken with the results shown below:
+
+
+\begin{tabular}{c|c|c}
+&Raspberry Pi & Arduino \\
+\hline
+Cost & 4 & 10\\
+\hline
+Simplicity of use & 10 & 5 \\
+\hline
+Size & 3 &5  \\
+\hline 
+Adaptability & 20 & 10 \\
+\hline
+Total & 37 & 30\\
+\end{tabular}
+
+The cost of a Raspberry Pi 4 from RS- components was \pounds53.22 \cite{RN63}while the cost of the Arduino Uno Rev3 which I planned on using is \pounds20.40 \cite{RN64}. Cost was a factor in my decision, it was not as important as adaptability, yet more important than size, therefore I rated the Arduino with a score of 10, and Raspberry Pi with a score of 4. The simplicity to use was something that I believe should have the same weighting as cost. From discussions with colleagues, it was clear that running different programs was more difficult on the Arduino due to the fact it stored one program at a time, meaning each time a procedure needed to be changed, the Arduino needed to be plugged in to a computer. The Raspberry-Pi, however, is simpler, it itself is more like a conventional computer, able to store multiple programs, run with a modified Linux operating system, thereby creating a simpler system for use by different people. 
+
+The size was a small factor to consider, thereby the reduced emphasis on scoring. Lastly, adaptability of the device was integral. The device needed to be able to store data, as well as run code which was easily modifiable for those using it. This created a clear divide between the two products as the Raspberry-Pi is by far considered a more ‘rounded’ device compared to an Arduino which is usually used for highly specific applications. 
+
+
+From the Multi-criteria analysis above it is clear that the Raspberry-Pi is the preferred device and thereby was the chosen product for this application. From here I consulted Dr. Christophoro again (after advice from Professor Riede) to see is he had any pre-made equipment that I could use/modify that would suit my needs. After discussions with Dr. Christophoro, I was pointed to some PCB designs in his GitHub repository which could be modified to suit my applications \cite{RN65}. The two schematics of designs that I was directed to are shown in the appendix 1 and 2.
+
+These designs were surplus to my needs and required significant modification to ensure that they were both manufacturable within the engineering workshop and suitable for the role they fulfilled in the set-up. 
+
+Firstly, the design named Base 8x, had significantly more sockets than was needed, I was only planning on testing 1 substrate, therefore did not need a base, which could ‘handle’ 8. Furthermore, the PCB was designed to interface with an Arduino, meaning a subsequent header needed to be implemented to ensure that the PCB was able to interface with the Raspberry Pi. Other small modifications include adding resistors and a header for a temperature sensor to be wired in, as well as creating the mounts for a secondary PCB to be mounted (which would hold the Solid-State Relay needed to control the mains powered cartridge heater). 
+
+Other changes included ensuring that the tracks were routed with large enough profiles to be printed on the departmental printers, as well as modifying the PCB so that it only had two working layers. These modifications in the schematic can be seen in appendix 3. 
+
+For the PCB named Solar Mux- appendix 2, there needed to be significantly fewer modifications, yet they were still significant. Firstly, the number of relays were reduced from n to 17 as only 6 solar cells were being measured rather than 10. Furthermore, there were significant modifications to the routing of the tracks as again this PCB was not designed to be printed in the engineering department thereby meaning the tracks needed to be made larger. These changes to the schematic can be seen in appendix 4. 
+
+
+
+
+
 \pagebreak
 \begin{singlespace}
 \bibliographystyle{unsrtnat} %also the big one 
@@ -224,5 +280,6 @@ Moreover, when speaking to Professor Riede, he pointed out that there needs to b
 \appendix
 \appendixpage
 \begin{appendix}
+
 \end{appendix}
 \end{document}

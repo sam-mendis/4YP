@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.8)  4 MAR 2021 09:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.8)  4 MAR 2021 12:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1074,12 +1074,12 @@ Overfull \hbox (7.45842pt too wide) in paragraph at lines 53--54
 g of solar cells; there-fore it was ex-pec-ted that some-thing
  []
 
-<./Images/Intro/HT9_Fig1.png, id=57, 644.4075pt x 415.5525pt>
+<./Images/Intro/HT9_Fig1.png, id=67, 644.4075pt x 415.5525pt>
 File: ./Images/Intro/HT9_Fig1.png Graphic file (type png)
 <use ./Images/Intro/HT9_Fig1.png>
 Package pdftex.def Info: ./Images/Intro/HT9_Fig1.png  used on input line 57.
 (pdftex.def)             Requested size: 225.21626pt x 145.2363pt.
-<./Images/Intro/HT9_Fig2.png, id=59, 653.44125pt x 553.06625pt>
+<./Images/Intro/HT9_Fig2.png, id=69, 653.44125pt x 553.06625pt>
 File: ./Images/Intro/HT9_Fig2.png Graphic file (type png)
 <use ./Images/Intro/HT9_Fig2.png>
 Package pdftex.def Info: ./Images/Intro/HT9_Fig2.png  used on input line 60.
@@ -1158,13 +1158,13 @@ l.81 ...10 cycles of humidity freeze (HF) from −
                                                   40 to +85 °C at 85\% humi...
 
 ? 
-<./Images/Intro/HT3_Fig2.png, id=86, 997.7275pt x 883.3pt>
+<./Images/Intro/HT3_Fig2.png, id=96, 997.7275pt x 883.3pt>
 File: ./Images/Intro/HT3_Fig2.png Graphic file (type png)
 <use ./Images/Intro/HT3_Fig2.png>
 Package pdftex.def Info: ./Images/Intro/HT3_Fig2.png  used on input line 86.
 (pdftex.def)             Requested size: 450.43253pt x 398.77522pt.
 [4 <./Images/Intro/HT3_Fig2.png>]
-<./Images/Intro/HT10_Fig1.png, id=100, 871.255pt x 605.26125pt>
+<./Images/Intro/HT10_Fig1.png, id=110, 871.255pt x 605.26125pt>
 File: ./Images/Intro/HT10_Fig1.png Graphic file (type png)
 <use ./Images/Intro/HT10_Fig1.png>
 Package pdftex.def Info: ./Images/Intro/HT10_Fig1.png  used on input line 100.
@@ -1186,13 +1186,13 @@ out-side to con-nect to the sub-strate for meas-ure-ments.
  []
 
 [7]
-<./Images/Design_chapter/Design_1.png, id=130, 438.63875pt x 439.6425pt>
+<./Images/Design_chapter/Design_1.png, id=140, 438.63875pt x 439.6425pt>
 File: ./Images/Design_chapter/Design_1.png Graphic file (type png)
 <use ./Images/Design_chapter/Design_1.png>
 Package pdftex.def Info: ./Images/Design_chapter/Design_1.png  used on input li
 ne 151.
 (pdftex.def)             Requested size: 225.21626pt x 225.7375pt.
-<./Images/Design_chapter/Design_2.png, id=131, 438.63875pt x 439.6425pt>
+<./Images/Design_chapter/Design_2.png, id=141, 438.63875pt x 439.6425pt>
 File: ./Images/Design_chapter/Design_2.png Graphic file (type png)
 <use ./Images/Design_chapter/Design_2.png>
 Package pdftex.def Info: ./Images/Design_chapter/Design_2.png  used on input li
@@ -1203,7 +1203,7 @@ Overfull \hbox (2.32138pt too wide) in paragraph at lines 150--157
 []$[]$ $[]$ 
  []
 
-<./Images/Design_chapter/Design_3.png, id=132, 438.63875pt x 439.6425pt>
+<./Images/Design_chapter/Design_3.png, id=142, 438.63875pt x 439.6425pt>
 File: ./Images/Design_chapter/Design_3.png Graphic file (type png)
 <use ./Images/Design_chapter/Design_3.png>
 Package pdftex.def Info: ./Images/Design_chapter/Design_3.png  used on input li
@@ -1212,7 +1212,7 @@ ne 161.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./Images/Design_chapter/Design_4.png, id=134, 438.63875pt x 439.6425pt>
+<./Images/Design_chapter/Design_4.png, id=144, 438.63875pt x 439.6425pt>
 File: ./Images/Design_chapter/Design_4.png Graphic file (type png)
 <use ./Images/Design_chapter/Design_4.png>
 Package pdftex.def Info: ./Images/Design_chapter/Design_4.png  used on input li
@@ -1221,7 +1221,7 @@ ne 169.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./Images/Design_chapter/Design_5.png, id=136, 438.63875pt x 439.6425pt>
+<./Images/Design_chapter/Design_5.png, id=146, 438.63875pt x 439.6425pt>
 File: ./Images/Design_chapter/Design_5.png Graphic file (type png)
 <use ./Images/Design_chapter/Design_5.png>
 Package pdftex.def Info: ./Images/Design_chapter/Design_5.png  used on input li
@@ -1234,13 +1234,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [9 <./Images/Design_chapter/Design_3.png> <./Images/Design_chapter/Design_4.png
 >]
-<./Images/Design_chapter/Design_6.png, id=155, 438.63875pt x 439.6425pt>
+<./Images/Design_chapter/Design_6.png, id=165, 438.63875pt x 439.6425pt>
 File: ./Images/Design_chapter/Design_6.png Graphic file (type png)
 <use ./Images/Design_chapter/Design_6.png>
 Package pdftex.def Info: ./Images/Design_chapter/Design_6.png  used on input li
 ne 186.
 (pdftex.def)             Requested size: 225.21626pt x 225.7375pt.
-<./Images/Design_chapter/Design_7.png, id=157, 438.63875pt x 439.6425pt>
+<./Images/Design_chapter/Design_7.png, id=167, 438.63875pt x 439.6425pt>
 File: ./Images/Design_chapter/Design_7.png Graphic file (type png)
 <use ./Images/Design_chapter/Design_7.png>
 Package pdftex.def Info: ./Images/Design_chapter/Design_7.png  used on input li
@@ -1250,61 +1250,68 @@ ne 194.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./Images/Design_chapter/Design_8.png, id=160, 438.63875pt x 439.6425pt>
+<./Images/Design_chapter/Design_8.png, id=170, 438.63875pt x 439.6425pt>
 File: ./Images/Design_chapter/Design_8.png Graphic file (type png)
 <use ./Images/Design_chapter/Design_8.png>
 Package pdftex.def Info: ./Images/Design_chapter/Design_8.png  used on input li
 ne 203.
 (pdftex.def)             Requested size: 225.21626pt x 225.7375pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [10 <./Images/Design_chapter/Design_5.png> <./Images/Design_chapter/Design_6.pn
 g>]
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 210.
-<./Images/Design_chapter/Design_9.png, id=171, 438.63875pt x 439.6425pt>
+<./Images/Design_chapter/Design_9.png, id=181, 438.63875pt x 439.6425pt>
 File: ./Images/Design_chapter/Design_9.png Graphic file (type png)
 <use ./Images/Design_chapter/Design_9.png>
 Package pdftex.def Info: ./Images/Design_chapter/Design_9.png  used on input li
-ne 214.
+ne 213.
 (pdftex.def)             Requested size: 150.14671pt x 150.48943pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [11 <./Images/Design_chapter/Design_7.png> <./Images/Design_chapter/Design_8.pn
-g>] (./Report.bbl [12 <./Images/Design_chapter/Design_9.png>]) [13
+g>]
+Overfull \hbox (1.6776pt too wide) in paragraph at lines 233--234
+[]\OT1/phv/m/n/10.95 This spe-cific-a-tion is non-exhaustive but does provide a
+ clear struc-ture to what is needed for the suc-cess-ful
+ []
 
-] [14
+[12 <./Images/Design_chapter/Design_9.png>] [13] [14] (./Report.bbl) [15
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 228.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 228.
+[16
 
-(./Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 228.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 228.
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 284.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 284.
+ (./Report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 284.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 284.
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: 0EEE507C140B3BB3B58A8871D4300061;425.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 228.
+(rerunfilecheck)             Checksum: 84A5B79418DE060BED46A422A7991965;558.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
  ) 
 Here is how much of TeX's memory you used:
- 14766 strings out of 480608
- 267447 string characters out of 5903630
- 525907 words of memory out of 5000000
- 30292 multiletter control sequences out of 15000+600000
+ 14784 strings out of 480608
+ 267644 string characters out of 5903630
+ 526028 words of memory out of 5000000
+ 30303 multiletter control sequences out of 15000+600000
  563947 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,8n,77p,968b,791s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,8n,77p,994b,791s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2020/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/
-2020/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2020/te
-xmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Report.pdf (15 pages, 3670582 bytes).
+exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/te
+xlive/2020/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2
+020/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2020/tex
+mf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on Report.pdf (17 pages, 3690921 bytes).
 PDF statistics:
- 222 PDF objects out of 1000 (max. 8388607)
- 174 compressed objects within 2 object streams
- 52 named destinations out of 1000 (max. 500000)
- 122 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 255 PDF objects out of 1000 (max. 8388607)
+ 203 compressed objects within 3 object streams
+ 59 named destinations out of 1000 (max. 500000)
+ 138 words of extra memory for PDF output out of 10000 (max. 10000000)
 

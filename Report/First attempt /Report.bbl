@@ -1,4 +1,4 @@
-\begin{thebibliography}{9}
+\begin{thebibliography}{12}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -76,5 +76,17 @@ William~R Mateker and Michael~D McGehee.
   stability in organic photovoltaics.
 \newblock \emph{Advanced materials}, 29\penalty0 (10):\penalty0 1603940, 2017.
 \newblock ISSN 0935-9648.
+
+\bibitem[RN6(Accessed: 12/12/2020{\natexlab{a}})]{RN63}
+Accessed: 12/12/2020{\natexlab{a}}.
+\newblock URL \url{https://uk.rs-online.com/web/p/raspberry-pi/1822096/}.
+
+\bibitem[RN6(Accessed: 12/12/2020{\natexlab{b}})]{RN64}
+Accessed: 12/12/2020{\natexlab{b}}.
+\newblock URL \url{https://uk.rs-online.com/web/p/arduino/7154081/}.
+
+\bibitem[RN6(Accessed: 21/01/2021)]{RN65}
+Accessed: 21/01/2021.
+\newblock URL \url{https://github.com/greyltc/hardware}.
 
 \end{thebibliography}

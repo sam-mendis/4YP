@@ -6,3 +6,5 @@
 \contentsline {section}{\numberline {2.2}Physical Specification}{7}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Initial Mechanical Designs}{8}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Final Container Models}{9}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Electrical Specification}{12}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Electrical Design}{12}{section.2.6}%
