@@ -268,6 +268,9 @@ Other changes included ensuring that the tracks were routed with large enough pr
 For the PCB named Solar Mux- appendix 2, there needed to be significantly fewer modifications, yet they were still significant. Firstly, the number of relays were reduced from n to 17 as only 6 solar cells were being measured rather than 10. Furthermore, there were significant modifications to the routing of the tracks as again this PCB was not designed to be printed in the engineering department thereby meaning the tracks needed to be made larger. These changes to the schematic can be seen in appendix 4. 
 
 
+\section {Code Design}
+
+Another integral component to the container is the control electronics which are created to run it. After the Raspberry Pi was chosen there was some general research through the documentation to understand the ways to use the General-Purpose Input Output header to control electronics (GPIO). From reading the documentation for the GPIO \cite{RN67}, it was clear there were 3 real options for programming language, C, C++ or Python. As someone who has experience in Python, alongside the \emph{extensive} documentation for the GPIO pins in Python \cite{RN68} it was a clear choice to use Python as the programming language. 
 
 
 
