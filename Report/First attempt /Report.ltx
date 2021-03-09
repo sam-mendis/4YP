@@ -268,9 +268,25 @@ Other changes included ensuring that the tracks were routed with large enough pr
 For the PCB named Solar Mux- appendix 2, there needed to be significantly fewer modifications, yet they were still significant. Firstly, the number of relays were reduced from n to 17 as only 6 solar cells were being measured rather than 10. Furthermore, there were significant modifications to the routing of the tracks as again this PCB was not designed to be printed in the engineering department thereby meaning the tracks needed to be made larger. These changes to the schematic can be seen in appendix 4. 
 
 
-\section {Code Design}
+\section {Code Planning}
 
 Another integral component to the container is the control electronics which are created to run it. After the Raspberry Pi was chosen there was some general research through the documentation to understand the ways to use the General-Purpose Input Output header to control electronics (GPIO). From reading the documentation for the GPIO \cite{RN67}, it was clear there were 3 real options for programming language, C, C++ or Python. As someone who has experience in Python, alongside the \emph{extensive} documentation for the GPIO pins in Python \cite{RN68} it was a clear choice to use Python as the programming language. 
+
+Using the library Gpiozero, I was able to run some tests to ensure that the raspberry Pi purchased was working correctly, as well as checking some other features (such as the multiprocessing library) work with Gpiozero. To do this I ran multiple LEDs blinking in parallel with each other, using different time intervals for the blink. This proved that the Gpiozero library worked with the multiprocessing library and enabled the planning of the main script that was going to control the testing container. 
+
+The thought process behind the code architecture was to develop a Graphical User Interphase (GUI) to enable easy control of the testing container. The GUI would then display specific information while the test was running, enabling a convenient ‘check’ for the user to ensure the test is proceeding as planned. The resultant GUI can be seen as a screen-shot in Figure \ref{fig:GUI_1}.
+There were, however, some problems with this set-up. Once the GUI itself was constructed I attempted to integrate it with the Multiprocessing package. No matter how I tried, this did not work. Therefore, I had to make a decision, do I learn another package and attempt to make a GUI that works with a package that runs multi-processing, or do I put the GUI to one side, and create a script which is easily editable and thereby negates many of the advantages of the GUI, allowing me to save time and focus on other aspects which are more important to the successful development of the chamber?
+
+Due to the iterative nature of this project, the decision was taken to prioritise constructing a working container that may not hit all the specification, rather than create a container that was 80\% working yet not ready to test solar cells. For this reason, I decided to put the GUI to one side and develop the code so that it was simple to change the parameters of the test from within. 
+
+To do this, I opted to use Object Oriented programming to keep track of all the different parameters, as well as to ensure simplicity for those using the code. An overall architecture was drawn up and is shown below in Figure \ref{fig:code_planning}.
+
+There were many difficulties and issues which arose when developing and testing this code, which will be discussed further in the manufacturing chapter. 
+
+
+\chapter{Manufacturing}. 
+
+
 
 
 
