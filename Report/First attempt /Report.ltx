@@ -37,13 +37,11 @@
 \date{\today}
 \maketitle
 \pagebreak
-\begin{singlespace}
-\tableofcontents
 
+\tableofcontents
 \pagebreak
 \chapter{Introduction}
 \section{Literature Review}
-\end{singlespace}
 In order to provide a device to add to the field a thorough literature review was conducted and modified throughout the project. The main objective of this project was to provide the AFMD research group with a device that created different conditions to degrade organic photovoltaic cells. 
 
 Currently the market leader in solar cells are Crystalline Silicon photovoltaics which hold a dominant 95 \% market share in the solar energy sector \cite[p.~1]{RN54} . Organic solar cells have the opportunity to disrupt this market by providing versatile light-weight devices which have little material consumption and low temperature processing. However, the current problems with organic solar cells boil down to long term stability, alongside higher power outputs \cite[p.~7]{RN54} . This project looks at creating a method to help solve the issue of long-term stability by providing the AFMD group (and the world) a device which is able to simulate a lifetime (10-20 years) of outdoor degradation in a matter of months. 
@@ -265,7 +263,47 @@ Firstly, the design named Base 8x, had significantly more sockets than was neede
 
 Other changes included ensuring that the tracks were routed with large enough profiles to be printed on the departmental printers, as well as modifying the PCB so that it only had two working layers. These modifications in the schematic can be seen in appendix 3. 
 
-For the PCB named Solar Mux- appendix 2, there needed to be significantly fewer modifications, yet they were still significant. Firstly, the number of relays were reduced from n to 17 as only 6 solar cells were being measured rather than 10. Furthermore, there were significant modifications to the routing of the tracks as again this PCB was not designed to be printed in the engineering department thereby meaning the tracks needed to be made larger. These changes to the schematic can be seen in appendix 4. 
+For the PCB named Solar Mux- appendix 2, there needed to be significantly fewer modifications, yet they were still significant. Firstly, the number of relays were reduced from 21 to 17 as only 6 solar cells were being measured rather than 8. Furthermore, there were significant modifications to the routing of the tracks as again this PCB was not designed to be printed in the engineering department thereby meaning the tracks needed to be made larger. These changes to the schematic can be seen in appendix 4. 
+
+I also designed a third PCB whose schematic can be seen as appendix 5. This is a small PCB designed to isolate mains current from the board named base, thereby enabling me to run tests without the hazards posed by wiring up to the mains. 
+
+Once these were all designed, they needed to be created into models that were manufacturable. Each PCB had two working layers made of copper, the components to be soldered on were nearly all through-hole mounted for ease of soldering and the tracks were mainly 1 mm thick to make it easy to solder the components onto. Each PCB can be seen from two views in the Figures \ref{fig:Base_3D},\ref{fig:MUX_3D},\ref{fig:SSR_3D}.
+
+\begin{figure}[h]
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\linewidth]{Base_3D_1}
+\caption{Front View of PCB named Base}
+\end{subfigure} \begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\linewidth]{Base_3D_2}
+\caption{Back View of PCB named Base}
+\end{subfigure}
+\caption{Showing the model of the PCB named Base }
+\label{fig:Base_3D }
+\end{figure}
+
+\begin{figure}[b]
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\linewidth]{MUX_3D_1}
+\caption{Front View of PCB named Solar Multiplexer}
+\end{subfigure} \begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\linewidth]{MUX_3D_2}
+\caption{Back View of PCB named Solar Multiplexer}
+\end{subfigure}
+\caption{Showing the model of the PCB named Solar Multiplexer }
+\label{fig:MUX_3D }
+\end{figure}
+
+\begin{figure}[h]
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\linewidth]{SSr_3D_1}
+\caption{Front View of PCB named SSR}
+\end{subfigure} \begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\linewidth]{SSR_3D_2}
+\caption{Back View of PCB named SSR}
+\end{subfigure}
+\caption{Showing the model of the PCB named SSR }
+\label{fig:SSR_3D }
+\end{figure}
 
 
 \section {Code Planning}
@@ -284,8 +322,41 @@ To do this, I opted to use Object Oriented programming to keep track of all the 
 There were many difficulties and issues which arose when developing and testing this code, which will be discussed further in the manufacturing chapter. 
 
 
+\begin{singlespace}
 \chapter{Manufacturing}. 
+\section{Introduction}
+\end{singlespace}
+In this chapter I will be discussing the different stages of manufacturing of the chamber. The manufacturing process is split into three sections in this chapter which cover the manufacturing of the chamber itself, the manufacturing of the PCB and associated electronics as well as the code development. 
 
+From the Gantt chart shown in the Appendix, Figure \ref{fig:Gantt}, the manufacturing process was estimated to take at least n weeks, this prediction included any time that was needed for iterating as well as physically building the components. Unfortunately, the work in this chapter was hampered by the impact of the second national lockdown in January 2021, with the details of the mitigations strategies I took outlined in this chapter as well as any forced changes I had to make.
+
+As mentioned in the Design Chapter, the plan was to use the engineering department workshops for the manufacturing of all the parts of this chamber. There were some limitations, such as the fact the PCB printing machine could only print 2 layers and there were limited materials available for 3D printing. However, this was dwarfed by the expertise that I was able to utilise while developing these designs, ensuring that the chamber was constructed to the highest standards. This chapter will discuss the decisions made during the manufacturing process, any modifications made and their impact on the final product. 
+
+
+\section{Chamber Manufacturing}
+
+This section will discuss the manufacturing of the container itself, including any components that are mechanically attached to it. From the designs shown in the previous chapter, engineering drawings were produced and shown to Duncan Constable (the senior workshop technician) who advised me to make some changes. Firstly, I needed to chamfer the inside edges to ensure that the CNC miller could manufacture the chamber. Furthermore, I was instructed to change the shape of the o-ring ‘gaps’ so that the o-rings would not tear around the sharp corners. 
+
+Once these edits were made, the designs were submitted to manufacturing for a second time, they shown in the appendix as Figure \ref{fig:drawing_1}, \ref{fig:drawing_2}, \ref{fig:drawing_3}.
+
+\section{PCB Manufacturing}
+Talking about PCB manufacturing
+\section{Code Development}
+Talking about Code development
+\chapter{Testing}
+
+\section{Introduction}
+Intro to the testing
+\section{Electrical Testing}
+Talk about PCB testing 
+\section{Integration Testing}
+Talk about integrating the box and testing
+\section{Leak Testing}
+Talk about the leak tests and results
+\section{Overall test}
+Talk about short time test with a solar cell
+
+\chapter{Conclusion}
 
 
 
@@ -299,6 +370,29 @@ There were many difficulties and issues which arose when developing and testing 
 \appendix
 \appendixpage
 \begin{appendix}
+\begin{figure}[h!]
+\includegraphics[width=1.4\linewidth, angle=270]{Appendix_1}
+\caption{The base schematic provided to me by Dr. Christophoro}
+\label{fig:Appendix1}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[width=1.4\linewidth, angle=270]{Appendix_2}
+\caption{The multiplexer schematic provided to me by Dr. Christophoro}
+\label{fig:Appendix2}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[width=1.4\linewidth, angle=270]{Appendix_3}
+\caption{The edited version of the base schematic in Appendix 1 showing the changes I made}
+\label{fig:Appendix3}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[width=1.4\linewidth, angle=270]{Appendix_4}
+\caption{The edited version of the multiplexer schematic in Appendix 2 showing the changes I made}
+\label{fig:Appendix4}
+\end{figure}
 
 \end{appendix}
 \end{document}
