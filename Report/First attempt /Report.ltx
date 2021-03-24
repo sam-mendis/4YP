@@ -2,7 +2,7 @@
 \usepackage{color}
 \usepackage{pdfpages}
 \usepackage{graphicx}
-\graphicspath{{./Images/Design_chapter/}{./Images/Intro/}{./Images/Appendix/}}
+\graphicspath{{./Images/Design_chapter/}{./Images/Intro/}{./Images/Appendix/}{./Images/Manufacturing_chapter/}}
 \usepackage{subcaption}
 \usepackage{wrapfig}
 \usepackage[export]{adjustbox}
@@ -106,7 +106,6 @@ The above research guided the entire project, particularly the specification whi
 
 \begin{singlespace}
 \chapter{Chamber Design}
-\section{Introduction}
 \end{singlespace}
 The design of the container and associated electronics was a process that encompassed several months. This chapter will go through the entire design process, outlining the key aims, decisions and analysis behind the container design. 
 
@@ -324,7 +323,6 @@ There were many difficulties and issues which arose when developing and testing 
 
 \begin{singlespace}
 \chapter{Manufacturing}. 
-\section{Introduction}
 \end{singlespace}
 In this chapter I will be discussing the different stages of manufacturing of the chamber. The manufacturing process is split into three sections in this chapter which cover the manufacturing of the chamber itself, the manufacturing of the PCB and associated electronics as well as the code development. 
 
@@ -335,12 +333,77 @@ As mentioned in the Design Chapter, the plan was to use the engineering departme
 
 \section{Chamber Manufacturing}
 
-This section will discuss the manufacturing of the container itself, including any components that are mechanically attached to it. From the designs shown in the previous chapter, engineering drawings were produced and shown to Duncan Constable (the senior workshop technician) who advised me to make some changes. Firstly, I needed to chamfer the inside edges to ensure that the CNC miller could manufacture the chamber. Furthermore, I was instructed to change the shape of the o-ring ‘gaps’ so that the o-rings would not tear around the sharp corners. 
+This section will discuss the manufacturing of the container itself, including any components that are mechanically attached to it. From the designs shown in the previous chapter, engineering drawings were produced and shown to Duncan Constable (the senior workshop technician) who advised me that the inside corners would come out rounded due to the precision of the CNC mill. Furthermore, I was instructed to change the shape of the O-ring ‘gaps’ so that the O-rings would not tear around the sharp corners. 
 
-Once these edits were made, the designs were submitted to manufacturing for a second time, they shown in the appendix as Figure \ref{fig:drawing_1}, \ref{fig:drawing_2}, \ref{fig:drawing_3}.
+Another important factor was the material selection. As mentioned previously, the material needed to be impermeable, preferably metal with limited corrosion. Speaking to Duncan about the preference of Aluminium, he suggested Duralumin, which the workshop had an abundance of spare stock and it was the most suitable metal for the CNC miller to manufacture. Dural is a 2000 series Aluminium alloy, with the main materials apart from Aluminium being Copper, Manganese and Magnesium \cite{RN73}.
+
+
+The designs were then submitted to the workshop for manufacturing with the drawings shown in the appendix as Figure \ref{fig:drawing_1}, \ref{fig:drawing_2}, \ref{fig:drawing_3}. Alongside the parts shown in the appendix, the electronic windows were manufactured from scrap metal using a lathe, with the drawings shown below. This is not the exact replica of the designs shown in Figure N, due to the difficulty in creating a leakproof 3D printed part. Therefore, with advice from the Student/Staff workshop I created the following drawing shown in Figure \ref{fig:metal_window} for the holes in the side of the container. These parts were then modified by hand to create leakproof wire connections between outside the container and within, with the before and after shown in Figure \ref{fig:b_a_metalwindow}. 
+
+\begin{figure}[h!]
+\hfill\includegraphics[width=0.5\linewidth]{elec_windows_drawings}\hspace*{\fill}
+\caption{The Final Substrate Layout}
+\label{fig:metal_window}
+\end{figure}
+
+
+\begin{figure}[h]
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\linewidth]{image1}
+\caption{Front view of the modified Electrical Window}
+\end{subfigure} \begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\linewidth]{image2}
+\caption{Back view of the modified Electrical Window}
+\end{subfigure}
+\caption{Showing the modified Electrical Window }
+\label{fig:b_a_metalwindow }
+\end{figure}
+
+
+As can be seen, the wires are glued into the metal, meaning that they should not allow any leakage of air through, as well as not allowing short circuit due to the metallic casing. Once the outer shell had been manufactured, parts needed to be fitted to it. Firstly, the push-fit valves, which were sourced from RS\cite{RN33}, were screwed into place, with piping fitted to ensure that the system worked. Furthermore, assembly with the o-rings took place upon both the metal-lid and the outer shell. The process can be seen in the following Figures \ref{fig:outer_shell}, \ref{fig:metal_lid}, \ref{fig:oring_assem}. 
+
+The O-rings sandwiched an acrylic plate which was used for the testing of the system (before any expensive glassware was bought). This assembly concluded with the attachment of the safety relief valve shown in Figure \ref{fig:safety_relief} sourced from Tameson \cite{RN36}.  Lastly, the assembly was completed using small guide pins, labelled in Figure \ref{fig:assembly} alongside the M4 screws used to tighten the lid onto the glass plate thereby creating an airtight seal. The testing of this will be discussed further in the following chapter. 
+
+The other component which needed manufacturing was the substrate holder. Figures \ref{} show the designs which were manufactured using the departmental 3D printing machines with ABS (Acrylonitrile Butadiene Styrene) plastic. ABS has a softening point of between 160 – 170 \textdegree  C \cite[p.~744]{RN70}, which is lower than desired for the container, however, this version was used as a test to see if it was possible to insert the electrical contacts with this design. 
+Figure \ref{failure} shows my attempts to insert electrical contact pins \cite{RN71} into the substrate holder. Unfortunately, this was unsuccessful due to the fact these pins were extremely fiddly to handle, coupled with the very small amount of space I had to solder wires onto the pin while not melting the plastic. This required a rapid solution otherwise the timeline for the project would be slowed down. 
+
+The solution was creating a new 3D printed part, with more space for the pins to be inserted and soldered correctly. The new substrate holder would also be made from PEEK (Polyether Ether Ketone) rather than ABS due to its higher MP (260 \textdegree  C) \cite{RN72} allowing more room for error in my soldering and higher temperatures within the container. The new substrate holder can be seen in \ref{fig:substrate_PEEK}, with Figure \ref{fig:pins_peek} showing the electrical pins inserted correctly. This was then connected to the wires exiting the container with the fully assembled chamber shown in Figure \ref{fig:assembled}
 
 \section{PCB Manufacturing}
-Talking about PCB manufacturing
+
+This section will talk about the manufacturing of the PCB and associated electronics of the chamber. As mentioned in the previous chapter, the PCB was designed to be manufactured in the Engineering Department Electronics Workshop. This meant that there were some limitations in manufacturing such as: the fact that the printer was unable to create plated through holes, thereby meaning nearly all components could only be connected to the bottom layer. Furthermore, this meant the via’s produced needed to have wires running through them and soldered onto both layers, adding time and complexity to the soldering process. 
+
+Using a soldering iron, I was able to complete two of the three PCBs. I was not allowed to solder the PCB named SSR-PCB as it would be connected to mains, therefore, cause a safety risk if someone not qualified completed the wiring. Figures \ref{fig:base} and \ref{fig:mux} show both sides of the completed PCBs. 
+
+\begin{figure}[h!]
+\begin{subfigure}{1\textwidth}
+\includegraphics[width=0.9\linewidth]{Base_front}
+\caption{Front View of PCB named Base}
+\end{subfigure} \begin{subfigure}{1\textwidth}
+\includegraphics[width=0.9\linewidth]{Base_back}
+\caption{Back View of PCB named Base}
+\end{subfigure}
+\caption{Showing the fully built PCB named Base }
+\label{fig:base}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{subfigure}{1\textwidth}
+\includegraphics[width=0.9\linewidth]{Mux_front}
+\caption{Front View of PCB named Solar Multiplexer}
+\end{subfigure} \begin{subfigure}{1\textwidth}
+\includegraphics[width=0.9\linewidth]{Mux_back}
+\caption{Back View of PCB named Solar Multiplexer}
+\end{subfigure}
+\caption{Showing the fully built PCB named Solar Multiplexer }
+\label{fig:MUX}
+\end{figure}
+
+
+
+The PCB in Figure\ref{fig:base} does have significant tidiness issues. These can be explained by the soldering iron I was using during the first part of the soldering process. Unfortunately, my first soldering iron did not reach high enough temperatures for easy, smooth soldering. However, once I changed soldering iron (for which the PCB named Solar Multiplexer was created with the quality and ease significantly increased. I  8
+
+
 \section{Code Development}
 Talking about Code development
 \chapter{Testing}
@@ -393,6 +456,13 @@ Talk about short time test with a solar cell
 \caption{The edited version of the multiplexer schematic in Appendix 2 showing the changes I made}
 \label{fig:Appendix4}
 \end{figure}
+
+\begin{figure}[h!]
+\includegraphics[width=1.4\linewidth, angle=270]{Gantt}
+\caption{A Gantt chart showing the desired timescale for the project}
+\label{fig:Gantt}
+\end{figure}
+
 
 \end{appendix}
 \end{document}
