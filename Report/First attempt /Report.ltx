@@ -405,7 +405,23 @@ The PCB in Figure\ref{fig:base} does have significant tidiness issues. These can
 
 
 \section{Code Development}
-Talking about Code development
+
+The code development for the system was something that spanned the entire project. This is due to the slight changes in scope, some of which mentioned in the previous chapter. However, the core of the program was unchanging allowing a good base for the measurement system to be built on. 
+
+As mentioned in the previous chapter, the code was to be designed using Object Oriented Programming with the absence of a GUI to control the system. The lack of GUI does add slightly more complexity to the user, however, does not create a \emph{unusable} system. The main issue with not having a GUI is the fact that the user cannot easily input the testing conditions into the program. Instead they have to delve into the code to \emph{find} the exact point to input it.
+
+The method used to combat this is a small introduction at the top of the script explaining where to input the testing conditions and exactly what variables this system is able to change, shown in Figure \ref{fig:code_intro}. A small document was also produced (shown in the Appendix as Figure \ref{fig:code_doc}) so the user could easily understand the test thereby allowing them to utilise the functionality best of the testing chamber.
+
+The key aspect of the code is to control the environment inside the temperature while recording the Voc and Jsc values of the cell. For accurate measurements, the AFMD group requested a Keithley 2400 was used to measure the solar cells. The advantage of using a Keithley is that it is also able to set a voltage bias across the cells and allow degradation to occur near maximum power point. This aspect is beyond the scope of the project, however, keeping this in mind would help those using it create modifications to suit their needs. 
+
+To interface with the Keithley 2400, the library PyMeasure was used. Again, due to the extensive documentation on the library PyMeasure \cite{RN74}, it was simple to create the code to interface with the Keithley 2400. This is because, the package PyMeasure has specific documentation related to using a Keithley 2400 SourceMeter with Python \cite{RN75}. 
+
+Once the code for running the Keithley was written, the following step was to create the functions that would control the temperature, measurement intervals and time of test. This 
+
+From this point on, the objective was making the code as simple to use and modify as possible. This is because one of the objectives was to ensure simple modification of the set-up. A user should easily be able to understand the code which was created thereby allowing them to create modifications to the script to suit their needs. 
+
+One of the important things was to ensure that the data is saved regularly (outside the script) so that if the test is interrupted for any reason (accidental removal, power cut or error) the data that has been collected will be available for recovery and analysis. To do this, at every measurement 
+
 \chapter{Testing}
 
 \section{Introduction}

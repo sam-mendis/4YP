@@ -1,4 +1,4 @@
-\begin{thebibliography}{20}
+\begin{thebibliography}{22}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -128,5 +128,14 @@ Accessed: 20/12/2020.
 \bibitem[RN7(Accessed: 20/01/2021)]{RN72}
 Accessed: 20/01/2021.
 \newblock URL \url{https://www.uplandfab.com/peek-machining}.
+
+\bibitem[RN7(Accessed: 23/01/2021)]{RN74}
+Accessed: 23/01/2021.
+\newblock URL \url{https://pymeasure.readthedocs.io/en/latest/index.html}.
+
+\bibitem[RN7(Accessed: 24/01/2021)]{RN75}
+Accessed: 24/01/2021.
+\newblock URL
+  \url{https://pymeasure.readthedocs.io/en/latest/api/instruments/keithley/keithley2400.html}.
 
 \end{thebibliography}

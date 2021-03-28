@@ -12,10 +12,10 @@
 \contentsline {section}{\numberline {3.1}Chamber Manufacturing}{18}{section.3.1}%
 \contentsline {section}{\numberline {3.2}PCB Manufacturing}{20}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Code Development}{22}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Testing}{23}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Introduction}{23}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Electrical Testing}{23}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Integration Testing}{23}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Leak Testing}{23}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Overall test}{23}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Conclusion}{24}{chapter.5}%
+\contentsline {chapter}{\numberline {4}Testing}{24}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{24}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Electrical Testing}{24}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Integration Testing}{24}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Leak Testing}{24}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Overall test}{24}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Conclusion}{25}{chapter.5}%
