@@ -3,44 +3,46 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Report.aux
 The style file: unsrtnat.bst
 Database file #1: References.bib
-You've used 22 entries,
+Warning--I didn't find a database entry for "RN"
+You've used 21 entries,
             2481 wiz_defined-function locations,
-            693 strings with 7970 characters,
-and the built_in function-call counts, 7346 in all, are:
-= -- 604
+            691 strings with 7846 characters,
+and the built_in function-call counts, 7138 in all, are:
+= -- 586
 > -- 306
 < -- 6
-+ -- 137
++ -- 135
 - -- 92
-* -- 549
-:= -- 1026
-add.period$ -- 64
-call.type$ -- 22
-change.case$ -- 31
-chr.to.int$ -- 21
-cite$ -- 34
-duplicate$ -- 392
-empty$ -- 787
+* -- 538
+:= -- 1006
+add.period$ -- 62
+call.type$ -- 21
+change.case$ -- 30
+chr.to.int$ -- 20
+cite$ -- 32
+duplicate$ -- 378
+empty$ -- 755
 format.name$ -- 106
-if$ -- 1653
+if$ -- 1602
 int.to.chr$ -- 2
-int.to.str$ -- 23
+int.to.str$ -- 22
 missing$ -- 11
-newline$ -- 114
+newline$ -- 110
 num.names$ -- 30
-pop$ -- 233
+pop$ -- 220
 preamble$ -- 1
-purify$ -- 22
+purify$ -- 21
 quote$ -- 0
-skip$ -- 292
+skip$ -- 279
 stack$ -- 0
-substring$ -- 261
-swap$ -- 76
+substring$ -- 258
+swap$ -- 74
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 151
+type$ -- 144
 warning$ -- 0
 while$ -- 32
 width$ -- 0
-write$ -- 264
+write$ -- 255
+(There was 1 warning)
