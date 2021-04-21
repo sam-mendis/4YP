@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.8)  20 APR 2021 08:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.8)  21 APR 2021 12:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1053,7 +1053,7 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.18 ...erline {4.3}Leak Testing}{25}{section.4.3}
+l.18 ...erline {4.3}Leak Testing}{27}{section.4.3}
                                                   % [1
 
 ])
@@ -1107,13 +1107,6 @@ vir-on-mental ap-plic-a-tions. On fur-ther in-vest-ig-a-tion,
  []
 
 [4 <./Images/Intro/HT9_Fig1.png> <./Images/Intro/HT9_Fig2.png>]
-./Report.ltx:80: Undefined control sequence.
-\degree ->\ERROR 
-                 
-l.80 ... 1000 h damp heat (DH) test at 85  \degree
-                                                   C and 85\% humidity, 200 ...
-
-? 
 
 ./Report.ltx:80: Package inputenc Error: Unicode character − (U+2212)
 (inputenc)                not set up for use with LaTeX.
@@ -1123,14 +1116,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.80 ...00 cycles of thermal cycling (TC) from −
-                                                  40 to +85  \degree C, and ...
-
-? 
-./Report.ltx:80: Undefined control sequence.
-\degree ->\ERROR 
-                 
-l.80 ...al cycling (TC) from −40 to +85  \degree
-                                                   C, and a sequence test co...
+                                                  40 to +85  $^o$C, and a se...
 
 ? 
 
@@ -1172,7 +1158,7 @@ File: ./Images/Intro/HT3_Fig2.png Graphic file (type png)
 Package pdftex.def Info: ./Images/Intro/HT3_Fig2.png  used on input line 85.
 (pdftex.def)             Requested size: 450.43253pt x 398.77522pt.
  [5 <./Images/Intro/HT3_Fig2.png>]
-<./Images/Intro/HT10_Fig1.png, id=166, 871.255pt x 605.26125pt>
+<./Images/Intro/HT10_Fig1.png, id=167, 871.255pt x 605.26125pt>
 File: ./Images/Intro/HT10_Fig1.png Graphic file (type png)
 <use ./Images/Intro/HT10_Fig1.png>
 Package pdftex.def Info: ./Images/Intro/HT10_Fig1.png  used on input line 99.
@@ -1188,13 +1174,13 @@ out-side to con-nect to the sub-strate for meas-ure-ments.
  []
 
 [9]
-<./Images/Design_chapter/Design_1.png, id=201, 438.63875pt x 439.6425pt>
+<./Images/Design_chapter/Design_1.png, id=202, 438.63875pt x 439.6425pt>
 File: ./Images/Design_chapter/Design_1.png Graphic file (type png)
 <use ./Images/Design_chapter/Design_1.png>
 Package pdftex.def Info: ./Images/Design_chapter/Design_1.png  used on input li
 ne 148.
 (pdftex.def)             Requested size: 225.21626pt x 225.7375pt.
-<./Images/Design_chapter/Design_2.png, id=202, 438.63875pt x 439.6425pt>
+<./Images/Design_chapter/Design_2.png, id=203, 438.63875pt x 439.6425pt>
 File: ./Images/Design_chapter/Design_2.png Graphic file (type png)
 <use ./Images/Design_chapter/Design_2.png>
 Package pdftex.def Info: ./Images/Design_chapter/Design_2.png  used on input li
@@ -1205,13 +1191,13 @@ Overfull \hbox (2.32138pt too wide) in paragraph at lines 147--154
 []$[]$ $[]$ 
  []
 
-<./Images/Design_chapter/Design_3.png, id=203, 483.8075pt x 476.78125pt>
+<./Images/Design_chapter/Design_3.png, id=204, 483.8075pt x 476.78125pt>
 File: ./Images/Design_chapter/Design_3.png Graphic file (type png)
 <use ./Images/Design_chapter/Design_3.png>
 Package pdftex.def Info: ./Images/Design_chapter/Design_3.png  used on input li
 ne 158.
 (pdftex.def)             Requested size: 225.21626pt x 221.94833pt.
-<./Images/Design_chapter/Design_4.png, id=206, 482.80376pt x 469.755pt>
+<./Images/Design_chapter/Design_4.png, id=207, 482.80376pt x 469.755pt>
 File: ./Images/Design_chapter/Design_4.png Graphic file (type png)
 <use ./Images/Design_chapter/Design_4.png>
 Package pdftex.def Info: ./Images/Design_chapter/Design_4.png  used on input li
@@ -1219,7 +1205,7 @@ ne 166.
 (pdftex.def)             Requested size: 225.21626pt x 219.1291pt.
 [10 <./Images/Design_chapter/Design_1.png> <./Images/Design_chapter/Design_2.pn
 g> <./Images/Design_chapter/Design_3.png>]
-<./Images/Design_chapter/Design_5.png, id=218, 438.63875pt x 439.6425pt>
+<./Images/Design_chapter/Design_5.png, id=219, 438.63875pt x 439.6425pt>
 File: ./Images/Design_chapter/Design_5.png Graphic file (type png)
 <use ./Images/Design_chapter/Design_5.png>
 Package pdftex.def Info: ./Images/Design_chapter/Design_5.png  used on input li
@@ -1227,19 +1213,19 @@ ne 173.
 (pdftex.def)             Requested size: 225.21626pt x 225.7375pt.
  [11 <./Images/Design_chapter/Design_4.png> <./Images/Design_chapter/Design_5.p
 ng>]
-<./Images/Design_chapter/Design_6.png, id=227, 696.6025pt x 675.52374pt>
+<./Images/Design_chapter/Design_6.png, id=228, 696.6025pt x 675.52374pt>
 File: ./Images/Design_chapter/Design_6.png Graphic file (type png)
 <use ./Images/Design_chapter/Design_6.png>
 Package pdftex.def Info: ./Images/Design_chapter/Design_6.png  used on input li
 ne 183.
 (pdftex.def)             Requested size: 225.21626pt x 218.39847pt.
-<./Images/Design_chapter/Design_7.png, id=229, 732.7375pt x 694.595pt>
+<./Images/Design_chapter/Design_7.png, id=230, 732.7375pt x 694.595pt>
 File: ./Images/Design_chapter/Design_7.png Graphic file (type png)
 <use ./Images/Design_chapter/Design_7.png>
 Package pdftex.def Info: ./Images/Design_chapter/Design_7.png  used on input li
 ne 191.
 (pdftex.def)             Requested size: 225.21626pt x 213.48865pt.
-<./Images/Design_chapter/Design_8.png, id=232, 631.35875pt x 492.84125pt>
+<./Images/Design_chapter/Design_8.png, id=233, 631.35875pt x 492.84125pt>
 File: ./Images/Design_chapter/Design_8.png Graphic file (type png)
 <use ./Images/Design_chapter/Design_8.png>
 Package pdftex.def Info: ./Images/Design_chapter/Design_8.png  used on input li
@@ -1251,7 +1237,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [12 <./Images/Design_chapter/Design_6.png> <./Images/Design_chapter/Design_7.pn
 g>]
-<./Images/Design_chapter/Design_9.png, id=244, 696.6025pt x 689.57625pt>
+<./Images/Design_chapter/Design_9.png, id=245, 696.6025pt x 689.57625pt>
 File: ./Images/Design_chapter/Design_9.png Graphic file (type png)
 <use ./Images/Design_chapter/Design_9.png>
 Package pdftex.def Info: ./Images/Design_chapter/Design_9.png  used on input li
@@ -1280,13 +1266,13 @@ Overfull \hbox (12.1138pt too wide) in paragraph at lines 268--269
 ts to be soldered on were nearly all through-hole
  []
 
-<./Images/Design_chapter/Base_3D_1.png, id=263, 860.21375pt x 534.99875pt>
+<./Images/Design_chapter/Base_3D_1.png, id=264, 860.21375pt x 534.99875pt>
 File: ./Images/Design_chapter/Base_3D_1.png Graphic file (type png)
 <use ./Images/Design_chapter/Base_3D_1.png>
 Package pdftex.def Info: ./Images/Design_chapter/Base_3D_1.png  used on input l
 ine 272.
 (pdftex.def)             Requested size: 225.21626pt x 140.06784pt.
-<./Images/Design_chapter/Base_3D_2.png, id=264, 860.21375pt x 534.99875pt>
+<./Images/Design_chapter/Base_3D_2.png, id=265, 860.21375pt x 534.99875pt>
 File: ./Images/Design_chapter/Base_3D_2.png Graphic file (type png)
 <use ./Images/Design_chapter/Base_3D_2.png>
 Package pdftex.def Info: ./Images/Design_chapter/Base_3D_2.png  used on input l
@@ -1334,7 +1320,7 @@ LaTeX Warning: Reference `fig:drawing_2' on page 18 undefined on input line 313
 LaTeX Warning: Reference `fig:drawing_3' on page 18 undefined on input line 313
 .
 
-<./Images/Manufacturing_chapter/elec_windows_drawings.png, id=292, 835.12pt x 6
+<./Images/Manufacturing_chapter/elec_windows_drawings.png, id=293, 835.12pt x 6
 23.32875pt>
 File: ./Images/Manufacturing_chapter/elec_windows_drawings.png Graphic file (ty
 pe png)
@@ -1342,7 +1328,7 @@ pe png)
 Package pdftex.def Info: ./Images/Manufacturing_chapter/elec_windows_drawings.p
 ng  used on input line 316.
 (pdftex.def)             Requested size: 300.29344pt x 224.14137pt.
-<./Images/Manufacturing_chapter/elec_windows_glued.png, id=293, 467.7475pt x 37
+<./Images/Manufacturing_chapter/elec_windows_glued.png, id=294, 467.7475pt x 37
 6.40625pt>
 File: ./Images/Manufacturing_chapter/elec_windows_glued.png Graphic file (type 
 png)
@@ -1350,7 +1336,7 @@ png)
 Package pdftex.def Info: ./Images/Manufacturing_chapter/elec_windows_glued.png 
  used on input line 327.
 (pdftex.def)             Requested size: 237.72913pt x 191.30988pt.
-<./Images/Manufacturing_chapter/safety_relief.png, id=294, 634.37pt x 607.26875
+<./Images/Manufacturing_chapter/safety_relief.png, id=295, 634.37pt x 607.26875
 pt>
 File: ./Images/Manufacturing_chapter/safety_relief.png Graphic file (type png)
 <use ./Images/Manufacturing_chapter/safety_relief.png>
@@ -1360,14 +1346,14 @@ Package pdftex.def Info: ./Images/Manufacturing_chapter/safety_relief.png  used
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./Images/Manufacturing_chapter/oring_assem.png, id=301, 545.03625pt x 505.89pt
+<./Images/Manufacturing_chapter/oring_assem.png, id=302, 545.03625pt x 505.89pt
 >
 File: ./Images/Manufacturing_chapter/oring_assem.png Graphic file (type png)
 <use ./Images/Manufacturing_chapter/oring_assem.png>
 Package pdftex.def Info: ./Images/Manufacturing_chapter/oring_assem.png  used o
 n input line 341.
 (pdftex.def)             Requested size: 225.21626pt x 209.03728pt.
-<./Images/Manufacturing_chapter/acrylic_plate.png, id=302, 606.265pt x 669.5012
+<./Images/Manufacturing_chapter/acrylic_plate.png, id=303, 606.265pt x 669.5012
 5pt>
 File: ./Images/Manufacturing_chapter/acrylic_plate.png Graphic file (type png)
 <use ./Images/Manufacturing_chapter/acrylic_plate.png>
@@ -1375,7 +1361,7 @@ Package pdftex.def Info: ./Images/Manufacturing_chapter/acrylic_plate.png  used
  on input line 345.
 (pdftex.def)             Requested size: 225.21626pt x 248.71272pt.
 [18 <./Images/Manufacturing_chapter/elec_windows_drawings.png>]
-<./Images/Manufacturing_chapter/assembly.png, id=316, 634.37pt x 667.49374pt>
+<./Images/Manufacturing_chapter/assembly.png, id=317, 634.37pt x 667.49374pt>
 File: ./Images/Manufacturing_chapter/assembly.png Graphic file (type png)
 <use ./Images/Manufacturing_chapter/assembly.png>
 Package pdftex.def Info: ./Images/Manufacturing_chapter/assembly.png  used on i
@@ -1385,17 +1371,10 @@ nput line 353.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-./Report.ltx:359: Undefined control sequence.
-\degree ->\ERROR 
-                 
-l.359 ...ning point of between 160 – 170 \degree
-                                                   C \cite[p.~744]{RN70}, wh...
-
-? 
 
 LaTeX Warning: Reference `failure' on page 19 undefined on input line 361.
 
-<./Images/Manufacturing_chapter/substrate_fail.png, id=320, 552.0625pt x 568.12
+<./Images/Manufacturing_chapter/substrate_fail.png, id=321, 552.0625pt x 568.12
 25pt>
 File: ./Images/Manufacturing_chapter/substrate_fail.png Graphic file (type png)
 
@@ -1406,25 +1385,18 @@ d on input line 364.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-./Report.ltx:370: Undefined control sequence.
-\degree ->\ERROR 
-                 
-l.370 ...han ABS due to its higher MP (260 \degree
-                                                   C) \cite{RN72} allowing s...
-
-? 
 [19 <./Images/Manufacturing_chapter/elec_windows_glued.png> <./Images/Manufactu
 ring_chapter/safety_relief.png> <./Images/Manufacturing_chapter/oring_assem.png
 > <./Images/Manufacturing_chapter/acrylic_plate.png>] [20 <./Images/Manufacturi
 ng_chapter/assembly.png> <./Images/Manufacturing_chapter/substrate_fail.png>]
-<./Images/Manufacturing_chapter/Base_front.jpeg, id=343, 4047.12pt x 3035.34pt>
+<./Images/Manufacturing_chapter/Base_front.jpeg, id=344, 4047.12pt x 3035.34pt>
 
 File: ./Images/Manufacturing_chapter/Base_front.jpeg Graphic file (type jpg)
 <use ./Images/Manufacturing_chapter/Base_front.jpeg>
 Package pdftex.def Info: ./Images/Manufacturing_chapter/Base_front.jpeg  used o
 n input line 382.
 (pdftex.def)             Requested size: 225.21626pt x 168.8663pt.
-<./Images/Manufacturing_chapter/Base_back.jpeg, id=344, 3447.88126pt x 2304.61p
+<./Images/Manufacturing_chapter/Base_back.jpeg, id=345, 3447.88126pt x 2304.61p
 t>
 File: ./Images/Manufacturing_chapter/Base_back.jpeg Graphic file (type jpg)
 <use ./Images/Manufacturing_chapter/Base_back.jpeg>
@@ -1436,14 +1408,14 @@ Overfull \hbox (2.32138pt too wide) in paragraph at lines 381--388
 []$[]$ $[]$ 
  []
 
-<./Images/Manufacturing_chapter/Mux_front.jpeg, id=345, 3837.33624pt x 2827.563
+<./Images/Manufacturing_chapter/Mux_front.jpeg, id=346, 3837.33624pt x 2827.563
 75pt>
 File: ./Images/Manufacturing_chapter/Mux_front.jpeg Graphic file (type jpg)
 <use ./Images/Manufacturing_chapter/Mux_front.jpeg>
 Package pdftex.def Info: ./Images/Manufacturing_chapter/Mux_front.jpeg  used on
  input line 394.
 (pdftex.def)             Requested size: 225.21626pt x 165.93602pt.
-<./Images/Manufacturing_chapter/Mux_back.jpeg, id=346, 3768.0775pt x 2799.45876
+<./Images/Manufacturing_chapter/Mux_back.jpeg, id=347, 3768.0775pt x 2799.45876
 pt>
 File: ./Images/Manufacturing_chapter/Mux_back.jpeg Graphic file (type jpg)
 <use ./Images/Manufacturing_chapter/Mux_back.jpeg>
@@ -1458,7 +1430,7 @@ Overfull \hbox (2.32138pt too wide) in paragraph at lines 393--400
 [21 <./Images/Manufacturing_chapter/Base_front.jpeg> <./Images/Manufacturing_ch
 apter/Base_back.jpeg> <./Images/Manufacturing_chapter/Mux_front.jpeg> <./Images
 /Manufacturing_chapter/Mux_back.jpeg>]
-<./Images/Manufacturing_chapter/final.png, id=355, 438.63875pt x 439.6425pt>
+<./Images/Manufacturing_chapter/final.png, id=356, 438.63875pt x 439.6425pt>
 File: ./Images/Manufacturing_chapter/final.png Graphic file (type png)
 <use ./Images/Manufacturing_chapter/final.png>
 Package pdftex.def Info: ./Images/Manufacturing_chapter/final.png  used on inpu
@@ -1481,50 +1453,84 @@ Overfull \hbox (7.47183pt too wide) in paragraph at lines 438--439
 er-ent test-ing pro-ced-ures that the cham-ber, elec-tron-ics
  []
 
-./Report.ltx:448: Undefined control sequence.
-\degree ->\ERROR 
-                 
-l.448 ...follows: ambient temperature of 25\degree
-                                                   C, heater temperature 200...
 
-? 
-./Report.ltx:448: Undefined control sequence.
-\degree ->\ERROR 
-                 
-l.448 ...\degree C, heater temperature 200 \degree
-                                                   C and a convective heat t...
+Package natbib Warning: Citation `RN76' on page 24 undefined on input line 447.
 
-? 
-./Report.ltx:448: Missing $ inserted.
-<inserted text> 
-                $
-l.448 ...tive heat transfer coefficient of 2.5 Wm^
-                                                  {-2}K^{-1} \cite{RN}.
-? 
 
-./Report.ltx:448: LaTeX Error: Command \bfseries invalid in math mode.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.448 ...oefficient of 2.5 Wm^{-2}K^{-1} \cite{RN}
-                                                  .
-? 
+Overfull \hbox (4.58794pt too wide) in paragraph at lines 447--448
+[]\OT1/phv/m/n/10.95 The para-met-ers for the ini-tial sim-u-la-tion were as fo
+l-lows: am-bi-ent tem-per-at-ure of 25$[]$C, heater tem-per-at-ure
+ []
 
-Package natbib Warning: Citation `RN' on page 24 undefined on input line 448.
+<./Images/Testing_chapter/heat_sim_1.png, id=368, 634.37pt x 383.4325pt>
+File: ./Images/Testing_chapter/heat_sim_1.png Graphic file (type png)
+<use ./Images/Testing_chapter/heat_sim_1.png>
+Package pdftex.def Info: ./Images/Testing_chapter/heat_sim_1.png  used on input
+ line 451.
+(pdftex.def)             Requested size: 350.33727pt x 211.76028pt.
 
-./Report.ltx:449: Missing $ inserted.
-<inserted text> 
-                $
-l.449 
-      
-? 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package natbib Warning: Citation `RN77' on page 24 undefined on input line 456.
+
+
 [24
 
-] [25]
+]
+<./Images/Testing_chapter/heat_sim_2.png, id=378, 623.32875pt x 383.4325pt>
+File: ./Images/Testing_chapter/heat_sim_2.png Graphic file (type png)
+<use ./Images/Testing_chapter/heat_sim_2.png>
+Package pdftex.def Info: ./Images/Testing_chapter/heat_sim_2.png  used on input
+ line 461.
+(pdftex.def)             Requested size: 350.33727pt x 215.50473pt.
+
+Overfull \hbox (18.61632pt too wide) in paragraph at lines 466--467
+\OT1/phv/m/n/10.95 il-lus-trates that there is a uni-form tem-per-at-ure dis-tr
+i-bu-tion across the solar cells them-selves with a tem-per-at-ure
+ []
+
+
+Overfull \hbox (3.9357pt too wide) in paragraph at lines 468--469
+[]\OT1/phv/m/n/10.95 As well as heat sim-u-la-tions, flow sim-u-la-tions were a
+lso con-duc-ted. This was to un-der-stand the mech-an-ism
+ []
+
+
+Overfull \hbox (10.70282pt too wide) in paragraph at lines 468--469
+\OT1/phv/m/n/10.95 sim-u-la-tion was used for these sim-u-la-tions. The gas was
+ mod-elled as an ideal gas, al-low-ing the as-sump-tions
+ []
+
+
+Overfull \hbox (0.29756pt too wide) in paragraph at lines 468--469
+\OT1/phv/m/n/10.95 of the gas particles hav-ing no in-ter-molecu-lar forces and
+ ran-dom move-ment. To un-der-stand the move-ment
+ []
+
+[25 <./Images/Testing_chapter/heat_sim_1.png> <./Images/Testing_chapter/heat_si
+m_2.png>]
+<./Images/Testing_chapter/flow_sim_1.png, id=387, 468.75125pt x 500.87125pt>
+File: ./Images/Testing_chapter/flow_sim_1.png Graphic file (type png)
+<use ./Images/Testing_chapter/flow_sim_1.png>
+Package pdftex.def Info: ./Images/Testing_chapter/flow_sim_1.png  used on input
+ line 471.
+(pdftex.def)             Requested size: 350.33727pt x 374.33797pt.
+<./Images/Testing_chapter/flow_sim_2.png, id=389, 401.5pt x 543.02875pt>
+File: ./Images/Testing_chapter/flow_sim_2.png Graphic file (type png)
+<use ./Images/Testing_chapter/flow_sim_2.png>
+Package pdftex.def Info: ./Images/Testing_chapter/flow_sim_2.png  used on input
+ line 479.
+(pdftex.def)             Requested size: 350.33727pt x 473.86465pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[26 <./Images/Testing_chapter/flow_sim_1.png>] [27 <./Images/Testing_chapter/fl
+ow_sim_2.png>]
 Chapter 5.
-[26
+[28
 
 ] (./Report.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 109--112
@@ -1550,49 +1556,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 128--131
 / / uk . farnell . com / harwin / p70-[]1000045r /
  []
 
-) [27
+) [29
 
-] [28
+] [30
 
 ]
-<./Images/Appendix/Appendix_1.png, id=408, 1177.39874pt x 827.09pt>
+<./Images/Appendix/Appendix_1.png, id=433, 1177.39874pt x 827.09pt>
 File: ./Images/Appendix/Appendix_1.png Graphic file (type png)
 <use ./Images/Appendix/Appendix_1.png>
-Package pdftex.def Info: ./Images/Appendix/Appendix_1.png  used on input line 4
-73.
+Package pdftex.def Info: ./Images/Appendix/Appendix_1.png  used on input line 5
+09.
 (pdftex.def)             Requested size: 700.67453pt x 492.20668pt.
-<./Images/Appendix/Appendix_2.png, id=409, 1177.39874pt x 827.09pt>
+<./Images/Appendix/Appendix_2.png, id=434, 1177.39874pt x 827.09pt>
 File: ./Images/Appendix/Appendix_2.png Graphic file (type png)
 <use ./Images/Appendix/Appendix_2.png>
-Package pdftex.def Info: ./Images/Appendix/Appendix_2.png  used on input line 4
-79.
+Package pdftex.def Info: ./Images/Appendix/Appendix_2.png  used on input line 5
+15.
 (pdftex.def)             Requested size: 700.67453pt x 492.20668pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./Images/Appendix/Appendix_3.png, id=410, 1177.39874pt x 827.09pt>
+<./Images/Appendix/Appendix_3.png, id=435, 1177.39874pt x 827.09pt>
 File: ./Images/Appendix/Appendix_3.png Graphic file (type png)
 <use ./Images/Appendix/Appendix_3.png>
-Package pdftex.def Info: ./Images/Appendix/Appendix_3.png  used on input line 4
-85.
+Package pdftex.def Info: ./Images/Appendix/Appendix_3.png  used on input line 5
+21.
 (pdftex.def)             Requested size: 700.67453pt x 492.20668pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./Images/Appendix/Appendix_4.png, id=411, 1177.39874pt x 827.09pt>
+<./Images/Appendix/Appendix_4.png, id=436, 1177.39874pt x 827.09pt>
 File: ./Images/Appendix/Appendix_4.png Graphic file (type png)
 <use ./Images/Appendix/Appendix_4.png>
-Package pdftex.def Info: ./Images/Appendix/Appendix_4.png  used on input line 4
-91.
+Package pdftex.def Info: ./Images/Appendix/Appendix_4.png  used on input line 5
+27.
 (pdftex.def)             Requested size: 700.67453pt x 492.20668pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./Images/Appendix/Gantt.png, id=412, 1234.6125pt x 872.25874pt>
+<./Images/Appendix/Gantt.png, id=437, 1234.6125pt x 872.25874pt>
 File: ./Images/Appendix/Gantt.png Graphic file (type png)
 <use ./Images/Appendix/Gantt.png>
-Package pdftex.def Info: ./Images/Appendix/Gantt.png  used on input line 497.
+Package pdftex.def Info: ./Images/Appendix/Gantt.png  used on input line 533.
 (pdftex.def)             Requested size: 700.67453pt x 495.0365pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1600,43 +1606,42 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 504.
-[29 <./Images/Appendix/Appendix_1.png>] [30 <./Images/Appendix/Appendix_2.png>]
-[31 <./Images/Appendix/Appendix_3.png>] [32 <./Images/Appendix/Appendix_4.png>]
-[33 <./Images/Appendix/Gantt.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 504.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 540.
+[31 <./Images/Appendix/Appendix_1.png>] [32 <./Images/Appendix/Appendix_2.png>]
+[33 <./Images/Appendix/Appendix_3.png>] [34 <./Images/Appendix/Appendix_4.png>]
+[35 <./Images/Appendix/Gantt.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 540.
  (./Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 504.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 504.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 540.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 540.
 Package rerunfilecheck Info: File `Report.out' has not changed.
 (rerunfilecheck)             Checksum: 98FACC1C097889569C8FEEFFA5239588;1134.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 504.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 540.
  ) 
 Here is how much of TeX's memory you used:
- 15036 strings out of 480608
- 273575 string characters out of 5903630
- 531570 words of memory out of 5000000
- 30509 multiletter control sequences out of 15000+600000
+ 15075 strings out of 480608
+ 274614 string characters out of 5903630
+ 532015 words of memory out of 5000000
+ 30541 multiletter control sequences out of 15000+600000
  556362 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,8n,77p,960b,862s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,8n,77p,952b,862s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
-xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
-ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
-/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
-020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/20
-20/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2020/texm
-f-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2020/texmf-dist/
-fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Report.pdf (34 pages, 21099661 bytes).
+exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/tex
+live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
+e/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
+2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2
+020/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2020/tex
+mf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2020/texmf-dist
+/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on Report.pdf (36 pages, 22504530 bytes).
 PDF statistics:
- 498 PDF objects out of 1000 (max. 8388607)
- 388 compressed objects within 4 object streams
- 109 named destinations out of 1000 (max. 500000)
- 313 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 519 PDF objects out of 1000 (max. 8388607)
+ 400 compressed objects within 4 object streams
+ 115 named destinations out of 1000 (max. 500000)
+ 333 words of extra memory for PDF output out of 10000 (max. 10000000)
 
