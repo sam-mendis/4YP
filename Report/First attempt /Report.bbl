@@ -1,4 +1,4 @@
-\begin{thebibliography}{21}
+\begin{thebibliography}{24}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -132,5 +132,22 @@ Accessed: 20/12/2020.
 \bibitem[RN7(Accessed: 20/01/2021)]{RN72}
 Accessed: 20/01/2021.
 \newblock URL \url{https://www.uplandfab.com/peek-machining}.
+
+\bibitem[Kosky et~al.(2015)Kosky, Balmer, Keat, and Wise]{RN76}
+Philip Kosky, Robert~T Balmer, William~D Keat, and George Wise.
+\newblock \emph{Exploring engineering: an introduction to engineering and
+  design}.
+\newblock Academic Press, 2015.
+\newblock ISBN 0128025883.
+
+\bibitem[RN7(Accessed: 10/12/20)]{RN77}
+Accessed: 10/12/20.
+\newblock URL \url{https://www.polymershapes.com/product/abs/#about-product}.
+
+\bibitem[Klumbies(2014)]{RN78}
+Hannes Klumbies.
+\newblock Encapsulations for organic devices and their evaluation using calcium
+  corrosion tests.
+\newblock 2014.
 
 \end{thebibliography}

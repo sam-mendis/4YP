@@ -17,6 +17,7 @@
 \usepackage{doi}
 \usepackage{siunitx}
 \usepackage{textcomp}
+\usepackage{hyperref}
 \usepackage[utf8]{inputenc}% for appendix
 \usepackage{appendix} %for appendix
 \usepackage[square,numbers]{natbib} %the big one
@@ -482,12 +483,126 @@ This view shows that there is good mixing around the chamber, however, it is har
 \end{figure}
 
 
+This section discusses the PCB testing, specifically the testing of the code with the PCBs and checking the soldering for any short circuits. 
+
+The first step of the tests was to conduct visual checks on the PCBs to ensure that there are no visible short circuits within the design. This involved using a magnifying glass going looking for connections that shouldn’t be there. Once this was complete, a digital multimeter was utilised to ensure that the resistance between unconnected tracks was unmeasurable as well as checking that the resistance between tracks which are supposed to be connected was minimal (as close to zero as possible). This test discovered 2 small errors where the via’s were not soldered fully, requiring further work to ensure good connections.
+
+Once this was rectified, tests involving the Raspberry Pi were undertaken. Firstly simple connection testing using a multimeter to ensure that the Pi was outputting high or low voltages and the connections between the Pi and the PCBs were at an acceptable standard. Using jumper leads as shown in Figure \ref{fig:jumpers}, the Pi was connected to the PCB named Base (with the schematic shown in the Appendix as Figure \ref{fig:Appendix_3}) and a multimeter used to check voltages were 5V or 3.3V - depending on which pin the PCB was connected to. 
+
+\begin{figure}[h!]
+\hfill\includegraphics[width=0.7\linewidth]{jumpers}\hspace*{\fill}
+\caption{Showing how the Pi and PCBs were connected.}
+\label{fig:jumpers}
+\end{figure}
+
+Once finished, the following step was to attempt to run some of the code I had written on the PCB. The purpose of the original code is to select a cell for the Keithley 2400 to measure, however, this modified slightly to select a relay to allow current through to light up an LED. Initially, the plan was to use the MCP23S17 (shown in the multiplexer schematic in the Appendix as Figure \ref{fig:Appendix_4}), however, after some testing this was not working as planned. However, I noticed that the Pi had significantly more Input/Output (I/O) pins than the Arduino that this PCB was originally designed to work with, enabling me to use the ‘extra’ I/O pins to bypass the serial port expander (MCP23S17) creating a simpler code and PCB. 
+
+
+\begin{figure}[h!]
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\linewidth]{sc_1}
+\caption{Before image of the Solar Multiplexer}
+\end{subfigure} \begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\linewidth]{sc_2}
+\caption{The Solar Multiplexer after the edits.} 
+\end{subfigure}
+\caption{Showing the edited Solar Multiplexer PCB}
+\label{fig:sc}
+\end{figure}
+
+
+This step was only done after PCB manufacturing; therefore, I took the decision to solder wires to \emph{short-circuit} the MCP23S17. The before and after of this can be seen in Figures \ref{fig:sc_1} and \ref{fig:sc_2}. Once this was complete, the test code was run again, this time using the GPIO zero package to switch the SSRs on and off, thereby allowing the LEDs to light up. This can be seen in Figure \ref{fig:LEDs} as well as the video linked \href{http://www.latex-tutorial.com}{here}.
+
+\begin{figure}[h!]
+\hfill\includegraphics[width=0.7\linewidth]{LEDs}\hspace*{\fill}
+\caption{Showing the LEDs lighting up}
+\label{fig:LEDs}
+\end{figure}
+
+This concluded the testing for the PCBs as did it not only show the Relays and raspberry Pi working well together, but it also illustrated that it would be possible to set all the cells to specific voltage bias for enhanced degradation, followed by the ability to cycle through each one to conduct measurements. 
+
+\section{Leak Testing}
+
+This section will discuss the leak testing of the chamber. There were two leak tests which were planned, a simple test of placing the chamber in water – to find any large leaks, and a further test which measured the resistance of calcium inside the chamber. 
+
+The water based leak test was conducted by filling a sink full of water and placing the chamber inside. The first test revealed a whole which I didn’t notice around the electrical windows. A glue gun was used to seal the hole and a hairdryer used to fully dry out the inside. 
+
+Once this was completed the chamber was ready for the calcium test. This test is similar to the one mentioned in Klumbies paper on Encapsulations for Organic Devices \cite{RN78}. The testing procedure was measuring the resistance of calcium deposited on a glass substrate. If the box was leakproof, the calcium wouldn’t degrade as there would be no oxygen and water within the chamber, thereby keeping the resistance low (and the calcium plate shiny). However, if there was a leak, the resistance would increase until the point where the calcium would have oxidised to either CaO or Ca(OH)$_2$, both of which are insulators. 
+
+The plan initially was to use a keithley 2400 to run the tests, this would be done by setting the current to a specific value, then continually measuring and recording the voltage. The setup can be seen below in Figure \ref{fig:calc_test1}.
+
+\begin{figure}[h!]
+\hfill\includegraphics[width=0.7\linewidth]{calc_test1}\hspace*{\fill}
+\caption{Showing the desired set up for the calcium plate test.}
+\label{fig:calc_test1}
+\end{figure}
+
+The equations \ref{eq:resistivity} and \ref{eq:voltage} were used to calculate the source current given the minimum voltage which I wanted the keithley 2400 to measure was 0.5 V. 
+
+\begin{equation}\label{eq:resistivity}
+R = \frac{\rho L}{A}
+\end{equation}
+\\
+\begin{equation}\label{eq:voltage}
+V_m = I_s~R
+\end{equation}
+
+Where:
+\begin{tabbing}
+\phantom{$ P_{diff}\ $}\= \kill
+$R$ \>= Resistance of the sample\\
+$\rho$ \>= Resistivity of Calcium\\
+$A$ \>= Cross sectional area of the sample ($w~t$)\\
+$L$ \>= Length of the sample\\
+$V_m$ \>= Voltage measured\\
+$I_s$ \>= Source current\\
+\end{tabbing}
+
+The value of the resistivity of Calcium ranged from 4 – 9 $*10^{-8}$ $\Omega$ m \cite[p.~42]{RN78} (with the lower bound chosen for these calculations), the thickness of the calcium sample was 150 nm, the length and width of the calcium sample was 30 mm. This resulted in a I$_s$ of 1.875 Amps and a minimum power dissipated of 0.93 W. 
+
+Once the measurement procedure was decided assembly of the chamber within the glove box occurred. During my first attempt, I realised that the space between the inside edge of the chamber and the substrate holder was very small, thereby preventing me from holding the substrate holder still while attempting to place the calcium plate upon it. This resulted in 2 calcium plate breakages and a redesign of some of the internal components within the chamber. 
+
+To enable easy attachment of the substrate to the substate holder, the decision was taken to use plugs, in this case 3 pairs 9 pin D-sub plugs and sockets. This allowed the substrate holder to be completely removed from the chamber during assembly which helped me hold the substrate holder still while I placed the substrate and lid onto it. The result of which can be seen in Figure \ref{fig:D_sub} below.
+
+\begin{figure}[h!]
+\hfill\includegraphics[width=0.7\linewidth]{D_sub}\hspace*{\fill}
+\caption{Showing the D-sub plugs connected to the wires exiting the chamber}
+\label{fig:D_sub}
+\end{figure}
+
+Once this was completed, I attempted to assemble the chamber again. However, there was a problem which prevented the assembly from working as planned. The substrate holder was deformed slightly from the hair dryer and heating required to dry out the porous ABS material. This meant that the substrate no longer sat well inside the substrate holder creating poor electrical connections that would work for a short period of time, but with a tiny bit of disturbance would sever and require a reassembly of the chamber.
+
+To mitigate this, I attempted to order a part made out of PEEK from the engineering department, however, the part never arrived. Therefore, I decided to use crocodile clips clipped onto the calcium substrate, to connect it to the wires within the chamber. This worked well with the assembly shown clearly in Figure \ref{fig:calc_test_assembly}.
+
+\begin{figure}[h!]
+\hfill\includegraphics[width=0.7\linewidth]{ calc_test_assembly}\hspace*{\fill}
+\caption{Showing the calcium test set up using crocodile clips.}
+\label{fig:calc_test_assembly}
+\end{figure}
+
+From here I measured the resistance of the calcium plate using a multimeter within the chamber. I measured the resistance for 15 minutes and there was no change in that time, with the calcium plate having a resistance of 13 $\Omega$. The Figure \ref{fig:glovebox_c_test} shows the set up with the resistance showing on the multimeter.  
+
+\begin{figure}[h!]
+\hfill\includegraphics[width=0.7\linewidth]{glovebox_c_test}\hspace*{\fill}
+\caption{Showing the cacium test running, with the first measurement within the chamber.}
+\label{fig:glovebox_c_test}
+\end{figure}
+
+After removing the chamber from the glovebox the resistance started increasing. This was seen on the multimeter, and after 3 hours of running the test, the resistance reached a immeasurable value. This indicated there was a leak in this initial test. To try and find the source of the leak I watched the chamber while it was submerged in water. This showed a clear but small leak which were creating bubbles which can be seen rising in Figure \ref{fig:bubbles}. 
+
+\begin{figure}[h!]
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\linewidth]{bubbles1}
+\end{subfigure} \begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\linewidth]{bubbles2}
+\end{subfigure}
+\caption{Showing the bubble rising up.}
+\label{fig:bubbles}
+\end{figure}
+
+
 
  
-\section{Integration Testing}
-Talk about integrating the box and testing
-\section{Leak Testing}
-Talk about the leak tests and results
 \section{Overall test}
 Talk about short time test with a solar cell
 

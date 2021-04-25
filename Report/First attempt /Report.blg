@@ -3,46 +3,46 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Report.aux
 The style file: unsrtnat.bst
 Database file #1: References.bib
-Warning--I didn't find a database entry for "RN"
-You've used 21 entries,
+Warning--empty journal in RN78
+You've used 24 entries,
             2481 wiz_defined-function locations,
-            691 strings with 7846 characters,
-and the built_in function-call counts, 7138 in all, are:
-= -- 586
-> -- 306
-< -- 6
-+ -- 135
-- -- 92
-* -- 538
-:= -- 1006
-add.period$ -- 62
-call.type$ -- 21
-change.case$ -- 30
-chr.to.int$ -- 20
-cite$ -- 32
-duplicate$ -- 378
-empty$ -- 755
-format.name$ -- 106
-if$ -- 1602
+            705 strings with 8208 characters,
+and the built_in function-call counts, 7961 in all, are:
+= -- 650
+> -- 340
+< -- 7
++ -- 151
+- -- 102
+* -- 588
+:= -- 1131
+add.period$ -- 71
+call.type$ -- 24
+change.case$ -- 34
+chr.to.int$ -- 23
+cite$ -- 37
+duplicate$ -- 429
+empty$ -- 845
+format.name$ -- 118
+if$ -- 1781
 int.to.chr$ -- 2
-int.to.str$ -- 22
-missing$ -- 11
-newline$ -- 110
-num.names$ -- 30
-pop$ -- 220
+int.to.str$ -- 25
+missing$ -- 14
+newline$ -- 125
+num.names$ -- 36
+pop$ -- 255
 preamble$ -- 1
-purify$ -- 21
+purify$ -- 24
 quote$ -- 0
-skip$ -- 279
+skip$ -- 312
 stack$ -- 0
-substring$ -- 258
-swap$ -- 74
+substring$ -- 265
+swap$ -- 79
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 144
-warning$ -- 0
-while$ -- 32
+type$ -- 162
+warning$ -- 1
+while$ -- 36
 width$ -- 0
-write$ -- 255
+write$ -- 289
 (There was 1 warning)
