@@ -47,13 +47,14 @@
 Introductory section describing the project.
 
 \section{Literature Review}
-In order to provide a device to add to the field, a thorough literature review was conducted and modified throughout the project. The main objective of this project was to provide the AFMD (Advanced Functional Materials and Devices) research group with a device that created different conditions to degrade organic photovoltaic cells. 
+\label{sec:lit}
+In order to provide a device to add to the field, a thorough literature review was conducted and modified throughout the project. The main objective of this project was to provide the AFMD (Advanced Functional Materials and Devices) research group, within the University of Oxford Physics Department, with a device that created different conditions to degrade organic photovoltaic cells. 
 
-Currently the market leader in solar cells are Crystalline Silicon photovoltaics which hold a dominant 95\% market share in the solar energy sector \cite{RN54}. Organic solar cells have the opportunity to disrupt this market by providing versatile light-weight devices which have little material consumption and low temperature processing. However, the current problems with organic solar cells boil down to long term stability, alongside low power outupts \cite{RN54}. This project looks at creating a method to help solve the issue of long-term stability by developing a low-cost system which is able to simulate a lifetime (10-20 years) of outdoor degradation in a matter of months. 
+Currently the market leader in solar cells are Crystalline Silicon photovoltaics which hold a dominant 95\% market share in the solar energy sector \cite{RN54}. Organic solar cells have the opportunity to disrupt this market by providing versatile light-weight devices which have little material consumption and low temperature processing. However, the current problems with organic solar cells boil down to long term stability, alongside low power outputs relative to silicon photovoltaics \cite{RN54}. This project looks at creating a method to help solve the issue of long-term stability by developing a low-cost system which is able to simulate a lifetime (10-20 years) of outdoor degradation in a matter of months. 
 
-To ensure that the conditions were analogous to a lifetime of degradation, research was conducted looking at failure mechanisms of organic photovoltaics (OPVs) as well as industry standards for testing OPVs. There are multiple degradation mechanisms which cause the short lifetimes of organic solar cells\cite[p.~141]{RN58}. The ones that the system will try and system are: diffusion of water into the cell, diffusion of Oxygen into the cell operation under high temperatures. Other degradation mechanisms will also play a part such as photochemical degradation by UV light and oxygen \cite[p.~106]{RN57}. These degradation mechanisms and more are illustrated below in Figure \ref{fig: }
+There are multiple degradation mechanisms which cause the short lifetimes of organic solar cells\cite[p.~141]{RN58}. The ones that the system will try and measure the effect of are: diffusion of water vapour into the active layer of the solar cell, diffusion of Oxygen into the active layer of the solar cell and operation under high temperatures. High temperature stability is important as Solar Cells are exposed to direct sunlight, meaning that they will absorb heat radiation alongside light radiation exposing them to high temperatures \cite{RN79}.Other degradation mechanisms will also play a part such as photochemical degradation by UV light and oxygen \cite[p.~106]{RN57}. 
 
-An important factor for the entire set up is to ensure that these degradations are measurable, thereby requiring careful control of the ambient conditions. This meant a container that would not let in ambient air (due to the oxygen and water content) as well as have a controllable chemical and physical atmosphere. Degradation experiments are essential in the testing of solar cells; therefore it was expected that something would have been manufactured for the testing of any solar cell. In 2015 Jaffery et al. \cite{RN59} released a paper outlining a similar setup that was designed for the testing of PVs. This design incorporated temperature control, varying lighting conditions. The set-up is shown in the Figure \ref{fig:set_upHT9} \cite[p.~3,4]{RN59} below.
+An important factor for the entire set up is to ensure that these degradations are measurable, thereby requiring careful control of the ambient conditions. This meant a container that would not let in ambient air (due to the oxygen and water content) as well as have a controllable chemical and physical atmosphere. Degradation experiments are essential in the testing of solar cells; therefore, it made sense to try and find any set ups which had similar goals to the chamber. In 2015 Jaffery et al. \cite{RN59} released a paper outlining a similar setup that was designed for the testing of PVs. This design incorporated temperature control, varying lighting conditions. The set-up is shown in the Figure \ref{fig:set_upHT9} \cite[p.~3,4]{RN59} below.
 
 \begin{figure}[h]
 \begin{subfigure}{0.5\textwidth}
@@ -63,7 +64,7 @@ An important factor for the entire set up is to ensure that these degradations a
 \includegraphics[width=0.9\linewidth]{HT9_Fig2}
 \caption{Schematic of the test chamber and relevant accessories used in the research}
 \end{subfigure}
-\caption{Showing the Test chamber used by Jaffery et al.\cite{RN59}}
+\caption{A device developed by Jaffery et al.\cite{RN59} to test organic photovoltaics}
 \label{fig:set_upHT9}
 \end{figure}
 
@@ -80,7 +81,7 @@ Despite these flaws, there were key components in all three set ups which I took
 
 I also noted some of the drawbacks which I determined will not plague my design. ….
 
-This all has influenced the functionality that will be designed into the container. However, one of the key features is to align closely with the standard for testing organic solar cells. Different papers reference different standards, therefore I decided to see where they overlapped and create a container that was able to meet as many as possible. Zhang et al \cite[p.~1]{RN51} talk about the IEC61646 standard developed by the International Electrochemical Committee. This testing standard includes: “ 1000 h damp heat (DH) test at 85$^o$C and 85\% humidity, 200 cycles of thermal cycling (TC) from −40 to +85$^o$C, and a sequence test consisting of UV exposure, 50 cycles of TC, and 10 cycles of humidity freeze (HF) from −40 to +85 °C at 85\% humidity. After finishing each test, modules are then characterised to determine device efficiency.”
+This all has influenced the functionality that will be designed into the container. However, one of the key features is to align closely with the standard for testing organic solar cells. Different papers reference different standards, h decision was made to see where they overlapped and create a container that was able to meet as many as possible. Zhang et al \cite[p.~1]{RN51} talk about the IEC61646 standard developed by the International Electrochemical Committee. This testing standard includes: “ 1000 h damp heat (DH) test at 85$^o$C and 85\% humidity, 200 cycles of thermal cycling (TC) from $−$40 to $+$85$^o$C, and a sequence test consisting of UV exposure, 50 cycles of TC, and 10 cycles of humidity freeze (HF) from $-$40 to $+$85 $^o$C at 85\% humidity. After finishing each test, modules are then characterised to determine device efficiency.”
 
 Further to the IEC61646 is the guidelines referenced in Reese et al. \cite[p.~1254]{RN53}[HT 3 P1254]. These were developed at the International Summit on Organic and Hybrid Photovoltaic Stability in the years 2008. 2009 and 2010. These 3 guidelines (ISOS 1,2,3) show different methods for testing solar cell degradation, some of which can be seen in Figure \ref{fig:HT3_fig2} \cite[p.~1255]{RN53} below. 
 
@@ -91,10 +92,10 @@ Further to the IEC61646 is the guidelines referenced in Reese et al. \cite[p.~12
 \end{figure}
 
 
-Figure \ref{fig:HT3_fig2} has been taken from Reece et al. \cite{RN53} and outlines some different testing conditions for organic solar cells. As can be seen the guidelines are similar to those referenced in the IEC61646 standard, however, there is more detail on the exact light source, as well as the load the solar cell should be subject to. 
+Figure \ref{fig:HT3_fig2} has been taken from Reese et al. \cite{RN53} and outlines some different testing conditions for organic solar cells. As can be seen the guidelines are similar to those referenced in the IEC61646 standard, however, there is more detail on the exact light source, as well as the load the solar cell should be subject to. 
 
 
-From these two sets of guidelines, basic functionality for the container could be drawn up. This includes: Temperature variation with a minimum maximum temperature of 85 degrees, ability to vary humidity, regular measurement of Voc and Jsc and light conditions which would vary from a solar simulator to outdoor sunlight to darkness. Both sets of guidelines reference temperatures below ambient room temperature; however, this would require some sort of refrigerant running through the device, connected to pumping systems and a heat exchanger. This would cause the box to be particularly cumbersome as it would require significantly more components, space and complexity meaning it would struggle to fit the requirement of easily replicable. Thereby, the decision was made to not have testing conditions below ambient room temperature. 
+From these two sets of guidelines, basic functionality for the container could be drawn up. This includes: Temperature variation with a minimum maximum temperature of 85 degrees, ability to vary humidity, regular measurement of Voc (open circuit voltage)and Jsc (short circuit current) and light conditions which would vary from a solar simulator to outdoor sunlight to darkness. Both sets of guidelines reference temperatures below ambient room temperature; however, this would require some sort of refrigerant running through the device, connected to pumping systems and a heat exchanger. This would cause the box to be particularly cumbersome as it would require significantly more components, space and complexity meaning it would struggle to fit the requirement of easily replicable. Thereby, the decision was made to not have testing conditions below ambient room temperature and to have a chamber that could exceed the high temperature testing requirements with a substrate temperature of 120$^o$C. 
 
 Another integral consideration was sampling time. For accurate results, it would be desirable to have regular short interval (measurements every minute) measurements of Voc and Jsc. However, this is not possible due to the observed characteristics of OPVs. Degradation can be broken down into three distinct phases, “an initial period of steep degradation that slows down with time, a period of relatively constant degradation that lasts for most of the solar cell’s usable lifetime, and rapid and complete degradation that results in device failure” \cite[P.~1]{RN60}. This non-linear nature of degradation can clearly be seen in Figure \ref{fig:HT10_fig1}  \cite[P.~3]{RN60}.
 
@@ -104,13 +105,14 @@ Another integral consideration was sampling time. For accurate results, it would
 \label{fig:HT10_fig1}
 \end{figure}
 
-From Figure \ref{fig:HT10_fig1} it is clear to see that the 2 regions that need short interval measurement times are Burn-in and Failure. These can be categorised as the time to reach 80 \% and 50\% of initial performance \cite[P.~4]{RN60}. Thereby the most accommodating testing regime, that won't create unnecessary excess data-points would be a collecting data at small intervals during Burn-in and Failure, while having longer interval times during the long-term testing regime. This will be discussed further during the x chapter.
+From Figure \ref{fig:HT10_fig1} it is clear to see that the 2 regions that need short interval measurement times are Burn-in and Failure. These can be categorised as the time to reach 80 \% and 50\% of initial performance \cite[P.~4]{RN60}. Thereby the most accommodating testing regime, that will not create unnecessary excess data-points would be a collecting data at small intervals during Burn-in and Failure, while having longer interval times during the long-term testing regime. This will be discussed further in Section \ref{sec:code_development}.
 
 
 Write closing remars for the intro…
 
 \chapter{Chamber Design}
-The design of the container and associated electronics was a process that encompassed several months. This chapter will go through the entire design process, outlining the key aims, decisions and analysis behind the container design. 
+\label{chp:design}
+The design of the container and associated electronics was a key process in the development of the chamber. This chapter will go through the entire design process, outlining the key aims, decisions and analysis behind the container design. 
 
 During the mechanical design process, there were two different software packages used: OpenSCAD and SOLIDWORKS. OpenSCAD is an open-source software which is compatible with all major computer operating systems. Furthermore, as mentioned in the introduction, using open-source software is a key tenant of this project as it needs to be replicable for teams worldwide. SOLIDWORKS however, is not open-source, but was still used, because there is some key functionality in SOLIDWORKS embedded in SOLIDWORKS (such as rendering photos, heat simulations and producing engineering drawings). However, as I will lay out further in the chapter, the main designs were completed on OpenSCAD, and they do hold enough information for a researchers and engineers elsewhere to replicate without significant difficulty. 
 
@@ -120,29 +122,27 @@ During the electrical design process there was more of a conundrum. Due to COVID
 
 \section{Physical Specification} 
 \label{section:Physical_spec}
-The first stage of the design process was to outline a specification for the testing container. These specifications were drawn from the project brief, the literature review and discussion with my supervisor Professor Moritz Riede. The specification of the design is outlined below:
+The first stage of the design process was to outline a specification for the testing container. These specifications were drawn from the project brief, the literature review and discussion with my supervisor Professor Moritz Riede. The primary specification of the design is outlined below:
 \begin{enumerate}
 \item{The container must be able to accommodate a 30 mm x 30 mm substrate provided by AFMD research group.}
-\item{The container must be leakproof to outside air.}
-\item{The container must allow electrical connections from outside to connect to the substrate for measurements.}
-\item{The container must enable the substrate to be heated to a given temperature.}
-\item{The container must have a window allowing light to be shone into the box.}
+\item{The container must be leakproof \footnote{Not allow enough Oxygen and water vapour in from ambient atmosphere to degrade a calcium sample with dimensions 30 mm *30 mm *150 nm over a period of 3 days} to outside air.}
+\item{The container must allow electrical connections \footnote{The connections must enable the cell to be controlled/measured by a source meter.} from outside to connect to the substrate for measurements.}
+\item{The container must enable the substrate to be heated to a given temperature \footnote{Up to 120$^o$C as mentioned in Section \ref{sec:lit}.}}
+\item{The container must have a window allowing light\footnote{The AM1.5 light spectrum} to be shone onto the substrate.}
 \item{The container must contain a gas inlet.}
-\item{The container should fit into the small glovebox inlet with diameter 150 mm. }
+\item{The container should fit into the small glovebox load lock with diameter 150 mm. }
 \end{enumerate}
 
-
-
-This specification is a clear guide to what functionality there needs to be within the container, as well as any size limitations. As mentioned in both the introduction and literature review, it is essential for the container to be leakproof, to ensure that the solar cell does not degrade due to atmospheric O2 and water vapour. This would result in flawed results due to the cell having some unmeasured degradation before the experiments even begin. Another important point in the specification is the ability of the cell to be heated to a given temperature*. This functionality is important as its role is to attempt to emulate a lifetime (20 years) of temperature degradation in the space of 3 months. 
-
-The gas inlet is another feature to enhance the degradation. This will be used to create a ‘cocktail’ of different gases (e.g. oxygen and water vapour) to try and emulate lifetime degradation of the solar cell. The last point on the specification is to ensure the ease of use with the AFMD research group. The gloveboxes they use have a small inlet with a diameter of 150 mm, using this would vastly reduce the time needed to insert the solar cell into the testing container. 
-
-Along with the specification, some further goals were drawn up to provide aims that would provide important functionality but were not essential for the solar cell. These are shown below: 
+The desirable goals which would supplement the primary specification are as follows: 
 \begin{itemize}
 \item{Build a Python based GUI (Graphical User Interface) to enable programmatic testing of the solar cell.}
 \item{Enable a programmable atmosphere for the box which should be embedded into the functionality of the GUI.}
 \end{itemize}
-These goals are important to ensure the ease of use of the box, as well as to reduce the amount of time needed for setting up and running the container. The programmatic testing of the cell is important as it enables simple running of the chamber, saving time and reducing complexity for those using it. 
+This specification is a clear guide to what functionality there needs to be within the container, as well as any size limitations. As mentioned in both the introduction and literature review, it is essential for the container to be leakproof, to ensure that the solar cell does not degrade due to atmospheric O2 and water vapour. This would result in flawed results due to the cell having some unmeasured degradation before the experiments even begin. Another important point in the specification is the ability of the cell to be heated to a given temperature*. This functionality is important as its role is to attempt to emulate a lifetime (20 years) of temperature degradation in the space of 3 months. 
+
+The gas inlet is another feature to enhance the degradation. This will be used to create a ‘cocktail’ of different gases (e.g. oxygen and water vapour) to try and emulate lifetime degradation of the solar cell. The last point on the specification is to ensure the ease of use with the AFMD research group. The gloveboxes they use have a small inlet with a diameter of 150 mm, using this would vastly reduce the time needed to insert the solar cell into the testing container. 
+
+These desirable goals are important to ensure the ease of use of the box, as well as to reduce the amount of time needed for setting up and running the container. The programmatic testing of the cell is important as it enables simple running of the chamber, saving time and reducing complexity for those using it. 
 \section{Initial Mechanical Designs}
 This specification provided the structure for the testing container. The literature review showed that there is no similar devices on the market to the chamber, thereby requiring innovative design to satisfy the specification. A first iteration of the design is shown below in Figures \ref{fig:plan_iteration1} and \ref{fig:iso_iteration1}. 
 
@@ -171,7 +171,7 @@ This model is supposed to coincide with a smaller module named the Substrate Hol
 \label{fig:substrate_holder1}
 \end{figure}
 
-Both the substrate holder and Outer Shell were 3D printed to provide a physical representation of the model(with a photo shown in Figure \ref{fig:3D_print1}), where it became possible to see some of the flaws that were hidden by the virtual design. The first thing was that this design was very small, making it difficult for use within the glovebox. This was a problem as all assembly needed to occur within a glovebox to ensure there would be no unwanted oxygen or water residue able to degrade the cell.  Adding to this, it seemed that there wouldn’t be enough room to wire the components in the container, this would cause significant problems as the modularity of the design would be compromised. This would go against one of the tenants of the project (modularity) which would be a problem when thinking of using this set up on different substrate layouts.
+Both the substrate holder and Outer Shell were 3D printed to provide a physical representation of the model (with a photo shown in Figure \ref{fig:3D_print1}). This was because the process was iterative: design, rapid prototype, design, rapid prototype. The reason behind this was to ensure that the design process found potential flaws within the chamber preventing time being wasted in the future where design flaws could impact the entire timeline. This process paid off as after 3D printing the design, it became clear that this design was very small and fiddly, making it difficult to assemble within the glovebox. Moreover, it is clear that there would not be enough room to wire the components in the container. 
 \begin{figure}[h]
 \hfill\includegraphics[width=0.45\linewidth]{Design_5}\hspace*{\fill}
 \caption{Showing the result of the first 3D print of the model}
@@ -179,8 +179,8 @@ Both the substrate holder and Outer Shell were 3D printed to provide a physical 
 \end{figure}
 
 \section{Final Container Models}
-
-These problems caused a redesign of the container, resulting in the model shown in figure (n). The Outer Shell is larger in this model with dimensions 100 mm* 110 mm* 77 mm, with a wall thickness 16 mm, resulting in more space within the container. Additionally, there was a rethink of the sealing method, to eliminate the need of directly screwing onto glass, risking a break, therefore a lid was constructed for the substrate holder, which would cause the glass window to be sandwiched between 2 O-rings creating an airtight seal. The changes to the outer shell can be seen in Figure \ref{fig:outer_final}. 
+\label{sec:FCM}
+To counter the problems listed, the following iteration - shown as a CAD model I Figure \ref{fig:outer_final} – fixes the listed problems. The Outer Shell is larger in this model with dimensions 100 mm* 110 mm* 77 mm, with a wall thickness 16 mm, resulting in more space within the container. Additionally, there was a rethink of the sealing method, to eliminate the need of directly screwing onto glass, risking a break, therefore a lid was constructed for the substrate holder, which would cause the glass window to be sandwiched between 2 O-rings creating an airtight seal. The changes to the outer shell can be seen in Figure \ref{fig:outer_final}, with the new lid shown in Figue \ref{fig:metal_lid_CAD}. 
 
 \begin{figure}[h]
 \hfill\includegraphics[width=0.45\linewidth]{Design_6}\hspace*{\fill}
@@ -188,16 +188,22 @@ These problems caused a redesign of the container, resulting in the model shown 
 \label{fig:outer_final}
 \end{figure}
 
-The substrate holder was also modified with the intention of being unique to this particular substrate layout resulting in a more detailed design. The substrate layout was provided to me by Dr. Grey Christophoro, a researcher working in the Physics department, and can be seen in Figure \ref{fig:sub_layout}.
+\begin{figure}[h]
+\hfill\includegraphics[width=0.45\linewidth]{metal_lid_CAD}\hspace*{\fill}
+\caption{Showing the Lid which will be used to sandwich the glass plate between 2 o-rings.}
+\label{fig:metal_lid_CAD}
+\end{figure}
+
+The substrate holder was also modified with the intention of being unique to this particular substrate layout resulting in a more detailed design. The pin layout – which includes the light masks - was provided to me by Dr. Grey Christophoro, a researcher working in the Physics department, and can be seen in Figure \ref{fig:sub_layout}.
 
 \begin{figure}[h]
 \hfill\includegraphics[width=0.45\linewidth]{Design_7}\hspace*{\fill}
-\caption{Showing the substrate layout provided by Dr. Christophoro.}
+\caption{Showing the pin layout provided by Dr. Christophoro, the light masks show the area which light should be incident on.}
 \label{fig:sub_layout}
 \end{figure}
 
 
-As shown in Figure \ref{fig:sub_layout} the substrate has x contact points and y cells, meaning that the substrate holder needs to provide a method to cleanly contact the contact points, without hindering the flow of air around the cell, or blocking the light incident on the cell surface. The solution was to develop a small lid which would be screwed into the substrate holder, thereby providing downward pressure onto the substrate to ensure clean contacts with the pins. This lid was designed so that the outline did not block any light being incident on the cells. The lid can be seen on top of the substrate holder in Figure \ref{fig:sub_lid}.
+As shown in Figure \ref{fig:sub_layout} the substrate has 10 contact points, meaning that the substrate holder needs to provide a method to cleanly contact the contact points, without hindering the flow of air around the cell\footnote{To ensure that gases that are needed for degradation are able to react with the active layer or electrodes}, or blocking the light incident on the cell surface. The solution was to develop a small lid which would be screwed into the substrate holder, thereby providing downward pressure onto the substrate to ensure clean contacts with the pins. This lid was designed so that the outline did not block any light being incident on the cells. The lid can be seen on top of the substrate holder in Figure \ref{fig:sub_lid}.
 
 \begin{figure}[h]
 \hfill\includegraphics[width=0.45\linewidth]{Design_8}\hspace*{\fill}
@@ -210,7 +216,7 @@ Another important consideration was the ability for the substrate holder to be e
 Another small edit is the gap under the where the substrate is supposed to sit, this is to encourage gas flow beneath the substrate. Another issue was where the heater and temperature sensor would sit. This led me to place the two holes running through the substrate holder one on top of the other to place the sensor and the heater. These holes were positioned there tactically so that the sensor temperature could be correlated with the predicted substrate temperature by modelling. These changes can be seen in the blown-up overall model shown in Figure \ref{fig:blown_up}.
 
 \begin{figure}[h!]
-\hfill\includegraphics[width=0.3\linewidth]{Design_9}\hspace*{\fill}
+\hfill\includegraphics[width=0.8\linewidth]{Design_9}\hspace*{\fill}
 \caption{The Blown-Up model of the chamber}
 \label{fig:blown_up}
 \end{figure}
@@ -218,7 +224,7 @@ Another small edit is the gap under the where the substrate is supposed to sit, 
 \section{Electrical Specification} 
 \label{section:Electrical_spec}
 
-This section will take a more in depth look at the electrical requirements of the chamber. From the substrate layout it is clear that there are 6 solar cells to contact, each with 2 pins, meaning a total of 12 wires will be connected to the cell itself. This means a PCB needs to be manufactured which is able to connect 12 wires to the cells. From there each cell needs to be measured and the value of the Voc and Jsc recorded with the time, temperature and gas composition the substrate is subjected to. 
+This section will take a more in depth look at the electrical requirements of the chamber. From the pin layout, it is clear that there needs to be 20 wires connected to the cell. For this particular substrate layout, there are 6 separate cells which means a PCB needs to be manufactured which is able to choose which of these cells to measure. Each cell needs to be measured to find the value of the Voc and Jsc recorded with the time, temperature and gas composition the substrate is subjected to. 
 
 Adding to this, a measurement device needed to be chosen, along with a controller to run and record the data. After discussion with the AFMD group, Dr. Christophoro and my supervisors Professors Riede and Morris the following electrical specification was drawn up:
 
@@ -232,12 +238,13 @@ Adding to this, a measurement device needed to be chosen, along with a controlle
 This specification is non-exhaustive but does provide a clear structure to what is needed for the successful manufacturing of the set-up.
 
 \section{Electrical Design}
+\label{sec:elec_design}
 
 For the control systems, there were two options: a Raspberry Pi or an Arduino. Both have extensive documentation and are relatively inexpensive given their power. To decide which would be more suitable a Multi-Criteria analysis was undertaken with the results shown below:
 
-\begin{table}[h!]
+\begin{table}[ht!]
 \begin{tabular}{c|c|c}
-&Raspberry Pi & Arduino \\
+&Raspberry Pi 4 & Arduino Uno Rev3 \\
 \hline
 Cost & 4 & 10\\
 \hline
@@ -260,9 +267,9 @@ From the multi-criteria analysis above it is clear that the Raspberry-Pi is the 
 
 These designs needed to be modified for the following reasons. Firstly, the design named Base 8x, was designed to interface with an Arduino, meaning a subsequent header needed to be implemented to ensure that the PCB was able to interface with the Raspberry Pi. Other small modifications include adding resistors and a header for a temperature sensor to be wired in, as well as creating the mounts for a secondary PCB to be mounted (which would hold the Solid-State Relay needed to control the mains powered cartridge heater). 
 
-Other changes included ensuring that the tracks were routed with large enough profiles to be printed on the departmental printers, as well as modifying the PCB so that it only had two working layers. These modifications in the schematic can be seen in appendix 2. 
+For rapid testing and prototyping, the decision was made to use the departmental PCB printers. This meant some further changes needed to be made to the PCBs: ensuring that the tracks were routed with large enough profiles to be printed on the departmental printers and modifying the PCB so that it only had two working layers \footnote{The departmental printers can only print a PCB with two layers or less}. These modifications in the schematic can be seen in the Appendix \ref{fig:appendix3}. 
 
-For the PCB named Solar Mux- appendix 2, there needed to be significantly fewer modifications, yet they were still significant. Firstly, the number of relays were reduced from 21 to 17 as only 6 solar cells were being measured rather than 8. Furthermore, there were significant modifications to the routing of the tracks as again this PCB was not designed to be printed in the engineering department thereby meaning the tracks needed to be made larger. These changes to the schematic can be seen in appendix 4. 
+For the PCB named Solar Mux- schematic shown in Appendix \ref{fig:appendix2} - there needed to be significantly fewer modifications, yet they were still significant. Firstly, the number of relays were reduced from 21 to 17 as only 6 solar cells were being measured rather than 8. Furthermore, there were significant modifications to the routing of the tracks as again this PCB was not designed to be printed in the engineering department thereby meaning the tracks needed to be made larger. These changes to the schematic can be seen in Appendix \ref{fig:appendix4}. 
 
 I also designed a third PCB whose schematic can be seen as appendix 5. This is a small PCB designed to isolate mains current from the board named base, thereby enabling me to run tests without the hazards posed by wiring up to the mains. 
 
@@ -280,38 +287,65 @@ Once these were all designed, they needed to be created into models that were ma
 \label{fig:Base_3D }
 \end{figure}
 
+\begin{figure}[h]
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\linewidth]{MUX_3D_1}
+\caption{Front View of PCB named MUX}
+\end{subfigure} \begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\linewidth]{MUX_3D_2}
+\caption{Back View of PCB named MUX}
+\end{subfigure}
+\caption{Showing the model of the PCB named MUX }
+\label{fig:MUX_3D }
+\end{figure}
+
+\begin{figure}[h]
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\linewidth]{SSR_3D_1}
+\caption{Front View of PCB named SSR}
+\end{subfigure} \begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\linewidth]{SSR_3D_2}
+\caption{Back View of PCB named SSR}
+\end{subfigure}
+\caption{Showing the model of the PCB named SSR }
+\label{fig:SSR_3D }
+\end{figure}
+
+
+
 
 \section {Code Planning}
 
-Another integral component to the container is the control electronics which are created to run it. After the Raspberry Pi was chosen there was some general research through the documentation to understand the ways to use the General-Purpose Input Output header to control electronics (GPIO). From reading the documentation for the GPIO \cite{RN67}, it was clear there were 3 real options for programming language, C, C++ or Python. As someone who has experience in Python, alongside the \emph{extensive} documentation for the GPIO pins in Python \cite{RN68} it was a clear choice to use Python as the programming language. 
+Chosing the Raspberry Pi enabled the development of the code and planning behind it. There was some general research through the documentation to understand the ways to use the General-Purpose Input Output header to control electronics (GPIO). From reading the documentation for the GPIO \cite{RN67}, it was clear there were 3 real options for programming language, C, C++ or Python. As someone who has experience in Python, alongside the \emph{extensive} documentation for the GPIO pins in Python \cite{RN68} it was a clear choice to use Python as the programming language. 
 
-Using the library Gpiozero, tests were carried out to ensure that the Raspberry Pi purchased was working correctly, as well as checking some other features (such as the multiprocessing library) work with Gpiozero. To do this I ran multiple LEDs blinking in parallel with each other, using different time intervals for the blink. This proved that the Gpiozero library worked with the multiprocessing library and enabled the planning of the main script that was going to control the testing container. 
+Using the library Gpiozero, tests were carried out to ensure that the Raspberry Pi purchased was working correctly, as well as checking some other features (such as the multiprocessing library) work with Gpiozero. To do multiple LEDs were run in parallel so that they would be blinking with each other, using different time intervals for the blink. This proved that the Gpiozero library worked with the multiprocessing library and enabled the planning of the main script that was going to control the testing container. 
 
-The thought process behind the code architecture was to develop a Graphical User Interphase (GUI) to enable easy control of the testing container. The GUI would then display specific information while the test was running, enabling a convenient ‘check’ for the user to ensure the test is proceeding as planned. The resultant GUI can be seen as a screen-shot in Figure \ref{fig:GUI_1}.
+The thought process behind the code architecture was to develop a Graphical User Interphase (GUI) to help the user with the control of the testing container. The GUI would then display specific information while the test was running, enabling a convenient ‘check’ for the user to ensure the test is proceeding as planned. The resultant GUI can be seen as a screen-shot in Figure \ref{fig:GUI_1}.
 
-There were, however, some problems with this set-up. Once the GUI itself was constructed I was unable to integrate it with the Multiprocessing package. A decision needed to be taken: run the risk of trying to solve this problem, using up valuable time, or create an easily editable python script which incorporated many of the benefits of the GUI while not actually using one.  
+There were, however, some problems with this set-up. Once the GUI itself was constructed I was unable to integrate it with the Multiprocessing package. A decision needed to be taken: run the risk of chasing a \emph{desriable} but not essential goal, using up valuable time, or create an easily editable python script which incorporated many of the benefits of the GUI while not actually using one.  
 
-Due to the iterative nature of this project, the decision was taken to prioritise constructing a working container that may not meet the entire specification, rather than create a container that was 80% working yet not ready to test solar cells. For this reason, I decided to put the GUI to one side and develop the code so that it was simple to change the parameters of the test from within. An overall architecture was drawn up and is shown below in Figure \ref{fig:code_planning}.
+Due to the iterative nature of this project, the decision was taken to prioritise constructing a working container that may not meet the supplementary desirable goals (but would be operational), rather than create a container that was 80% working yet not ready to test solar cells. For this reason, I decided to put the GUI to one side and develop the code so that it was simple to change the parameters of the test from within. An overall architecture was drawn up and is shown below in Figure \ref{fig:code_planning}.
 
 
 \chapter{Manufacturing}. 
+\label{chp:manufacturing}
 
 
 In this chapter I will be discussing the different stages of manufacturing of the chamber. The manufacturing process is split into three sections in this chapter which cover the manufacturing of the chamber itself, the manufacturing of the PCB and associated electronics as well as the code development. 
 
-From the Gantt chart shown in the Appendix, Figure \ref{fig:Gantt}, the manufacturing process was estimated to take at least n weeks, this prediction included any time that was needed for iterating as well as physically building the components. Unfortunately, the work in this chapter was hampered by the impact of the second national lockdown in January 2021, with the details of the mitigations strategies I took outlined in this chapter as well as any forced changes I had to make.
+From the Gantt chart shown in Appendix \ref{fig:Gantt}, the manufacturing process was estimated to take at least n weeks, this prediction included any time that was needed for iterating as well as physically building the components. Unfortunately, due to the second national lockdown in January 2021, the project was hampered by a series of delays. This can be seen in Appendix \ref{fig:Gantt_covid} where the delays can be seen clearly. 
 
 As mentioned in the Design Chapter, the plan was to use the engineering department workshops for the manufacturing of all the parts of this chamber. There were some limitations, such as the fact the PCB printing machine could only print 2 layers. However, this was dwarfed by the expertise that I was able to utilise while developing these designs, ensuring that the chamber was constructed to the highest standards. This chapter will discuss the decisions made during the manufacturing process, any modifications made and their impact on the final product. 
 
 
-\section{Chamber Manufacturing}
+\section{Outer Chamber Manufacturing}
 
-This section will discuss the manufacturing of the container itself, including any components that are mechanically attached to it. From the designs shown in the previous chapter, engineering drawings were produced and shown to Duncan Constable (the senior workshop technician) who advised me that the inside corners would come out rounded due to the precision of the CNC mill. Furthermore, I was instructed to change the shape of the O-ring ‘gaps’ so that the O-rings would not tear around the sharp corners. 
+This section will discuss the manufacturing of the container itself, including components which were attached to the chamber From the designs shown in Section \ref{sec:FCM}, engineering drawings were produced and shown to Duncan Constable (the senior workshop technician) who advised me that the inside corners would come out rounded due to the precision of the CNC mill. Furthermore, I was instructed to change the shape of the O-ring ‘gaps’ so that the O-rings would not tear around the sharp corners. 
 
 Another important factor was the material selection. As mentioned previously, the material needed to be impermeable, preferably metal with limited corrosion. Speaking to Duncan about the preference of Aluminium, he suggested Duralumin, which the workshop had an abundance of spare stock and it was the most suitable metal for the CNC miller to manufacture. Dural is a 2000 series Aluminium alloy, with the main materials apart from Aluminium being Copper, Manganese and Magnesium \cite{RN73}. 
 
 
-The designs were then submitted to the workshop for manufacturing with the drawings shown in the appendix as Figure \ref{fig:drawing_1}, \ref{fig:drawing_2}, \ref{fig:drawing_3}. Alongside the parts shown in the appendix, the electronic windows were manufactured from scrap metal using a lathe, with the drawings shown Figure \ref{fig:metal_window_drawing} below. These parts were then modified by hand to create leakproof wire connections between outside the container and within, with the finalised part shown embedded into the container in Figure \ref{fig:metalwindow}. 
+The designs were then submitted to the workshop for manufacturing with the drawings shown in Appendix \ref{fig:drawing_1}, \ref{fig:drawing_2}, \ref{fig:drawing_3}. Alongside the parts shown in the appendix, the electronic windows were manufactured from scrap metal using a lathe, with the drawings shown Figure \ref{fig:metal_window_drawing} below. These parts were then modified by hand to create leakproof wire connections between outside the container and within, with the finalised part shown embedded into the container in Figure \ref{fig:metalwindow}. 
 
 \begin{figure}[h!]
 \hfill\includegraphics[width=0.6\linewidth]{elec_windows_drawings}\hspace*{\fill}
@@ -336,7 +370,7 @@ As can be seen, the wires are glued (using a glue gun) into the metal, meaning t
 \caption{Figures Showing the assembly of the chamber}
 \end{figure}
 
-Once the outer shell had been manufactured, parts needed to be fitted to it. Firstly, the O-rings needed to be attached to the chamber. Figure \ref{fig:oring_assem} shows the O-ring glued into its slot. The O-rings sandwiched an acrylic plate which was used for the testing of the system (before any expensive glassware was bought) shown in Figure \ref{fig:acrylic_plate}. This assembly concluded with the attachment of the safety relief valves and push fit valves shown in Figure \ref{fig:safety_relief} sourced from Tameson \cite{RN36} and RS\cite{RN33} respectively.  Lastly, the assembly was completed using small guide pins, labelled in Figure \ref{fig:assembly} alongside the M4 screws used to tighten the lid onto the glass plate thereby creating an airtight seal. The testing of this will be discussed further in the following chapter. 
+Following the manufacturing of the outer shell, assembly occurred. Firstly, the O-rings needed to be attached to the chamber. Figure \ref{fig:oring_assem} shows the O-ring glued into its slot. The O-rings sandwiched an acrylic plate which was used for the testing of the system (before any expensive glassware was bought) shown in Figure \ref{fig:acrylic_plate}. This assembly concluded with the attachment of the safety relief valves\footnote{The safety relief valve is required in case there is a malfunction with the MFCs causing a large overpressure within the chamber, which could result in an explosive failure causing damage and injury}and push fit valves shown in Figure \ref{fi:safety_relief} sourced from Tameson \cite{RN36} and RS\cite{RN33} respectively.  Lastly, the assembly was completed using small guide pins, labelled in Figure \ref{fig:assembly} alongside the M4 screws used to tighten the lid onto the glass plate thereby creating an airtight seal. The testing of this will be discussed further in the following chapter. 
 
 \begin{figure}[h!]
 \begin{subfigure}{0.5\textwidth}
@@ -357,10 +391,12 @@ Once the outer shell had been manufactured, parts needed to be fitted to it. Fir
 \label{fig:assembly}
 \end{figure}
 
+\section{Internal Chamber Manufacturing}
+\label{sec:ICM}
 
-The other component which needed manufacturing was the substrate holder. Figures \ref{blown_up} show the designs which were manufactured using the departmental 3D printing machines with ABS (Acrylonitrile Butadiene Styrene) plastic. ABS has a softening point of between 160 – 170$^o$C \cite[p.~744]{RN70}, which is lower than desired for the container, however, this version was used as a test to see if it was possible to insert the electrical contacts with this design. 
+This section looks at the manufacturing of the substrate holder. Figures \ref{blown_up} show the designs which were manufactured using the departmental 3D printing machines with ABS (Acrylonitrile Butadiene Styrene) plastic. ABS has a softening point of between 160 – 170$^o$C \cite[p.~744]{RN70}, which is lower than desired for the container, however, this version was used as a test to see if it was possible to insert the electrical contacts with this design. 
 
-Figure \ref{failure} shows my attempts to insert electrical contact pins \cite{RN71} into the substrate holder. Unfortunately, this was unsuccessful due to the fact these pins were extremely fiddly to handle, coupled with the very small amount of space I had to solder wires onto the pin while not melting the plastic. This required a rapid solution otherwise the timeline for the project would be delayed. 
+Figure \ref{failure} shows my attempts to insert electrical contact pins \cite{RN71} into the substrate holder. This was unsuccessful due to the fact these pins were extremely fiddly to handle, coupled with the very small amount of space I had to solder wires onto the pin while not melting the plastic. This required a rapid solution otherwise the timeline for the project would be delayed. 
 
 \begin{figure}[h!]
 \hfill\includegraphics[width=0.5\linewidth]{substrate_fail}\hspace*{\fill}
@@ -369,15 +405,19 @@ Figure \ref{failure} shows my attempts to insert electrical contact pins \cite{R
 \end{figure}
 
 
-The solution was creating a new 3D printed part, with more space for the pins to be inserted and soldered correctly. The new substrate holder would also be made from PEEK (Polyether Ether Ketone) rather than ABS due to its higher MP (260$^o$C) \cite{RN72} allowing soldering of the pins to wires to take place, as well as no deformation within the container. Unfortunately, this part was never manufactured as the departmental 3D printing lead Peter Walters informed me that the person in charge of printing in PEEK was not responding, costing over 4 weeks in development time. This meant that this part could no longer be manufactured and caused significant impact on the outcome of the project, which will be discussed further in the conclusion.  
+The solution was creating a new 3D printed part, with more space for the pins to be inserted and soldered correctly. The new substrate holder would also be made from PEEK (Polyether Ether Ketone) rather than ABS due to its higher MP (260$^o$C) \cite{RN72} allowing soldering of the pins to wires to take place, as well as no deformation within the container. This part was due to be manufactured in the engineering department, however, due to external factors, the production had to be outsourced to Lazer Lines, with the part made from Formlabs High Temp Resin for High Thermal Stability, ith the datasheet found at \cite{RN80}. The substrate holder and lid can be seen in Figures \ref{fig:substrate_HT} and \ref{fig:lid_HT}. 
+
+The substrate holder was then modified to incorporate the pins as was attempted in Figure\ref{failure}. This attempt proved successful with the pins clearly showing in Figure \ref{fig:HTpins}. 
+
+ 
 
 
 
 \section{PCB Manufacturing}
 
-This section will talk about the manufacturing of the PCB and associated electronics of the chamber. As mentioned in the previous chapter, the PCB was designed to be manufactured in the Engineering Department Electronics Workshop. This meant that there were some limitations in manufacturing such as: the fact that the printer was unable to create plated through holes, thereby meaning nearly all components could only be connected to the bottom layer. Furthermore, this meant the via’s produced needed to have wires running through them and soldered onto both layers, adding time and complexity to the soldering process. 
+As mentioned in Section \ref{sec:elec_design}, the PCB was designed to be manufactured in the Engineering Department Electronics Workshop. Using the workshop allowed access to expert help alongside rapid prototyping. Using the engineering workshop meant that there were limitations to the capability of the printer. The holes were not plated through meaning nearly all components could only be connected to the bottom layer. Furthermore, this meant the via’s produced needed to have wires running through them and soldered onto both layers, adding time and complexity to the soldering process. 
 
-Using a soldering iron, I was able to complete two of the three PCBs. I was not allowed to solder the PCB named SSR-PCB as it would be connected to mains, therefore, cause a safety risk if someone not qualified completed the wiring. Figures \ref{fig:base} and \ref{fig:mux} show both sides of the completed PCBs. 
+Using a soldering iron, I was able to complete two of the three PCBs. I was not allowed to solder the PCB named SSR-PCB as it would be connected to mains, therefore, cause a safety risk if someone not qualified completed the wiring\footnote{This needs to be done by qualified technician, however, due to covid this was not completed}. Figures \ref{fig:base} and \ref{fig:mux} show both sides of the completed PCBs. 
 
 \begin{figure}[h]
 \begin{subfigure}{0.5\textwidth}
@@ -405,8 +445,6 @@ Using a soldering iron, I was able to complete two of the three PCBs. I was not 
 
 
 
-The PCB in Figure\ref{fig:base} does have significant tidiness issues. These can be explained by the soldering iron I was using during the first part of the soldering process. Unfortunately, my first soldering iron did not reach high enough temperatures for easy, smooth soldering. However, once I changed soldering iron (for which the PCB named Solar Multiplexer was created with) the quality and ease significantly increased. 
-
 From here the next steps were to connect the PCBs to the substrate holder via the electronic windows. This required careful soldering of wires to ensure no short circuit occurred. To ensure that this was all correctly working testing was done on all the components with the method and results explained in the following chapter. Figure \ref{fig:final} show the PCBs connected together and wired up to the chamber. 
 
 \begin{figure}[h!]
@@ -417,37 +455,31 @@ From here the next steps were to connect the PCBs to the substrate holder via th
 
 
 \section{Code Development}
+\label{sec:code_development}
 
-The code development for the system was something that spanned the entire project. This is due to the slight changes in scope, some of which mentioned in the previous chapter. However, the core of the program was unchanging allowing a good base for the measurement system to be built on. 
+The code development for the system was something that spanned the entire project. This is due to the slight changes in scope, mentioned in the \ref{sec:code_d}. However, the core of the program was unchanging allowing a good base for the measurement system to be built on. The lack of GUI does add slightly more complexity to the user; more importantly however, it does work. 
 
-As mentioned in the previous chapter, the code was to be designed using Object Oriented Programming with the absence of a GUI to control the system. The lack of GUI does add slightly more complexity to the user, however, does not create a \emph{unusable} system. The main issue with not having a GUI is the fact that the user cannot easily input the testing conditions into the program. Instead, they have to delve into the code to \emph{find} the exact point to input it.
+The method used to combat the increase in complexity is a small introduction at the top of the script explaining where to input the testing conditions and exactly what variables this system is able to change, shown in Figure \ref{fig:code_intro}. A small document was also produced (shown in the Appendix as Figure \ref{fig:code_doc}) so the user could easily understand the test thereby allowing them to utilise the functionality best of the testing chamber.
 
-The method used to combat this is a small introduction at the top of the script explaining where to input the testing conditions and exactly what variables this system is able to change, shown in Figure \ref{fig:code_intro}. A small document was also produced (shown in the Appendix as Figure \ref{fig:code_doc}) so the user could easily understand the test thereby allowing them to utilise the functionality best of the testing chamber.
+The goal of the code was to control the internal environment of the chamber while measuring and storing the current voltage characteristics for analysis. To do this a Keithley 2400 was used to for these measurements. The advantage of using a Keithley is that it is also able to set a voltage bias across the cells and allow degradation to occur near maximum power point. This aspect is beyond the scope of the project, however, keeping this in mind would help those using it create modifications to suit their needs. 
 
-The key aspect of the code is to control the environment inside the temperature while recording the Voc and Jsc values of the cell. For accurate measurements, the AFMD group requested a Keithley 2400 was used to measure the solar cells. The advantage of using a Keithley is that it is also able to set a voltage bias across the cells and allow degradation to occur near maximum power point. This aspect is beyond the scope of the project, however, keeping this in mind would help those using it create modifications to suit their needs. 
+Initial communication issues derailed attempts to use the Keithley 2400 with the Raspberry Pi, therefore the measurements for the leak tests were conducted using a simple multi-meter. \footnote{Due to COVID-19, obtaining a Keithley for the leak tests took time, meaning that the testing of the code was unable to take place till late on in the process. With the code not working, a decision was made to prioritise the chamber testing, with the code being an aspect someone could develop further.} 
 
-Unfortunately, this aspect of the code created some unforeseen issues which were cantered on the Raspberry Pi communicating with the Keithley 2400. Due to the lack of access to Keithley’s until late into the Easter Vacation (due to COVID rules), this problem was not noticed untill first week of Trinity term. The short term solution was to use a multi-meter for the leak tests, following that 
-
-From this point on, the objective was making the code as simple to use and modify as possible. This is because one of the objectives was to ensure simple modification of the set-up. A user should easily be able to understand the code which was created thereby allowing them to create modifications to the script to suit their needs. 
-
-One of the important things was to ensure that the data is saved regularly (outside the script) so that if the test is interrupted for any reason (accidental removal, power cut or error) the data that has been collected will be available for recovery and analysis. To do this, at every measurement point the data is saved to a CSV file, thereby insuring that even if the test is compromised, the data will be saved.  
+One of the important things was to ensure that the data is saved regularly (outside the script) so that if the test is interrupted for any reason (accidental removal, power cut or error) the data that has been collected will be available for recovery and analysis. To do this, at every measurement point the data is saved to a CSV file, thereby insuring that even if the test is compromised, the data will be saved. Furthermore, to ensure that the information container in the CSV file is readable for those outside the group, formatting is explained at the start of the CSV file with the start date and time also recorded within the file. This can be seen in Figure \ref{fig:csv}.
 
 The development of the code allowed the project to move on to the next steps, including testing
 
 Conclusion of manufacturing chapter
 
 
-\chapter{Testing}
+\chapter{Chamber Testing and Simulations}
+\label{chp:testing}
 
-This chapter will be discussing and explaining the different testing procedures that the chamber, electronics and code were subjected to. The testing of the container is integral to the project as it provides a mechanism to demonstrate the working capabilities as well as determine any failure modes. 
+The tests conducted range from heat and flow simulations to leak testing. The leak and PCB tests are designed to allow the accurate rebuilding of the chamber for other research groups to use. Therefore, this means that the tests conducted should be done with equipment that would \emph{reasonably} be found in laboratories worldwide (glovebox, source meter, simulation software etc.). This chapter outlines all the simulations and tests as well as their results and analysis. 
 
-The tests conducted range from heat and flow simulations to leak testing. The tests conducted were designed to be replicable worldwide, to allow the accurate rebuilding of the chamber for other research groups to use. Therefore, this means that the tests conducted should be done with equipment that would \emph{reasonably} be found in laboratories worldwide (glovebox, source meter, simulation software etc.). This chapter outlines all the simulations and tests as well as their results and analysis. 
+\section{Heat and Flow Simulations}
 
-\section{Simulations}
-
-In this section, I will discuss the different simulations conducted on the chamber. The simulations were undertaken in SOLIDWORKS, this is because it was very simple to run the simulations in the same software as some of the designs. 
-
-Initially heat simulations were undertaken. These were designed to emulate the conditions across the substrate and within the substrate holder. The simulations were conducted using SOLIDWORKS heat simulations, where many different conditions could be placed upon the chamber. 
+The simulations were undertaken in SOLIDWORKS, this is because it was very simple to run the simulations in the same software as some of the designs. Initially heat simulations were undertaken. These were designed to emulate the conditions across the substrate and within the substrate holder. The simulations were conducted using SOLIDWORKS heat simulations, where many different conditions could be placed upon the chamber. 
 
 The parameters for the initial simulation were as follows: ambient temperature of 25$^o$C C, heater temperature 200$^o$C and a convective heat transfer coefficient of 2.5 Wm$^{-2}$L$^{-1}$. The value of 2.5 Wm$^{-2}$L$^{-1}$ was chosen as a lower bound of natural convection from Kosky et al.’s book \cite[p.~264]{RN76}. Using these values, the test was run with a cylindrical cartridge heater. This simulation was only simulating the heat transfer across the substrate holder with the results shown in Figure\ref{fig:heat_sim_1}. 
 
@@ -595,7 +627,7 @@ From here I measured the resistance of the calcium plate using a multimeter with
 \label{fig:glovebox_c_test}
 \end{figure}
 
-After removing the chamber from the glovebox the resistance started increasing. This was seen on the multimeter, and after 3 hours of running the test, the resistance reached a immeasurable value. This indicated there was a leak in this initial test. To try and find the source of the leak I watched the chamber while it was submerged in water. This showed a clear but small leak which were creating bubbles which can be seen rising in Figures \ref{fig:bubbles1} and \ref{fig:bubbles2}. 
+After removing the chamber from the glovebox the resistance started increasing. This was seen on the multimeter, and after 3 hours of running the test, the resistance reached a immeasurable value. This indicated there was a leak in this initial test. To try and find the source of the leak I watched the chamber while it was submerged in water. This showed a clear but small leak which were creating bubbles which can be seen rising in Figures \ref{fig:bubbles} and \ref{fig:bubbles2}. 
 
 \begin{figure}[h!]
 \begin{subfigure}{0.5\textwidth}
@@ -606,13 +638,19 @@ After removing the chamber from the glovebox the resistance started increasing. 
 \label{fig:bubbles}
 \end{figure}
 
+Once these leaks were filled, a further water test was conducted with no leaks found. Therefore I conducted another calcium plate test, with the same setup shown previously. The resistance of the plate while the chamber was still in the glovebox was measured to be x $\Omega$ on the multimeter. Once the chamber was taken out of the glovebox it was connected to a Keithley 2400 and the test was run as planned. The results of the test can be seen plotted below in Figure \ref{fig:plot_c}  
+
+\begin{figure}[h!]
+\hfill\includegraphics[width=0.7\linewidth]{plot_c}\hspace*{\fill}
+\caption{Showing the results of the calcium test, with voltage measured plotted against test time.} 
+\label{fig:plot_c}
+\end{figure}
 
 
 \section{Overall test}
 Talk about short time test with a solar cell
 
 \chapter{Conclusion}
-
 
 
 

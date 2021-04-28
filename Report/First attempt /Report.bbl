@@ -1,4 +1,4 @@
-\begin{thebibliography}{24}
+\begin{thebibliography}{26}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -17,6 +17,13 @@ DW~Zhao, L~Ke, W~Huang, and XW~Sun.
 \newblock \emph{Interface Stability of Polymer and Small-Molecule Organic
   Photovoltaics}, pages 139--176.
 \newblock Springer, 2013.
+
+\bibitem[Yao et~al.(2014)Yao, Tsai, and Hsu]{RN79}
+En-Ping Yao, Yi-Jhe Tsai, and Wei-Chou Hsu.
+\newblock Investigation of thermal instability of additive-based
+  high-efficiency organic photovoltaics.
+\newblock \emph{International Journal of Photoenergy}, 2014, 2014.
+\newblock ISSN 1110-662X.
 
 \bibitem[Ahmad et~al.(2013)Ahmad, Bazaka, Anderson, White, and Jacob]{RN57}
 Jakaria Ahmad, Kateryna Bazaka, Liam~J Anderson, Ronald~D White, and Mohan~V
@@ -78,31 +85,33 @@ William~R Mateker and Michael~D McGehee.
 \newblock ISSN 0935-9648.
 
 \bibitem[RN6(Accessed: 12/12/2020{\natexlab{a}})]{RN63}
-Accessed: 12/12/2020{\natexlab{a}}.
+Raspberry pi 4 b 4gb, Accessed: 12/12/2020{\natexlab{a}}.
 \newblock URL \url{https://uk.rs-online.com/web/p/raspberry-pi/1822096/}.
 
 \bibitem[RN6(Accessed: 12/12/2020{\natexlab{b}})]{RN64}
-Accessed: 12/12/2020{\natexlab{b}}.
+Arduino, uno rev 3, Accessed: 12/12/2020{\natexlab{b}}.
 \newblock URL \url{https://uk.rs-online.com/web/p/arduino/7154081/}.
 
-\bibitem[RN6(Accessed: 21/01/2021)]{RN65}
-Accessed: 21/01/2021.
+\bibitem[Christophoro(Accessed: 21/01/2021)]{RN65}
+Greyson Christophoro.
+\newblock Hardware design repository, Accessed: 21/01/2021.
 \newblock URL \url{https://github.com/greyltc/hardware}.
 
-\bibitem[RN6(Accessed: 10/02/2021)]{RN66}
-Accessed: 10/02/2021.
+\bibitem[Christophoro(Accessed: 10/02/2021)]{RN66}
+Greyson Christophoro.
+\newblock Solar sim electronics repository, Accessed: 10/02/2021.
 \newblock URL \url{https://github.com/greyltc/electronics}.
 
 \bibitem[RN6(Accessed: 30/12/2020)]{RN67}
-Accessed: 30/12/2020.
+Gpio, Accessed: 30/12/2020.
 \newblock URL \url{https://www.raspberrypi.org/documentation/usage/gpio/}.
 
 \bibitem[RN6(Accessed:30/12/2020)]{RN68}
-Accessed:30/12/2020.
+Gpio zero, Accessed:30/12/2020.
 \newblock URL \url{https://gpiozero.readthedocs.io/en/stable/}.
 
 \bibitem[RN7(Accessed: 12/12/20)]{RN73}
-Accessed: 12/12/20.
+Duralmin, Accessed: 12/12/20.
 \newblock URL \url{https://www.britannica.com/technology/duralumin}.
 
 \bibitem[RN3(Accessed: 03/11/2020)]{RN36}
@@ -125,13 +134,19 @@ Yongjin Li and Hiroshi Shimizu.
 \newblock ISSN 0014-3057.
 
 \bibitem[RN7(Accessed: 20/12/2020)]{RN71}
-Accessed: 20/12/2020.
+P70-1000045r, Accessed: 20/12/2020.
 \newblock URL
   \url{https://uk.farnell.com/harwin/p70-1000045r/spring-loaded-contact-pin-3-5mm/dp/2664910}.
 
 \bibitem[RN7(Accessed: 20/01/2021)]{RN72}
-Accessed: 20/01/2021.
+Polyetheretherketone (peek) plastic machining services, Accessed: 20/01/2021.
 \newblock URL \url{https://www.uplandfab.com/peek-machining}.
+
+\bibitem[RN8(Accessed: 28/04/2021)]{RN80}
+Formlabs material properties - high temp: Photopolymer resin for form 2 3d
+  printers, Accessed: 28/04/2021.
+\newblock URL
+  \url{https://formlabs-media.formlabs.com/datasheets/High_Temp_Technical.pdf}.
 
 \bibitem[Kosky et~al.(2015)Kosky, Balmer, Keat, and Wise]{RN76}
 Philip Kosky, Robert~T Balmer, William~D Keat, and George Wise.
@@ -141,7 +156,7 @@ Philip Kosky, Robert~T Balmer, William~D Keat, and George Wise.
 \newblock ISBN 0128025883.
 
 \bibitem[RN7(Accessed: 10/12/20)]{RN77}
-Accessed: 10/12/20.
+About abs, Accessed: 10/12/20.
 \newblock URL \url{https://www.polymershapes.com/product/abs/#about-product}.
 
 \bibitem[Klumbies(2014)]{RN78}

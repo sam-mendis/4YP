@@ -8,12 +8,13 @@
 \BOOKMARK [1][-]{section.2.5}{Electrical Design}{chapter.2}% 8
 \BOOKMARK [1][-]{section.2.6}{Code Planning}{chapter.2}% 9
 \BOOKMARK [0][-]{chapter.3}{Manufacturing}{}% 10
-\BOOKMARK [1][-]{section.3.1}{Chamber Manufacturing}{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.2}{PCB Manufacturing}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.3}{Code Development}{chapter.3}% 13
-\BOOKMARK [0][-]{chapter.4}{Testing}{}% 14
-\BOOKMARK [1][-]{section.4.1}{Simulations}{chapter.4}% 15
-\BOOKMARK [1][-]{section.4.2}{Electrical Testing}{chapter.4}% 16
-\BOOKMARK [1][-]{section.4.3}{Leak Testing}{chapter.4}% 17
-\BOOKMARK [1][-]{section.4.4}{Overall test}{chapter.4}% 18
-\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 19
+\BOOKMARK [1][-]{section.3.1}{Outer Chamber Manufacturing}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.2}{Internal Chamber Manufacturing}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.3}{PCB Manufacturing}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.4}{Code Development}{chapter.3}% 14
+\BOOKMARK [0][-]{chapter.4}{Chamber Testing and Simulations}{}% 15
+\BOOKMARK [1][-]{section.4.1}{Heat and Flow Simulations}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.2}{Electrical Testing}{chapter.4}% 17
+\BOOKMARK [1][-]{section.4.3}{Leak Testing}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.4}{Overall test}{chapter.4}% 19
+\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 20
