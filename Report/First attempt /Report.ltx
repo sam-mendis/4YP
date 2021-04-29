@@ -44,7 +44,13 @@
 
 \chapter{Introduction}
 
-Introductory section describing the project.
+The energy outlook of the 21st century is almost certainly going to be renewable. With the World’s largest economies pledging to be carbon neutral within this century, the energy they require needs to be renewable. Solar energy is one of the answers to this problem, the sun is a source of inexhaustible free energy which can be harnessed to address the needs of the world\cite[p.~894]{RN82}
+
+Currently the market leader in solar cells are Crystalline Silicon photovoltaics which hold a dominant 95\% market share in the solar energy sector \cite{RN54}. Organic solar cells have the opportunity to disrupt this market by providing versatile light-weight devices which have little material consumption and low temperature processing. This, alongside the fact that the materials required for organic photovoltaics are already widely manufactured, means that they have the potential to be significantly lower cost than their silicon counterparts \cite[p.~54]{RN81}. However, the current problems with organic solar cells boil down to long term stability, alongside low power outputs relative to silicon photovoltaics \cite{RN54}. This project looks at creating a method to help solve the issue of long-term stability by developing a low-cost system which can simulate a lifetime (10-20 years) of outdoor degradation in a matter of months.
+
+An important aspect of this project is its ability to contribute to the relevant research worldwide. Therefore, the decision was taken to make everything relating to this project opensource, as well as attempt to use opensource software and open-hardware to create this testing chamber. 
+
+Another key goal is to create a testing set up which can easily be \emph{cherry picked} from to suit the needs of those using it. This brings another important tenant to this project of modularity. Ideally, this set up would need one “chamber” which then different substrates and cells could be tested on, with only a small component of the entire set up modified. 
 
 \section{Literature Review}
 \label{sec:lit}
@@ -77,11 +83,9 @@ Another example is by Lai and Potters \cite{RN43} which referenced a large scale
 
 Adding to this, a further set-up was used in Pearson et al \cite{RN62} experiments on the degradation of organic solar cells. This set up ensured that the cells were loaded into the container while in a glovebox, then held at an overpressure to ensure atmospheric gases (specifically water and Oxygen) did not leak into the container. Furthermore, the atmospheric make-up of the container was monitored by a gas analyser and the cells measured using a Keithley source meter \cite [P.~227]{RN62}. This chamber is the closest to what was specified in my project description; however, the gas make-up monitoring adds further complexity to the chamber which again reduces the replicability worldwide.  
 
-Despite these flaws, there were key components in all three set ups which I took inspiration from for my designs. From Figure \ref{fig:set_upHT9} the small container is something which appealed to me, especially if it were tweaked to ensure ease of set up. Furthermore, from the commercial modules, the holistic nature of all the components was something that I desired to emulate, as this would ensure that the container would be suitable for all manners of testing. From Pearson et al \cite {RN62}, I thought the idea of overpressure to prevent leakage was clever, as well as making the device small enough to load in a glovebox. These were all features which I incorporate into my device.
+These set ups worked well for their goals; however, they do not fully address the needs of this project. Despite this, there were key components in all three set ups which I took inspiration from for my designs. From Figure \ref{fig:set_upHT9} the small container is something which appealed to me, especially if it were tweaked to ensure ease of set up. Furthermore, from the commercial modules, the holistic nature of all the components was something that was desirable, as this would ensure that the container would be suitable for all manners of testing. From Pearson et al \cite {RN62}, I thought the idea of overpressure to prevent leakage was clever, as well as making the device small enough to load in a glovebox. These were all features which will all be incorporated into the chamber 
 
-I also noted some of the drawbacks which I determined will not plague my design. ….
-
-This all has influenced the functionality that will be designed into the container. However, one of the key features is to align closely with the standard for testing organic solar cells. Different papers reference different standards, h decision was made to see where they overlapped and create a container that was able to meet as many as possible. Zhang et al \cite[p.~1]{RN51} talk about the IEC61646 standard developed by the International Electrochemical Committee. This testing standard includes: “ 1000 h damp heat (DH) test at 85$^o$C and 85\% humidity, 200 cycles of thermal cycling (TC) from $−$40 to $+$85$^o$C, and a sequence test consisting of UV exposure, 50 cycles of TC, and 10 cycles of humidity freeze (HF) from $-$40 to $+$85 $^o$C at 85\% humidity. After finishing each test, modules are then characterised to determine device efficiency.”
+This all has influenced the functionality that will be designed into the container. However, one of the key features is to align closely with the standard for testing organic solar cells. Different papers reference different standards, a decision was made to see where they overlapped and create a container that was able to meet as many as possible. Zhang et al \cite[p.~1]{RN51} talk about the IEC61646 standard developed by the International Electrochemical Committee. This testing standard includes: “ 1000 h damp heat (DH) test at 85$^o$C and 85\% humidity, 200 cycles of thermal cycling (TC) from $−$40 to $+$85$^o$C, and a sequence test consisting of UV exposure, 50 cycles of TC, and 10 cycles of humidity freeze (HF) from $-$40 to $+$85 $^o$C at 85\% humidity. After finishing each test, modules are then characterised to determine device efficiency.”
 
 Further to the IEC61646 is the guidelines referenced in Reese et al. \cite[p.~1254]{RN53}[HT 3 P1254]. These were developed at the International Summit on Organic and Hybrid Photovoltaic Stability in the years 2008. 2009 and 2010. These 3 guidelines (ISOS 1,2,3) show different methods for testing solar cell degradation, some of which can be seen in Figure \ref{fig:HT3_fig2} \cite[p.~1255]{RN53} below. 
 
@@ -97,18 +101,26 @@ Figure \ref{fig:HT3_fig2} has been taken from Reese et al. \cite{RN53} and outli
 
 From these two sets of guidelines, basic functionality for the container could be drawn up. This includes: Temperature variation with a minimum maximum temperature of 85 degrees, ability to vary humidity, regular measurement of Voc (open circuit voltage)and Jsc (short circuit current) and light conditions which would vary from a solar simulator to outdoor sunlight to darkness. Both sets of guidelines reference temperatures below ambient room temperature; however, this would require some sort of refrigerant running through the device, connected to pumping systems and a heat exchanger. This would cause the box to be particularly cumbersome as it would require significantly more components, space and complexity meaning it would struggle to fit the requirement of easily replicable. Thereby, the decision was made to not have testing conditions below ambient room temperature and to have a chamber that could exceed the high temperature testing requirements with a substrate temperature of 120$^o$C. 
 
-Another integral consideration was sampling time. For accurate results, it would be desirable to have regular short interval (measurements every minute) measurements of Voc and Jsc. However, this is not possible due to the observed characteristics of OPVs. Degradation can be broken down into three distinct phases, “an initial period of steep degradation that slows down with time, a period of relatively constant degradation that lasts for most of the solar cell’s usable lifetime, and rapid and complete degradation that results in device failure” \cite[P.~1]{RN60}. This non-linear nature of degradation can clearly be seen in Figure \ref{fig:HT10_fig1}  \cite[P.~3]{RN60}.
+Another integral consideration was sampling time. For accurate results, it would be desirable to have regular short interval (measurements every minute) measurements of Voc and Jsc. However, due to the differences across different devices and degradation conditions having a singular sampling time would create either too much data, or be too long to create an accurate enough picture of the device. The Figures \ref{fig:O2_deg} and \ref{fig:N2_deg} show the differences in degradation for the same solar cells in different conditions. 
 
 \begin{figure}[h]
-\hfill\includegraphics[width=0.85\linewidth]{HT10_Fig1}\hspace*{\fill}
-\caption{Illustrating the non linear nature of OPV degradation \cite{RN60}}
-\label{fig:HT10_fig1}
+\begin{subfigure}{0.45\textwidth}
+\includegraphics[width=1\linewidth]{O2_deg}
+\caption{Solar cell exposed to dry oxygenated atmosphere under continuous white light radiation, taken from Kawano et al. \cite{RN83}}
+\label{fig:O2_deg}
+\end{subfigure} \begin{subfigure}{0.45\textwidth}
+\includegraphics[width=1\linewidth]{N2_deg}
+\caption{Solar cell exposed humid nitrogen atmosphere (0\% oxygen) under continuous white light radiation, taken from Kawano et al. \cite{RN83}}
+\label{fig:N2_deg}
+\end{subfigure}
+\caption{Normalised photovoltaic performance characteristics for an unencapsulated solar cells as a function of exposure time. FF is Fill Factor, which represents ratio of maximum power to Jsc$\times$Voc.}
+\label{fig:degs}
 \end{figure}
 
-From Figure \ref{fig:HT10_fig1} it is clear to see that the 2 regions that need short interval measurement times are Burn-in and Failure. These can be categorised as the time to reach 80 \% and 50\% of initial performance \cite[P.~4]{RN60}. Thereby the most accommodating testing regime, that will not create unnecessary excess data-points would be a collecting data at small intervals during Burn-in and Failure, while having longer interval times during the long-term testing regime. This will be discussed further in Section \ref{sec:code_development}.
-
+From Figures \ref{fig:O2_deg} and \ref{fig:N2_deg}it is clear to see that the it would be impossible to create a singular sampling time for different conditions without creating the issues mentioned. This is is an important factor that should be considered when designing the measurement system and will be discussed in Section \ref{sec:code_development}. 
 
 Write closing remars for the intro…
+
 
 \chapter{Chamber Design}
 \label{chp:design}

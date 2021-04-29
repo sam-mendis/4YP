@@ -1,9 +1,16 @@
-\begin{thebibliography}{26}
+\begin{thebibliography}{28}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Kabir et~al.(2018)Kabir, Kumar, Kumar, Adelodun, and Kim]{RN82}
+Ehsanul Kabir, Pawan Kumar, Sandeep Kumar, Adedeji~A Adelodun, and Ki-Hyun Kim.
+\newblock Solar energy: Potential and future prospects.
+\newblock \emph{Renewable and Sustainable Energy Reviews}, 82:\penalty0
+  894--900, 2018.
+\newblock ISSN 1364-0321.
 
 \bibitem[Riede et~al.(2021)Riede, Spoltore, and Leo]{RN54}
 Moritz Riede, Donato Spoltore, and Karl Leo.
@@ -11,6 +18,12 @@ Moritz Riede, Donato Spoltore, and Karl Leo.
 \newblock \emph{Advanced Energy Materials}, 11\penalty0 (1):\penalty0 2002653,
   2021.
 \newblock ISSN 1614-6832.
+
+\bibitem[Bagher(2014)]{RN81}
+Askari~Mohammad Bagher.
+\newblock Comparison of organic solar cells and inorganic solar cells.
+\newblock \emph{International Journal of Renewable and Sustainable Energy},
+  3\penalty0 (3):\penalty0 53--58, 2014.
 
 \bibitem[Zhao et~al.(2013)Zhao, Ke, Huang, and Sun]{RN58}
 DW~Zhao, L~Ke, W~Huang, and XW~Sun.
@@ -77,12 +90,14 @@ Matthew~O Reese, Suren~A Gevorgyan, Mikkel Jørgensen, Eva Bundgaard, Sarah~R
   (5):\penalty0 1253--1267, 2011.
 \newblock ISSN 0927-0248.
 
-\bibitem[Mateker and McGehee(2017)]{RN60}
-William~R Mateker and Michael~D McGehee.
-\newblock Progress in understanding degradation mechanisms and improving
-  stability in organic photovoltaics.
-\newblock \emph{Advanced materials}, 29\penalty0 (10):\penalty0 1603940, 2017.
-\newblock ISSN 0935-9648.
+\bibitem[Kawano et~al.(2006)Kawano, Pacios, Poplavskyy, Nelson, Bradley, and
+  Durrant]{RN83}
+Kenji Kawano, Roberto Pacios, Dmitry Poplavskyy, Jenny Nelson, Donal~DC
+  Bradley, and James~R Durrant.
+\newblock Degradation of organic solar cells due to air exposure.
+\newblock \emph{Solar energy materials and solar cells}, 90\penalty0
+  (20):\penalty0 3520--3530, 2006.
+\newblock ISSN 0927-0248.
 
 \bibitem[RN6(Accessed: 12/12/2020{\natexlab{a}})]{RN63}
 Raspberry pi 4 b 4gb, Accessed: 12/12/2020{\natexlab{a}}.

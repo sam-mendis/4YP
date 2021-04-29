@@ -4,45 +4,45 @@ The top-level auxiliary file: Report.aux
 The style file: unsrtnat.bst
 Database file #1: References.bib
 Warning--empty journal in RN78
-You've used 26 entries,
+You've used 28 entries,
             2481 wiz_defined-function locations,
-            727 strings with 8793 characters,
-and the built_in function-call counts, 8666 in all, are:
-= -- 722
-> -- 375
+            739 strings with 9145 characters,
+and the built_in function-call counts, 9570 in all, are:
+= -- 789
+> -- 439
 < -- 9
-+ -- 165
-- -- 112
-* -- 633
-:= -- 1257
-add.period$ -- 79
-call.type$ -- 26
-change.case$ -- 48
-chr.to.int$ -- 25
-cite$ -- 38
-duplicate$ -- 461
-empty$ -- 901
-format.name$ -- 131
-if$ -- 1932
++ -- 189
+- -- 132
+* -- 717
+:= -- 1412
+add.period$ -- 86
+call.type$ -- 28
+change.case$ -- 52
+chr.to.int$ -- 27
+cite$ -- 40
+duplicate$ -- 499
+empty$ -- 976
+format.name$ -- 151
+if$ -- 2119
 int.to.chr$ -- 2
-int.to.str$ -- 27
-missing$ -- 15
-newline$ -- 137
-num.names$ -- 45
-pop$ -- 272
+int.to.str$ -- 29
+missing$ -- 17
+newline$ -- 148
+num.names$ -- 51
+pop$ -- 285
 preamble$ -- 1
-purify$ -- 26
+purify$ -- 28
 quote$ -- 0
-skip$ -- 325
+skip$ -- 344
 stack$ -- 0
-substring$ -- 268
-swap$ -- 83
+substring$ -- 314
+swap$ -- 87
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 176
+type$ -- 190
 warning$ -- 1
-while$ -- 42
+while$ -- 48
 width$ -- 0
-write$ -- 328
+write$ -- 356
 (There was 1 warning)
