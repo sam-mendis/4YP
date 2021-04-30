@@ -39,26 +39,37 @@
 \maketitle
 \pagebreak
 
+\begin{abstract}
+
+Abstract
+
+\end{abstract}
+
+\renewcommand{\abstractname}{Acknowledgements}
+\begin{abstract}
+Thank you!
+\end{abstract}
+
 \tableofcontents
 \pagebreak
 
+
 \chapter{Introduction}
+The energy outlook of the 21st century is almost certainly going to be renewable. With the World’s largest economies pledging to be carbon neutral within this century, the energy they require needs to be renewable. Solar energy is one of the answers to this problem, the sun is a source of inexhaustible free energy which can be harnessed to address the needs of the world \cite[p.~894]{RN82}
 
-The energy outlook of the 21st century is almost certainly going to be renewable. With the World’s largest economies pledging to be carbon neutral within this century, the energy they require needs to be renewable. Solar energy is one of the answers to this problem, the sun is a source of inexhaustible free energy which can be harnessed to address the needs of the world\cite[p.~894]{RN82}
-
-Currently the market leader in solar cells are Crystalline Silicon photovoltaics which hold a dominant 95\% market share in the solar energy sector \cite{RN54}. Organic solar cells have the opportunity to disrupt this market by providing versatile light-weight devices which have little material consumption and low temperature processing. This, alongside the fact that the materials required for organic photovoltaics are already widely manufactured, means that they have the potential to be significantly lower cost than their silicon counterparts \cite[p.~54]{RN81}. However, the current problems with organic solar cells boil down to long term stability, alongside low power outputs relative to silicon photovoltaics \cite{RN54}. This project looks at creating a method to help solve the issue of long-term stability by developing a low-cost system which can simulate a lifetime (10-20 years) of outdoor degradation in a matter of months.
+Currently the market leader in solar cells are crystalline silicon photovoltaics which hold a dominant 95\% market share in the solar energy sector \cite{RN54}. Organic solar cells have the opportunity to disrupt this market by providing versatile light-weight devices which have little material consumption and low temperature processing. This, alongside the fact that the materials required for organic photovoltaics are already widely manufactured, means that they have the potential to be significantly lower cost than their silicon counterparts \cite[p.~54]{RN81}. However, the current problems with organic solar cells boil down to long term stability, alongside low power outputs relative to silicon photovoltaics \cite{RN54}. This project looks at creating a method to help solve the issue of long-term stability by developing a low-cost system which can simulate a lifetime (10-20 years) of outdoor degradation in a matter of months.
 
 An important aspect of this project is its ability to contribute to the relevant research worldwide. Therefore, the decision was taken to make everything relating to this project opensource, as well as attempt to use opensource software and open-hardware to create this testing chamber. 
 
 Another key goal is to create a testing set up which can easily be \emph{cherry picked} from to suit the needs of those using it. This brings another important tenant to this project of modularity. Ideally, this set up would need one “chamber” which then different substrates and cells could be tested on, with only a small component of the entire set up modified. 
 
+
 \section{Literature Review}
 \label{sec:lit}
 In order to provide a device to add to the field, a thorough literature review was conducted and modified throughout the project. The main objective of this project was to provide the AFMD (Advanced Functional Materials and Devices) research group, within the University of Oxford Physics Department, with a device that created different conditions to degrade organic photovoltaic cells. 
 
-Currently the market leader in solar cells are Crystalline Silicon photovoltaics which hold a dominant 95\% market share in the solar energy sector \cite{RN54}. Organic solar cells have the opportunity to disrupt this market by providing versatile light-weight devices which have little material consumption and low temperature processing. However, the current problems with organic solar cells boil down to long term stability, alongside low power outputs relative to silicon photovoltaics \cite{RN54}. This project looks at creating a method to help solve the issue of long-term stability by developing a low-cost system which is able to simulate a lifetime (10-20 years) of outdoor degradation in a matter of months. 
 
-There are multiple degradation mechanisms which cause the short lifetimes of organic solar cells\cite[p.~141]{RN58}. The ones that the system will try and measure the effect of are: diffusion of water vapour into the active layer of the solar cell, diffusion of Oxygen into the active layer of the solar cell and operation under high temperatures. High temperature stability is important as Solar Cells are exposed to direct sunlight, meaning that they will absorb heat radiation alongside light radiation exposing them to high temperatures \cite{RN79}.Other degradation mechanisms will also play a part such as photochemical degradation by UV light and oxygen \cite[p.~106]{RN57}. 
+There are multiple degradation mechanisms which cause the short lifetimes of organic solar cells\cite[p.~141]{RN58}. The ones that the system will try and measure the effect of are: diffusion of water vapour into the active layer of the solar cell, diffusion of oxygen into the active layer of the solar cell and operation under high temperatures. High temperature stability is important as solar cells are exposed to direct sunlight, meaning that they will absorb heat radiation alongside light radiation exposing them to high temperatures \cite{RN79}.Other degradation mechanisms will also play a part such as photochemical degradation by UV light and oxygen \cite[p.~106]{RN57}. 
 
 An important factor for the entire set up is to ensure that these degradations are measurable, thereby requiring careful control of the ambient conditions. This meant a container that would not let in ambient air (due to the oxygen and water content) as well as have a controllable chemical and physical atmosphere. Degradation experiments are essential in the testing of solar cells; therefore, it made sense to try and find any set ups which had similar goals to the chamber. In 2015 Jaffery et al. \cite{RN59} released a paper outlining a similar setup that was designed for the testing of PVs. This design incorporated temperature control, varying lighting conditions. The set-up is shown in the Figure \ref{fig:set_upHT9} \cite[p.~3,4]{RN59} below.
 
@@ -76,12 +87,12 @@ An important factor for the entire set up is to ensure that these degradations a
 
 
 
-This set-up is a good start to build on to meet the goals of this project however, it lacks the simplicity of what is required. There are multiple large scale components which mean a complicated building and testing process. For the chamber this project specifies, it needs to be easily replicable worldwide, thereby allowing it to contribute to the development of OPV(Organic Photovoltaic) technology. 
+This set-up is a good start to build on to meet the goals of this project however, it lacks the simplicity of what is required. There are multiple large scale components which mean a complicated building and testing process. For the chamber this project requires, it needs to be easily replicable worldwide, thereby allowing it to contribute to the development of OPV(Organic Photovoltaic) technology. 
 
 
 Another example is by Lai and Potters \cite{RN43} which referenced a large scale industrial chamber. This chamber also provided different conditions for testing a photovoltaic cell. This module was manufactured by Envirotriks (now Weiss Technik) who specialise in the manufacturing of environmental testing equipment. Their technology ranges from aerospace to biological environmental applications. On further investigation, their products were large scale expensive modules which would not be applicable to one of the key goals of this project, being easily replicable worldwide. 
 
-Adding to this, a further set-up was used in Pearson et al \cite{RN62} experiments on the degradation of organic solar cells. This set up ensured that the cells were loaded into the container while in a glovebox, then held at an overpressure to ensure atmospheric gases (specifically water and Oxygen) did not leak into the container. Furthermore, the atmospheric make-up of the container was monitored by a gas analyser and the cells measured using a Keithley source meter \cite [P.~227]{RN62}. This chamber is the closest to what was specified in my project description; however, the gas make-up monitoring adds further complexity to the chamber which again reduces the replicability worldwide.  
+Adding to this, a further set-up was used in Pearson et al \cite{RN62} experiments on the degradation of organic solar cells. This set up ensured that the cells were loaded into the container while in a glovebox, then held at an overpressure to ensure atmospheric gases (specifically water vapour and oxygen) did not leak into the container. Furthermore, the atmospheric make-up of the container was monitored by a gas analyser and the cells measured using a Keithley source meter \cite [P.~227]{RN62}. This chamber is the closest to what was specified in my project description; however, the gas make-up monitoring adds further complexity to the chamber which again reduces the replicability worldwide.  
 
 These set ups worked well for their goals; however, they do not fully address the needs of this project. Despite this, there were key components in all three set ups which I took inspiration from for my designs. From Figure \ref{fig:set_upHT9} the small container is something which appealed to me, especially if it were tweaked to ensure ease of set up. Furthermore, from the commercial modules, the holistic nature of all the components was something that was desirable, as this would ensure that the container would be suitable for all manners of testing. From Pearson et al \cite {RN62}, I thought the idea of overpressure to prevent leakage was clever, as well as making the device small enough to load in a glovebox. These were all features which will all be incorporated into the chamber 
 
@@ -99,28 +110,25 @@ Further to the IEC61646 is the guidelines referenced in Reese et al. \cite[p.~12
 Figure \ref{fig:HT3_fig2} has been taken from Reese et al. \cite{RN53} and outlines some different testing conditions for organic solar cells. As can be seen the guidelines are similar to those referenced in the IEC61646 standard, however, there is more detail on the exact light source, as well as the load the solar cell should be subject to. 
 
 
-From these two sets of guidelines, basic functionality for the container could be drawn up. This includes: Temperature variation with a minimum maximum temperature of 85 degrees, ability to vary humidity, regular measurement of Voc (open circuit voltage)and Jsc (short circuit current) and light conditions which would vary from a solar simulator to outdoor sunlight to darkness. Both sets of guidelines reference temperatures below ambient room temperature; however, this would require some sort of refrigerant running through the device, connected to pumping systems and a heat exchanger. This would cause the box to be particularly cumbersome as it would require significantly more components, space and complexity meaning it would struggle to fit the requirement of easily replicable. Thereby, the decision was made to not have testing conditions below ambient room temperature and to have a chamber that could exceed the high temperature testing requirements with a substrate temperature of 120$^o$C. 
+From these two sets of guidelines, basic functionality for the container could be drawn up. This includes: temperature variation with a minimum maximum temperature of 85 degrees, ability to vary humidity, regular measurement of Voc (open circuit voltage)and Jsc (short circuit current) and light conditions which would vary from a solar simulator to outdoor sunlight to darkness. Both sets of guidelines reference temperatures below ambient room temperature; however, this would require some sort of refrigerant running through the device, connected to pumping systems and a heat exchanger. This would cause the box to be particularly cumbersome as it would require significantly more components, space and complexity meaning it would struggle to fit the requirement of easily replicable. Thereby, the decision was made to not have testing conditions below ambient room temperature and to have a chamber that could exceed the high temperature testing requirements with a substrate temperature of 120$^o$C. 
 
 Another integral consideration was sampling time. For accurate results, it would be desirable to have regular short interval (measurements every minute) measurements of Voc and Jsc. However, due to the differences across different devices and degradation conditions having a singular sampling time would create either too much data, or be too long to create an accurate enough picture of the device. The Figures \ref{fig:O2_deg} and \ref{fig:N2_deg} show the differences in degradation for the same solar cells in different conditions. 
 
 \begin{figure}[h]
 \begin{subfigure}{0.45\textwidth}
 \includegraphics[width=1\linewidth]{O2_deg}
-\caption{Solar cell exposed to dry oxygenated atmosphere under continuous white light radiation, taken from Kawano et al. \cite{RN83}}
+\caption{Solar cell exposed to dry oxygenated atmosphere\footnote{Under continuous white light radiation, with the atmosphere containing 20\% oxygen $<4\%$ relative humidity.},taken from Kawano et al. \cite{RN83}}
 \label{fig:O2_deg}
 \end{subfigure} \begin{subfigure}{0.45\textwidth}
 \includegraphics[width=1\linewidth]{N2_deg}
-\caption{Solar cell exposed humid nitrogen atmosphere (0\% oxygen) under continuous white light radiation, taken from Kawano et al. \cite{RN83}}
+\caption{Solar cell exposed humid nitrogen atmosphere\footnote{Under continuous white light radiation with the atmosphere containing 0\% oxygen and $>40\%$ relative humidity.}, taken from Kawano et al. \cite{RN83}}
 \label{fig:N2_deg}
 \end{subfigure}
 \caption{Normalised photovoltaic performance characteristics for an unencapsulated solar cells as a function of exposure time. FF is Fill Factor, which represents ratio of maximum power to Jsc$\times$Voc.}
 \label{fig:degs}
 \end{figure}
 
-From Figures \ref{fig:O2_deg} and \ref{fig:N2_deg}it is clear to see that the it would be impossible to create a singular sampling time for different conditions without creating the issues mentioned. This is is an important factor that should be considered when designing the measurement system and will be discussed in Section \ref{sec:code_development}. 
-
-Write closing remars for the intro…
-
+From Figures \ref{fig:O2_deg} and \ref{fig:N2_deg} it is clear to see that the it would be impossible to create a singular sampling time for different conditions without creating the issues mentioned. This is an important factor that should be considered when designing the measurement system and will be discussed in Section \ref{sec:code_development}. 
 
 \chapter{Chamber Design}
 \label{chp:design}
@@ -670,12 +678,14 @@ Talk about short time test with a solar cell
 \pagebreak
 \begin{singlespace}
 \bibliographystyle{unsrtnat} %also the big one 
+\addcontentsline{toc}{chapter}{References}
 \bibliography{References}
 \end{singlespace}
 
 \appendix
 \appendixpage
 \begin{appendix}
+\addcontentsline{toc}{chapter}{Appendix}
 \begin{figure}[h!]
 \includegraphics[width=1.4\linewidth, angle=270]{Appendix_1}
 \caption{The base schematic provided to me by Dr. Christophoro}
@@ -706,6 +716,11 @@ Talk about short time test with a solar cell
 \label{fig:Gantt}
 \end{figure}
 
+\begin{figure}[h!]
+\includegraphics[width=1.4\linewidth, angle=270]{Gantt_covid}
+\caption{A Gantt chart showing the desired timescale for the project}
+\label{fig:Gantt_covid}
+\end{figure}
 
 \end{appendix}
 \end{document}
