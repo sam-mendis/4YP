@@ -183,7 +183,7 @@ This specification provided the structure for the testing container. The literat
 \label{fig:iso_iteration1}
 \end{figure}
 
-This model is supposed to coincide with a smaller module named the Substrate Holder, which is designed to sit within the outer shell, holding the substrate, temperature sensor and heater, shown in Figure \ref{fig:substrate_holder1}. The substrate holder is designed to be a removable component which can be edited to match the substrate provided. During the design process, this module was designed to be 3D printed to ensure low costs and easy modification. In Figure\ref{fig:substrate_holder1} label \textbf{a} represents the whole which the heater is meant to sit inside, while label \textbf{b} represents the 30 mm x 30 mm slot that the substrate will sit in. 
+This model is supposed to coincide with a smaller module named the Substrate Holder, which is designed to sit within the outer shell, holding the substrate, temperature sensor and heater, shown in Figure \ref{fig:substrate_holder1}. The substrate holder is designed to be a removable component which can be edited to match the substrate provided. During the design process, this module was designed to be 3D printed to ensure low costs and easy modification. In Figure \ref{fig:substrate_holder1} label \textbf{a} represents the whole which the heater is meant to sit inside, while label \textbf{b} represents the 30 mm x 30 mm slot that the substrate will sit in. 
 
 \begin{figure}[h]
 \hfill\includegraphics[width=0.45\linewidth]{Design_4}\hspace*{\fill}
@@ -427,7 +427,7 @@ Figure \ref{failure} shows my attempts to insert electrical contact pins \cite{R
 
 The solution was creating a new 3D printed part, with more space for the pins to be inserted and soldered correctly. The new substrate holder would also be made from PEEK (Polyether Ether Ketone) rather than ABS due to its higher MP (260$^o$C) \cite{RN72} allowing soldering of the pins to wires to take place, as well as no deformation within the container. This part was due to be manufactured in the engineering department, however, due to external factors, the production had to be outsourced to Lazer Lines, with the part made from Formlabs High Temp Resin for High Thermal Stability, ith the datasheet found at \cite{RN80}. The substrate holder and lid can be seen in Figures \ref{fig:substrate_HT} and \ref{fig:lid_HT}. 
 
-The substrate holder was then modified to incorporate the pins as was attempted in Figure\ref{failure}. This attempt proved successful with the pins clearly showing in Figure \ref{fig:HTpins}. 
+The substrate holder was then modified to incorporate the pins as was attempted in Figure \ref{failure}. This attempt proved successful with the pins clearly showing in Figure \ref{fig:HTpins}. 
 
  
 
@@ -501,7 +501,7 @@ The tests conducted range from heat and flow simulations to leak testing. The le
 
 The simulations were undertaken in SOLIDWORKS, this is because it was very simple to run the simulations in the same software as some of the designs. Initially heat simulations were undertaken. These were designed to emulate the conditions across the substrate and within the substrate holder. The simulations were conducted using SOLIDWORKS heat simulations, where many different conditions could be placed upon the chamber. 
 
-The parameters for the initial simulation were as follows: ambient temperature of 25$^o$C C, heater temperature 200$^o$C and a convective heat transfer coefficient of 2.5 Wm$^{-2}$L$^{-1}$. The value of 2.5 Wm$^{-2}$L$^{-1}$ was chosen as a lower bound of natural convection from Kosky et al.’s book \cite[p.~264]{RN76}. Using these values, the test was run with a cylindrical cartridge heater. This simulation was only simulating the heat transfer across the substrate holder with the results shown in Figure\ref{fig:heat_sim_1}. 
+The parameters for the initial simulation were as follows: ambient temperature of 25$^o$C C, heater temperature 200$^o$C and a convective heat transfer coefficient of 2.5 Wm$^{-2}$L$^{-1}$. The value of 2.5 Wm$^{-2}$L$^{-1}$ was chosen as a lower bound of natural convection from Kosky et al.’s book \cite[p.~264]{RN76}. Using these values, the test was run with a cylindrical cartridge heater. This simulation was only simulating the heat transfer across the substrate holder with the results shown in Figure \ref{fig:heat_sim_1}. 
 
 
 \begin{figure}[h!]
@@ -530,10 +530,10 @@ As well as heat simulations, flow simulations were also conducted. This was to u
 \label{fig:flow_sim_1}
 \end{figure}
 
-This view shows that there is good mixing around the chamber, however, it is hard to tell the distribution of the input gases around the substrate. Figure\ref{fig:flow_sim_2} shows the view from underneath the substrate with the substrate holder hidden from view. In this view, it is clear that there is minimal direct flow over the cells (which are located on the underside of the substrate). However, there is good mixing away from cell and due to the tests being 1000s of hours, it is assumed that the mixing under the cells will be driven by diffusion. 
+This view shows that there is good mixing around the chamber, however, it is hard to tell the distribution of the input gases around the substrate. Figure \ref{fig:flow_sim_2} shows the view from underneath the substrate with the substrate holder hidden from view. In this view, it is clear that there is minimal direct flow over the cells (which are located on the underside of the substrate). However, there is good mixing away from cell and due to the tests being 1000s of hours, it is assumed that the mixing under the cells will be driven by diffusion. 
 
 \begin{figure}[h!]
-\hfill\includegraphics[width=0.7\linewidth]{flow_sim_2}\hspace*{\fill}
+\hfill\includegraphics[width=0.5\linewidth]{flow_sim_2}\hspace*{\fill}
 \caption{Underneath view of the flow simulations}
 \label{fig:flow_sim_2}
 \end{figure}
@@ -647,7 +647,7 @@ From here I measured the resistance of the calcium plate using a multimeter with
 \label{fig:glovebox_c_test}
 \end{figure}
 
-After removing the chamber from the glovebox the resistance started increasing. This was seen on the multimeter, and after 3 hours of running the test, the resistance reached a immeasurable value. This indicated there was a leak in this initial test. To try and find the source of the leak I watched the chamber while it was submerged in water. This showed a clear but small leak which were creating bubbles which can be seen rising in Figures \ref{fig:bubbles} and \ref{fig:bubbles2}. 
+After removing the chamber from the glovebox, the resistance started increasing. This was seen on the multimeter, and after 3 hours of running the test, the resistance reached a immeasurable value. This indicated there was a leak in this initial test. To try and find the source of the leak I watched the chamber while it was submerged in water with dissolved washing up liquid\footnote{The washing up liquid reduces the surface tension of the water making bubbles form more easily}. This showed a clear but small leak which were creating bubbles which can be seen rising in Figure \ref{fig:bubbles}.
 
 \begin{figure}[h!]
 \begin{subfigure}{0.5\textwidth}
@@ -655,20 +655,15 @@ After removing the chamber from the glovebox the resistance started increasing. 
 \end{subfigure} \begin{subfigure}{0.5\textwidth}
 \includegraphics[width=0.9\linewidth]{bubbles2}
 \end{subfigure}
+\caption{Showing bubbles rising up out of the chamber, while submerged in water mixed with washing up liquid.}
 \label{fig:bubbles}
 \end{figure}
 
-Once these leaks were filled, a further water test was conducted with no leaks found. Therefore I conducted another calcium plate test, with the same setup shown previously. The resistance of the plate while the chamber was still in the glovebox was measured to be x $\Omega$ on the multimeter. Once the chamber was taken out of the glovebox it was connected to a Keithley 2400 and the test was run as planned. The results of the test can be seen plotted below in Figure \ref{fig:plot_c}  
+Once these leaks were filled, a further water test\footnote{Again with washing up liquid} was conducted with no leaks found. Therefore, I conducted another calcium plate test, with the same setup shown previously. However, when the plate was placed within the chamber, while it was in the glovebox, it started to degrade (the measured resistance increasing) to the point where it fully degraded while within the glovebox in the space of 3 hours. Clearly, this is not because of outside air leaking into the chamber, but the most likely reason is that the chamber itself was not fully dried out after using the hairdryer. This means that even with the chamber kept in a vacuum overnight, the water within the chamber did not evaporate and leave, meaning that it was able to degrade the calcium resulting in a failed test before it even started. 
 
-\begin{figure}[h!]
-\hfill\includegraphics[width=0.7\linewidth]{plot_c}\hspace*{\fill}
-\caption{Showing the results of the calcium test, with voltage measured plotted against test time.} 
-\label{fig:plot_c}
-\end{figure}
+There were no more tests conducted due to a lack of lab time available, meaning that the only leak tests conducted, that were passed, were water-based tests. This, however, is not a failure; the lack of bubbles indicate that if there is a leak, it is very small, meaning that if the user holds the chamber at a slight overpressure (using MFCs), outside air will not be able to enter the chamber allowing the degradation tests to go ahead as planned.\footnote{The reason behind only two calcium leak tests is due to lab regulation surrounding COVID-19. A user could only access the AFMD physics labs for half of a week, meaning that if an experiment takes 2 days to set up (such as leaving the chamber unsealed, in a vacuum overnight, one must wait another week to conduct another one.} 
 
-
-\section{Overall test}
-Talk about short time test with a solar cell
+The leak tests were conducted late on in the year, meaning that it was not possible to conduct an overall test of the chamber using a working solar cell. This is something that will be spoken about further in the conclusion. 
 
 \chapter{Conclusion}
 
