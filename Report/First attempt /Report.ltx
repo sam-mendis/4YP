@@ -24,6 +24,7 @@
 \usepackage{titlepic}
 \usepackage[none]{hyphenat}
 \usepackage{helvet}
+\usepackage[section]{placeins}
 \renewcommand{\familydefault}{\sfdefault}
 \doublespacing
 \geometry{legalpaper, portrait, margin=2cm}
@@ -31,7 +32,7 @@
 \setlength{\parindent}{0pt} %No indent in paragraphs
 \setlength{\parskip}{1\baselineskip} % double line spacing at the end or a paragraph
 
-\title{Open Science Hardware Setup for investigating the Stability of Organic Solar Cells - Interim Report}
+\title{Open Science Hardware Setup for investigating the Stability of Organic Solar Cells}
 \author{Samuel Mendis}
 \affil{Department of Engineering Science, University of Oxford}
 \affil{Department of Physics, University of Oxford}
@@ -151,6 +152,7 @@ The first stage of the design process was to outline a specification for the tes
 \item{The container must have a window allowing light\footnote{The AM1.5 light spectrum} to be shone onto the substrate.}
 \item{The container must contain a gas inlet.}
 \item{The container should fit into the small glovebox load lock with diameter 150 mm. }
+\item{It must be possible to assemble the chamber within a glovebox.}
 \end{enumerate}
 
 The desirable goals which would supplement the primary specification are as follows: 
@@ -235,7 +237,7 @@ Another important consideration was the ability for the substrate holder to be e
 
 Another small edit is the gap under the where the substrate is supposed to sit, this is to encourage gas flow beneath the substrate. Another issue was where the heater and temperature sensor would sit. This led me to place the two holes running through the substrate holder one on top of the other to place the sensor and the heater. These holes were positioned there tactically so that the sensor temperature could be correlated with the predicted substrate temperature by modelling. These changes can be seen in the blown-up overall model shown in Figure \ref{fig:blown_up}.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \hfill\includegraphics[width=0.8\linewidth]{Design_9}\hspace*{\fill}
 \caption{The Blown-Up model of the chamber}
 \label{fig:blown_up}
@@ -283,17 +285,17 @@ The cost of a Raspberry Pi 4 from RS- components was \pounds53.22 \cite{RN63}whi
 
 The size was a small factor to consider, thereby the reduced emphasis on scoring. Lastly, adaptability of the device was integral. The device needed to be able to store data, as well as run code which was easily modifiable for those using it. This created a clear divide between the two products as the Raspberry-Pi is by far considered a more ‘rounded’ device compared to an Arduino which is usually used for highly specific applications. 
 
-From the multi-criteria analysis above it is clear that the Raspberry-Pi is the preferred device and thereby was the chosen product for this application. The Raspberry-Pi required electronics which enables the selection of which solar cell was required. After discussions with Dr. Christophoro, I was pointed to some PCB designs in his GitHub repositories \cite{RN65} \cite{RN66} which could be modified to suit my applications. The two schematics of designs that I was directed to are shown in the appendix as Figure 1 and 3.
+From the multi-criteria analysis above it is clear that the Raspberry-Pi is the preferred device and thereby was the chosen product for this application. The Raspberry-Pi required electronics which enables the selection of which solar cell was required. After discussions with Dr. Christophoro, I was pointed to some PCB designs in his GitHub repositories \cite{RN65} \cite{RN66} which could be modified to suit my applications. The two schematics of designs that I was directed to are shown in the appendix as Figure \ref{fig:appendix} and \ref{fig:appendix3}.
 
 These designs needed to be modified for the following reasons. Firstly, the design named Base 8x, was designed to interface with an Arduino, meaning a subsequent header needed to be implemented to ensure that the PCB was able to interface with the Raspberry Pi. Other small modifications include adding resistors and a header for a temperature sensor to be wired in, as well as creating the mounts for a secondary PCB to be mounted (which would hold the Solid-State Relay needed to control the mains powered cartridge heater). 
 
 For rapid testing and prototyping, the decision was made to use the departmental PCB printers. This meant some further changes needed to be made to the PCBs: ensuring that the tracks were routed with large enough profiles to be printed on the departmental printers and modifying the PCB so that it only had two working layers \footnote{The departmental printers can only print a PCB with two layers or less}. These modifications in the schematic can be seen in the Appendix \ref{fig:appendix3}. 
 
-For the PCB named Solar Mux- schematic shown in Appendix \ref{fig:appendix2} - there needed to be significantly fewer modifications, yet they were still significant. Firstly, the number of relays were reduced from 21 to 17 as only 6 solar cells were being measured rather than 8. Furthermore, there were significant modifications to the routing of the tracks as again this PCB was not designed to be printed in the engineering department thereby meaning the tracks needed to be made larger. These changes to the schematic can be seen in Appendix \ref{fig:appendix4}. 
+For the PCB named Solar Mux- schematic shown in appendix as Figure \ref{fig:appendix2} - there needed to be significantly fewer modifications, yet they were still significant. Firstly, the number of relays were reduced from 21 to 17 as only 6 solar cells were being measured rather than 8. Furthermore, there were significant modifications to the routing of the tracks as again this PCB was not designed to be printed in the engineering department thereby meaning the tracks needed to be made larger. These changes to the schematic can be seen in Figure \ref{fig:appendix4} in the Appendix. 
 
-I also designed a third PCB whose schematic can be seen as appendix 5. This is a small PCB designed to isolate mains current from the board named base, thereby enabling me to run tests without the hazards posed by wiring up to the mains. 
+I also designed a third PCB whose schematic can be seen in the appendix as Figure \ref{fig:appendix5}. This is a small PCB designed to isolate mains current from the board named base, thereby enabling me to run tests without the hazards posed by wiring up to the mains. 
 
-Once these were all designed, they needed to be created into models that were manufacturable. Each PCB had two working layers made of copper, the components to be soldered on were nearly all through-hole mounted for ease of soldering and the tracks were mainly 1 mm thick to make it easy to solder the components onto. Each PCB can be seen from two views in the Figures \ref{fig:Base_3D},\ref{fig:MUX_3D},\ref{fig:SSR_3D}.
+Once these were all designed, they needed to be created into models that were manufacturable. Each PCB had two working layers made of copper, the components to be soldered on were nearly all through-hole mounted for ease of soldering and the tracks were mainly 1 mm thick to make it easy to solder the components onto. Each PCB can be seen from two views in the Figures \ref{fig:Base_3D} , \ref{fig:MUX_3D} , \ref{fig:SSR_3D} .
 
 \begin{figure}[h]
 \begin{subfigure}{0.5\textwidth}
@@ -304,7 +306,7 @@ Once these were all designed, they needed to be created into models that were ma
 \caption{Back View of PCB named Base}
 \end{subfigure}
 \caption{Showing the model of the PCB named Base }
-\label{fig:Base_3D }
+\label{fig:Base_3D}
 \end{figure}
 
 \begin{figure}[h]
@@ -316,7 +318,7 @@ Once these were all designed, they needed to be created into models that were ma
 \caption{Back View of PCB named MUX}
 \end{subfigure}
 \caption{Showing the model of the PCB named MUX }
-\label{fig:MUX_3D }
+\label{fig:MUX_3D}
 \end{figure}
 
 \begin{figure}[h]
@@ -328,7 +330,7 @@ Once these were all designed, they needed to be created into models that were ma
 \caption{Back View of PCB named SSR}
 \end{subfigure}
 \caption{Showing the model of the PCB named SSR }
-\label{fig:SSR_3D }
+\label{fig:SSR_3D}
 \end{figure}
 
 
@@ -336,7 +338,7 @@ Once these were all designed, they needed to be created into models that were ma
 
 \section {Code Planning}
 
-Chosing the Raspberry Pi enabled the development of the code and planning behind it. There was some general research through the documentation to understand the ways to use the General-Purpose Input Output header to control electronics (GPIO). From reading the documentation for the GPIO \cite{RN67}, it was clear there were 3 real options for programming language, C, C++ or Python. As someone who has experience in Python, alongside the \emph{extensive} documentation for the GPIO pins in Python \cite{RN68} it was a clear choice to use Python as the programming language. 
+Choosing the Raspberry Pi enabled the development of the code and planning behind it. There was some general research through the documentation to understand the ways to use the General-Purpose Input Output header to control electronics (GPIO). From reading the documentation for the GPIO \cite{RN67}, it was clear there were 3 real options for programming language, C, C++ or Python. As someone who has experience in Python, alongside the \emph{extensive} documentation for the GPIO pins in Python \cite{RN68} it was a clear choice to use Python as the programming language. 
 
 Using the library Gpiozero, tests were carried out to ensure that the Raspberry Pi purchased was working correctly, as well as checking some other features (such as the multiprocessing library) work with Gpiozero. To do multiple LEDs were run in parallel so that they would be blinking with each other, using different time intervals for the blink. This proved that the Gpiozero library worked with the multiprocessing library and enabled the planning of the main script that was going to control the testing container. 
 
@@ -344,7 +346,7 @@ The thought process behind the code architecture was to develop a Graphical User
 
 There were, however, some problems with this set-up. Once the GUI itself was constructed I was unable to integrate it with the Multiprocessing package. A decision needed to be taken: run the risk of chasing a \emph{desriable} but not essential goal, using up valuable time, or create an easily editable python script which incorporated many of the benefits of the GUI while not actually using one.  
 
-Due to the iterative nature of this project, the decision was taken to prioritise constructing a working container that may not meet the supplementary desirable goals (but would be operational), rather than create a container that was 80% working yet not ready to test solar cells. For this reason, I decided to put the GUI to one side and develop the code so that it was simple to change the parameters of the test from within. An overall architecture was drawn up and is shown below in Figure \ref{fig:code_planning}.
+Due to the iterative nature of this project, the decision was taken to prioritise constructing a working container that may not meet the supplementary desirable goals (but would be operational), rather than create a container that was 80\% working yet not ready to test solar cells. For this reason, I decided to put the GUI to one side and develop the code so that it was simple to change the parameters of the test from within. An overall architecture was drawn up and is shown below in Figure \ref{fig:code_planning}.
 
 
 \chapter{Manufacturing}. 
@@ -353,7 +355,7 @@ Due to the iterative nature of this project, the decision was taken to prioritis
 
 In this chapter I will be discussing the different stages of manufacturing of the chamber. The manufacturing process is split into three sections in this chapter which cover the manufacturing of the chamber itself, the manufacturing of the PCB and associated electronics as well as the code development. 
 
-From the Gantt chart shown in Appendix \ref{fig:Gantt}, the manufacturing process was estimated to take at least n weeks, this prediction included any time that was needed for iterating as well as physically building the components. Unfortunately, due to the second national lockdown in January 2021, the project was hampered by a series of delays. This can be seen in Appendix \ref{fig:Gantt_covid} where the delays can be seen clearly. 
+From the Gantt chart shown in Appendix \ref{fig:Gantt}, the manufacturing (including assembly process was estimated to take 4 least  weeks, this prediction did not include any time that was needed for iterating as well as physically building the components. Unfortunately, due to the second national lockdown in January 2021, alongside longer than expected lead times, the project was delayed compared to the original plan. This can be seen in Appendix \ref{fig:Gantt_covid} where the delays can be seen clearly. 
 
 As mentioned in the Design Chapter, the plan was to use the engineering department workshops for the manufacturing of all the parts of this chamber. There were some limitations, such as the fact the PCB printing machine could only print 2 layers. However, this was dwarfed by the expertise that I was able to utilise while developing these designs, ensuring that the chamber was constructed to the highest standards. This chapter will discuss the decisions made during the manufacturing process, any modifications made and their impact on the final product. 
 
@@ -643,7 +645,7 @@ From here I measured the resistance of the calcium plate using a multimeter with
 
 \begin{figure}[h!]
 \hfill\includegraphics[width=0.7\linewidth]{glovebox_c_test}\hspace*{\fill}
-\caption{Showing the cacium test running, with the first measurement within the chamber.}
+\caption{Showing the cacium test running, with the first measurement within the glovebox.}
 \label{fig:glovebox_c_test}
 \end{figure}
 
@@ -667,6 +669,20 @@ The leak tests were conducted late on in the year, meaning that it was not possi
 
 \chapter{Conclusion}
 
+In conclusion, this set-up has been a partial success in the development of an ageing chamber for an organic solar cell. The chamber hits 5 out of the 7 main specification points with work also being conducted to help achieve the programable atmosphere – which was one of the two desirable goals. 
+
+The work in the Testing Chapter, shows that the concept and designs work well, even if there were some small issues to iron out. The PCBs were a success, they were able to \emph{choose} a cell\footnote{In the test conducted, an LED} to allow current through as the project required. The chamber itself was easily assembled within the glovebox and was able to fit inside the small 150 mm diameter load-lock. The gas inlets were leakproof \footnote{This was inspected visually through the water based leak test.} as was the lid mechanism. Even though the GUI was not created, the code was simple and easily editable, creating the basis for a programmable atmosphere to be developed with further work.
+
+As mentioned, there were two points on the specification that were not achieved; being leakproof to outside air and allowing electrical connections to connect to the substrate. Upon further consideration, a small modification could be made to ensure a better seal between the electronic windows and the chamber\footnote{This is because when conducting the water based leak test, it was the seal between the electronic windows and the chamber that was leaking, as opposed to the seal which prevents a leak occurring where the wires are based.}. Rather than use glue gun glue to seal the outer edge of the electrical windows, a system closer to the lid would have been a better method – using an o-ring to create the airtight seal with screw holes to tighten the electronic windows into place. This modification can be seen in Figure \ref{fig:modified}.
+\begin{figure}[h!]
+\hfill\includegraphics[width=0.7\linewidth]{modified}\hspace*{\fill}
+\caption{Showing an updated model of the electronic window.}
+\label{fig:modified}
+\end{figure}
+
+Furthermore, the substrate holder was never fully tested due to COVID-19 and lead times longer than expected. The pins were never inserted or soldered onto the wires which take the connections out of the chamber. Therefore, if one wants to use the chamber, they need to ensure they insert the electrical contact pins into the substrate holder, then solder the wires from the D-sub connections onto the pins embedded in the substrate holder.
+
+The results however, are extremely positive and should enable researchers to conduct simple degradation experiments, thereby accelerating organic solar cell development worldwide. 
 
 
 
@@ -684,38 +700,57 @@ The leak tests were conducted late on in the year, meaning that it was not possi
 \begin{figure}[h!]
 \includegraphics[width=1.4\linewidth, angle=270]{Appendix_1}
 \caption{The base schematic provided to me by Dr. Christophoro}
-\label{fig:Appendix1}
+\label{fig:appendix1}
 \end{figure}
 
 \begin{figure}[h!]
 \includegraphics[width=1.4\linewidth, angle=270]{Appendix_2}
 \caption{The multiplexer schematic provided to me by Dr. Christophoro}
-\label{fig:Appendix2}
+\label{fig:appendix2}
 \end{figure}
 
 \begin{figure}[h!]
 \includegraphics[width=1.4\linewidth, angle=270]{Appendix_3}
 \caption{The edited version of the base schematic in Appendix 1 showing the changes I made}
-\label{fig:Appendix3}
+\label{fig:appendix3}
 \end{figure}
 
 \begin{figure}[h!]
 \includegraphics[width=1.4\linewidth, angle=270]{Appendix_4}
 \caption{The edited version of the multiplexer schematic in Appendix 2 showing the changes I made}
-\label{fig:Appendix4}
+\label{fig:appendix4}
 \end{figure}
 
 \begin{figure}[h!]
-\includegraphics[width=1.4\linewidth, angle=270]{Gantt}
+\includegraphics[width=1.6\linewidth, angle=270]{Gantt}
 \caption{A Gantt chart showing the desired timescale for the project}
 \label{fig:Gantt}
 \end{figure}
 
 \begin{figure}[h!]
-\includegraphics[width=1.4\linewidth, angle=270]{Gantt_covid}
+\includegraphics[width=1.6\linewidth, angle=270]{Gantt_covid}
 \caption{A Gantt chart showing the desired timescale for the project}
 \label{fig:Gantt_covid}
 \end{figure}
+
+\begin{figure}[h!]
+\includegraphics[width=1.4\linewidth, angle=270]{drawing1}
+\caption{An engineering drawing in 3rd angle projection showing the outer shell of the chamber}
+\label{fig:drawing_1}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[width=1.4\linewidth, angle=270]{drawing2}
+\caption{An engineering drawing in 3rd angle projection showing the outer shell of the chamber}
+\label{fig:drawing_2}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[width=1.4\linewidth, angle=270]{drawing3}
+\caption{An engineering drawing in 3rd angle projection showing the metal lid of the chamber}
+\label{fig:drawing_3}
+\end{figure}
+
 
 \end{appendix}
 \end{document}
