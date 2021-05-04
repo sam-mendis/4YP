@@ -2,7 +2,7 @@
 \usepackage{color}
 \usepackage{pdfpages}
 \usepackage{graphicx}
-\graphicspath{{./Images/Design_chapter/}{./Images/Intro/}{./Images/Appendix/}{./Images/Manufacturing_chapter/}{./Images/Testing_chapter/}}
+\graphicspath{{./Images/Design_chapter/}{./Images/Intro/}{./Images/Appendix/}{./Images/Manufacturing_chapter/}{./Images/Testing_chapter/}{./Images/Conclusion/}}
 \usepackage{subcaption}
 \usepackage{wrapfig}
 \usepackage[export]{adjustbox}
@@ -38,23 +38,29 @@
 \affil{Department of Physics, University of Oxford}
 \date{\today}
 \maketitle
+\pagenumbering{roman}
 \pagebreak
 
 \begin{abstract}
 
-Abstract
+In order to develop next generation organic solar cells, laboratory research needs to be conducted to reduce degradation as well as increase efficiency. Accurately measuring organic solar cell degradation is difficult and there are not many affordable set-ups available to conduct this type of research. This project developed a set-up which can be used to further organic solar cell degradation research. 
+
+The set-up designed is a leakproof aluminium chamber which has a glass window, a 3D printed holder located inside for the substrate to sit on, 3 PCBs to control the measurements and internal environment of the chamber as well as a raspberry pi which runs the code to control the measurements and internal environment. Simulations show that the substrate temperature (which holds the organic solar cells) can reach up to 120$^o$C, while a leak test conducted indicates there is no leakage into or out of the chamber when submerged in water. 
+
+The chamber is not fully complete due to COVID-19 complications, however, the report clearly lays out the further work needed to ensure that the chamber has the capability to measure and degrade organic solar cells. 
+
 
 \end{abstract}
 
 \renewcommand{\abstractname}{Acknowledgements}
 \begin{abstract}
-Thank you!
+I would like to acknowledge and thank, my supervisors Professor Stephen Morris and Professor Moritz Riede, for their continued help and support throughout the project, alongside their commitment to ensuring this project is affected as minimally as possible by COVID-19. I would also like to thank Peter Walters, for his assistance with the 3D printing during the project and Stuart Higgs for his guidance with PCB development. Lastly, I would like to thank Dr. Greyson Christophoro for his time and help with many different aspects of this project. 
 \end{abstract}
 
 \tableofcontents
 \pagebreak
 
-
+\pagenumbering{arabic}
 \chapter{Introduction}
 The energy outlook of the 21st century is almost certainly going to be renewable. With the World’s largest economies pledging to be carbon neutral within this century, the energy they require needs to be renewable. Solar energy is one of the answers to this problem, the sun is a source of inexhaustible free energy which can be harnessed to address the needs of the world \cite[p.~894]{RN82}
 
@@ -97,18 +103,18 @@ Adding to this, a further set-up was used in Pearson et al \cite{RN62} experimen
 
 These set ups worked well for their goals; however, they do not fully address the needs of this project. Despite this, there were key components in all three set ups which I took inspiration from for my designs. From Figure \ref{fig:set_upHT9} the small container is something which appealed to me, especially if it were tweaked to ensure ease of set up. Furthermore, from the commercial modules, the holistic nature of all the components was something that was desirable, as this would ensure that the container would be suitable for all manners of testing. From Pearson et al \cite {RN62}, I thought the idea of overpressure to prevent leakage was clever, as well as making the device small enough to load in a glovebox. These were all features which will all be incorporated into the chamber 
 
-This all has influenced the functionality that will be designed into the container. However, one of the key features is to align closely with the standard for testing organic solar cells. Different papers reference different standards, a decision was made to see where they overlapped and create a container that was able to meet as many as possible. Zhang et al \cite[p.~1]{RN51} talk about the IEC61646 standard developed by the International Electrochemical Committee. This testing standard includes: “ 1000 h damp heat (DH) test at 85$^o$C and 85\% humidity, 200 cycles of thermal cycling (TC) from $−$40 to $+$85$^o$C, and a sequence test consisting of UV exposure, 50 cycles of TC, and 10 cycles of humidity freeze (HF) from $-$40 to $+$85 $^o$C at 85\% humidity. After finishing each test, modules are then characterised to determine device efficiency.”
+This all has influenced the functionality that will be designed into the container. However, one of the key features is to align closely with the standard for testing organic solar cells. Different papers reference different standards, a decision was made to see where they overlapped and create a container that was able to meet as many as possible. Zhang et al \cite[p.~1]{RN51} talk about the IEC61646 standard developed by the International Electrochemical Committee. This testing standard includes: “ 1000 h damp heat (DH) test at 85$^o$C and 85\% humidity, 200 cycles of thermal cycling (TC) from $-$40 to $+$85$^o$C, and a sequence test consisting of UV exposure, 50 cycles of TC, and 10 cycles of humidity freeze (HF) from $-$40 to $+$85 $^o$C at 85\% humidity. After finishing each test, modules are then characterised to determine device efficiency.”
 
-Further to the IEC61646 is the guidelines referenced in Reese et al. \cite[p.~1254]{RN53}[HT 3 P1254]. These were developed at the International Summit on Organic and Hybrid Photovoltaic Stability in the years 2008. 2009 and 2010. These 3 guidelines (ISOS 1,2,3) show different methods for testing solar cell degradation, some of which can be seen in Figure \ref{fig:HT3_fig2} \cite[p.~1255]{RN53} below. 
-
-\begin{figure}[h]
-\hfill\includegraphics[width=0.9\linewidth]{HT3_Fig2}\hspace*{\fill}
-\caption{Showing some of the testing procedures in Reese et al. }
-\label{fig:HT3_fig2}
-\end{figure}
+Further to the IEC61646 is the guidelines referenced in Reese et al. \cite[p.~1254]{RN53}[HT 3 P1254]. These were developed at the International Summit on Organic and Hybrid Photovoltaic Stability in the years 2008. 2009 and 2010. These 3 guidelines (ISOS 1,2,3) show different methods for testing solar cell degradation, some of which can be seen in Figure \ref{fig:HT3_fig2} \cite[p.~1255]{RN53}. 
 
 
 Figure \ref{fig:HT3_fig2} has been taken from Reese et al. \cite{RN53} and outlines some different testing conditions for organic solar cells. As can be seen the guidelines are similar to those referenced in the IEC61646 standard, however, there is more detail on the exact light source, as well as the load the solar cell should be subject to. 
+
+\begin{figure}[h]
+\hfill\includegraphics[width=1\linewidth]{HT3_Fig2}\hspace*{\fill}
+\caption{Showing some of the testing procedures in Reese et al. }
+\label{fig:HT3_fig2}
+\end{figure}
 
 
 From these two sets of guidelines, basic functionality for the container could be drawn up. This includes: temperature variation with a minimum maximum temperature of 85 degrees, ability to vary humidity, regular measurement of Voc (open circuit voltage)and Jsc (short circuit current) and light conditions which would vary from a solar simulator to outdoor sunlight to darkness. Both sets of guidelines reference temperatures below ambient room temperature; however, this would require some sort of refrigerant running through the device, connected to pumping systems and a heat exchanger. This would cause the box to be particularly cumbersome as it would require significantly more components, space and complexity meaning it would struggle to fit the requirement of easily replicable. Thereby, the decision was made to not have testing conditions below ambient room temperature and to have a chamber that could exceed the high temperature testing requirements with a substrate temperature of 120$^o$C. 
@@ -118,18 +124,23 @@ Another integral consideration was sampling time. For accurate results, it would
 \begin{figure}[h]
 \begin{subfigure}{0.45\textwidth}
 \includegraphics[width=1\linewidth]{O2_deg}
-\caption{Solar cell exposed to dry oxygenated atmosphere\footnote{Under continuous white light radiation, with the atmosphere containing 20\% oxygen $<4\%$ relative humidity.},taken from Kawano et al. \cite{RN83}}
+\caption{Solar cell exposed to dry oxygenated atmosphere\footnotemark,taken from Kawano et al. \cite{RN83}}
 \label{fig:O2_deg}
-\end{subfigure} \begin{subfigure}{0.45\textwidth}
+\end{subfigure} 
+\begin{subfigure}{0.45\textwidth}
 \includegraphics[width=1\linewidth]{N2_deg}
-\caption{Solar cell exposed humid nitrogen atmosphere\footnote{Under continuous white light radiation with the atmosphere containing 0\% oxygen and $>40\%$ relative humidity.}, taken from Kawano et al. \cite{RN83}}
+\caption{Solar cell exposed humid nitrogen atmosphere\footnotemark, taken from Kawano et al. \cite{RN83}}
 \label{fig:N2_deg}
 \end{subfigure}
 \caption{Normalised photovoltaic performance characteristics for an unencapsulated solar cells as a function of exposure time. FF is Fill Factor, which represents ratio of maximum power to Jsc$\times$Voc.}
 \label{fig:degs}
 \end{figure}
-
 From Figures \ref{fig:O2_deg} and \ref{fig:N2_deg} it is clear to see that the it would be impossible to create a singular sampling time for different conditions without creating the issues mentioned. This is an important factor that should be considered when designing the measurement system and will be discussed in Section \ref{sec:code_development}. 
+\footnotetext[1]{Under continuous white light radiation, with the atmosphere containing 20\% oxygen $<4\%$ relative humidity.}
+\footnotetext{Under continuous white light radiation with the atmosphere containing 0\% oxygen and $>40\%$ relative humidity.}
+
+The objective of this project is to create a set-up which can measure the degradation of  organic solar solar cells subject to different operating conditions. This report is split into three chapters, each outlining a key aspect of the project, alongside the conclusion which describes further work that could be done to enhance the set-up. 
+
 
 \chapter{Chamber Design}
 \label{chp:design}
@@ -253,7 +264,7 @@ Adding to this, a measurement device needed to be chosen, along with a controlle
 \begin{itemize}
 \item[-] The set-up requires a method of differentiating the cell voltages and currents (ideally through the use of a multiplexer);
 \item[-] The set-up requires a method of controlling the heat and gas composition within the chamber as well as  the measurement intervals;
-\item[-] The set-up requires a method to record the many* Voc and Jsc measurements;
+\item[-] The set-up requires a method to record Voc and Jsc measurements;
 \item[-] The set-up requires a method of measuring the Voc and Jsc;
 \item[-] The set-up requires a method of measuring the temperature conditions within the container.
 \end{itemize}
@@ -285,7 +296,7 @@ The cost of a Raspberry Pi 4 from RS- components was \pounds53.22 \cite{RN63}whi
 
 The size was a small factor to consider, thereby the reduced emphasis on scoring. Lastly, adaptability of the device was integral. The device needed to be able to store data, as well as run code which was easily modifiable for those using it. This created a clear divide between the two products as the Raspberry-Pi is by far considered a more ‘rounded’ device compared to an Arduino which is usually used for highly specific applications. 
 
-From the multi-criteria analysis above it is clear that the Raspberry-Pi is the preferred device and thereby was the chosen product for this application. The Raspberry-Pi required electronics which enables the selection of which solar cell was required. After discussions with Dr. Christophoro, I was pointed to some PCB designs in his GitHub repositories \cite{RN65} \cite{RN66} which could be modified to suit my applications. The two schematics of designs that I was directed to are shown in the appendix as Figure \ref{fig:appendix} and \ref{fig:appendix3}.
+From the multi-criteria analysis above it is clear that the Raspberry-Pi is the preferred device and thereby was the chosen product for this application. The Raspberry-Pi required electronics which enables the selection of which solar cell was required. After discussions with Dr. Christophoro, I was pointed to some PCB designs in his GitHub repositories \cite{RN65} \cite{RN66} which could be modified to suit my applications. The two schematics of designs that I was directed to are shown in the appendix as Figure \ref{fig:appendix1} and \ref{fig:appendix2}.
 
 These designs needed to be modified for the following reasons. Firstly, the design named Base 8x, was designed to interface with an Arduino, meaning a subsequent header needed to be implemented to ensure that the PCB was able to interface with the Raspberry Pi. Other small modifications include adding resistors and a header for a temperature sensor to be wired in, as well as creating the mounts for a secondary PCB to be mounted (which would hold the Solid-State Relay needed to control the mains powered cartridge heater). 
 
@@ -344,9 +355,18 @@ Using the library Gpiozero, tests were carried out to ensure that the Raspberry 
 
 The thought process behind the code architecture was to develop a Graphical User Interphase (GUI) to help the user with the control of the testing container. The GUI would then display specific information while the test was running, enabling a convenient ‘check’ for the user to ensure the test is proceeding as planned. The resultant GUI can be seen as a screen-shot in Figure \ref{fig:GUI_1}.
 
+\begin{figure}[ht!]
+\hfill\includegraphics[width=0.7\linewidth]{GUI}\hspace*{\fill}
+\caption{The GUI developed as part of the code for the programmatic atmosphere.}
+\label{fig:GUI_1}
+\end{figure}
+
+
 There were, however, some problems with this set-up. Once the GUI itself was constructed I was unable to integrate it with the Multiprocessing package. A decision needed to be taken: run the risk of chasing a \emph{desriable} but not essential goal, using up valuable time, or create an easily editable python script which incorporated many of the benefits of the GUI while not actually using one.  
 
-Due to the iterative nature of this project, the decision was taken to prioritise constructing a working container that may not meet the supplementary desirable goals (but would be operational), rather than create a container that was 80\% working yet not ready to test solar cells. For this reason, I decided to put the GUI to one side and develop the code so that it was simple to change the parameters of the test from within. An overall architecture was drawn up and is shown below in Figure \ref{fig:code_planning}.
+Due to the iterative nature of this project, the decision was taken to prioritise constructing a working container that may not meet the supplementary desirable goals (but would be operational), rather than create a container that was 80\% working yet not ready to test solar cells. For this reason, I decided to put the GUI to one side and develop the code so that it was simple to change the parameters of the test from within. 
+
+This concluded the design part of the project. Due to the iterative nature of this project, there are further modifications which are not mentioned in this chapter, but are described in both the Manufacturing and Testing Chapters. 
 
 
 \chapter{Manufacturing}. 
@@ -355,7 +375,7 @@ Due to the iterative nature of this project, the decision was taken to prioritis
 
 In this chapter I will be discussing the different stages of manufacturing of the chamber. The manufacturing process is split into three sections in this chapter which cover the manufacturing of the chamber itself, the manufacturing of the PCB and associated electronics as well as the code development. 
 
-From the Gantt chart shown in Appendix \ref{fig:Gantt}, the manufacturing (including assembly process was estimated to take 4 least  weeks, this prediction did not include any time that was needed for iterating as well as physically building the components. Unfortunately, due to the second national lockdown in January 2021, alongside longer than expected lead times, the project was delayed compared to the original plan. This can be seen in Appendix \ref{fig:Gantt_covid} where the delays can be seen clearly. 
+From the Gantt chart shown in Figure \ref{fig:Gantt} in the Appendix, the manufacturing (including assembly process was estimated to take 4 least  weeks, this prediction did not include any time that was needed for iterating as well as physically building the components. Unfortunately, due to the second national lockdown in January 2021, alongside longer than expected lead times, the project was delayed compared to the original plan. This can be seen in Figure \ref{fig:Gantt_covid} in the Appendix, where the delays can be seen clearly. 
 
 As mentioned in the Design Chapter, the plan was to use the engineering department workshops for the manufacturing of all the parts of this chamber. There were some limitations, such as the fact the PCB printing machine could only print 2 layers. However, this was dwarfed by the expertise that I was able to utilise while developing these designs, ensuring that the chamber was constructed to the highest standards. This chapter will discuss the decisions made during the manufacturing process, any modifications made and their impact on the final product. 
 
@@ -386,13 +406,13 @@ As can be seen, the wires are glued (using a glue gun) into the metal, meaning t
 \label{fig:metalwindow}
 \end{subfigure}\begin{subfigure}{0.5\textwidth}
 \includegraphics[width=0.95\linewidth]{safety_relief}
-\caption{The Assembly of the push-fit and safety relief valves}
+\caption{The Assembly of the push-fit valves}
 \label{fig:safety_relief}
 \end{subfigure}
 \caption{Figures Showing the assembly of the chamber}
 \end{figure}
 
-Following the manufacturing of the outer shell, assembly occurred. Firstly, the O-rings needed to be attached to the chamber. Figure \ref{fig:oring_assem} shows the O-ring glued into its slot. The O-rings sandwiched an acrylic plate which was used for the testing of the system (before any expensive glassware was bought) shown in Figure \ref{fig:acrylic_plate}. This assembly concluded with the attachment of the safety relief valves\footnote{The safety relief valve is required in case there is a malfunction with the MFCs causing a large overpressure within the chamber, which could result in an explosive failure causing damage and injury}and push fit valves shown in Figure \ref{fi:safety_relief} sourced from Tameson \cite{RN36} and RS\cite{RN33} respectively.  Lastly, the assembly was completed using small guide pins, labelled in Figure \ref{fig:assembly} alongside the M4 screws used to tighten the lid onto the glass plate thereby creating an airtight seal. The testing of this will be discussed further in the following chapter. 
+Following the manufacturing of the outer shell, assembly occurred. Firstly, the O-rings needed to be attached to the chamber. Figure \ref{fig:oring_assem} shows the O-ring glued into its slot. The O-rings sandwiched an acrylic plate which was used for the testing of the system (before any expensive glassware was bought) shown in Figure \ref{fig:acrylic_plate}. This assembly concluded with the attachment of the safety relief valves\footnote{The safety relief valve is required in case there is a malfunction with the MFCs causing a large overpressure within the chamber, which could result in an explosive failure causing damage and injury}and push fit valves shown in Figure \ref{fig:safety_relief} sourced from Tameson \cite{RN36} and RS\cite{RN33} respectively.  Lastly, the assembly was completed using small guide pins, labelled in Figure \ref{fig:assembly} alongside the M4 screws used to tighten the lid onto the glass plate thereby creating an airtight seal. The testing of this will be discussed further in the following chapter. 
 
 \begin{figure}[h!]
 \begin{subfigure}{0.5\textwidth}
@@ -416,9 +436,9 @@ Following the manufacturing of the outer shell, assembly occurred. Firstly, the 
 \section{Internal Chamber Manufacturing}
 \label{sec:ICM}
 
-This section looks at the manufacturing of the substrate holder. Figures \ref{blown_up} show the designs which were manufactured using the departmental 3D printing machines with ABS (Acrylonitrile Butadiene Styrene) plastic. ABS has a softening point of between 160 – 170$^o$C \cite[p.~744]{RN70}, which is lower than desired for the container, however, this version was used as a test to see if it was possible to insert the electrical contacts with this design. 
+This section looks at the manufacturing of the substrate holder. Figures \ref{fig:blown_up} show the designs which were manufactured using the departmental 3D printing machines with ABS (Acrylonitrile Butadiene Styrene) plastic. ABS has a softening point of between 160 – 170$^o$C \cite[p.~744]{RN70}, which is lower than desired for the container, however, this version was used as a test to see if it was possible to insert the electrical contacts with this design. 
 
-Figure \ref{failure} shows my attempts to insert electrical contact pins \cite{RN71} into the substrate holder. This was unsuccessful due to the fact these pins were extremely fiddly to handle, coupled with the very small amount of space I had to solder wires onto the pin while not melting the plastic. This required a rapid solution otherwise the timeline for the project would be delayed. 
+Figure \ref{fig:failure} shows my attempts to insert electrical contact pins \cite{RN71} into the substrate holder. This was unsuccessful due to the fact these pins were extremely fiddly to handle, coupled with the very small amount of space I had to solder wires onto the pin while not melting the plastic. This required a rapid solution otherwise the timeline for the project would be delayed. 
 
 \begin{figure}[h!]
 \hfill\includegraphics[width=0.5\linewidth]{substrate_fail}\hspace*{\fill}
@@ -427,12 +447,19 @@ Figure \ref{failure} shows my attempts to insert electrical contact pins \cite{R
 \end{figure}
 
 
-The solution was creating a new 3D printed part, with more space for the pins to be inserted and soldered correctly. The new substrate holder would also be made from PEEK (Polyether Ether Ketone) rather than ABS due to its higher MP (260$^o$C) \cite{RN72} allowing soldering of the pins to wires to take place, as well as no deformation within the container. This part was due to be manufactured in the engineering department, however, due to external factors, the production had to be outsourced to Lazer Lines, with the part made from Formlabs High Temp Resin for High Thermal Stability, ith the datasheet found at \cite{RN80}. The substrate holder and lid can be seen in Figures \ref{fig:substrate_HT} and \ref{fig:lid_HT}. 
+The solution was creating a new 3D printed part, with more space for the pins to be inserted and soldered correctly. The new substrate holder would also be made from PEEK (Polyether Ether Ketone) rather than ABS due to its higher MP (260$^o$C) \cite{RN72} allowing soldering of the pins to wires to take place, as well as no deformation within the container. This part was due to be manufactured in the engineering department, however, due to external factors, the production had to be outsourced to Lazer Lines, with the part made from Formlabs High Temp Resin for High Thermal Stability, with the datasheet found at \cite{RN80}. The substrate holder and lid can be seen in Figures \ref{fig:substrate_HT} and \ref{fig:lid_HT}. 
 
-The substrate holder was then modified to incorporate the pins as was attempted in Figure \ref{failure}. This attempt proved successful with the pins clearly showing in Figure \ref{fig:HTpins}. 
-
- 
-
+\begin{figure}[h!]
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\linewidth]{substrate_HT}
+\caption{The new substrate holder made from High Temperature Resin}
+\label{fig:substrate_HT}
+\end{subfigure}\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.9\linewidth]{lid_HT}
+\caption{The new lid made from High Temperature Resin}
+\label{fig:lid_HT}
+\end{subfigure}
+\end{figure}
 
 
 \section{PCB Manufacturing}
@@ -471,7 +498,7 @@ From here the next steps were to connect the PCBs to the substrate holder via th
 
 \begin{figure}[h!]
 \hfill\includegraphics[width=0.9\linewidth]{final}\hspace*{\fill}
-\caption{The chamber fully assembled to the PCBs and Raspberry Pi  }
+\caption{The chamber fully assembled to the PCBs and Raspberry Pi}
 \label{fig:final}
 \end{figure}
 
@@ -479,19 +506,21 @@ From here the next steps were to connect the PCBs to the substrate holder via th
 \section{Code Development}
 \label{sec:code_development}
 
-The code development for the system was something that spanned the entire project. This is due to the slight changes in scope, mentioned in the \ref{sec:code_d}. However, the core of the program was unchanging allowing a good base for the measurement system to be built on. The lack of GUI does add slightly more complexity to the user; more importantly however, it does work. 
+The code development for the system was something that spanned the entire project. The lack of GUI does add slightly more complexity to the user; more importantly however, it does work. 
 
-The method used to combat the increase in complexity is a small introduction at the top of the script explaining where to input the testing conditions and exactly what variables this system is able to change, shown in Figure \ref{fig:code_intro}. A small document was also produced (shown in the Appendix as Figure \ref{fig:code_doc}) so the user could easily understand the test thereby allowing them to utilise the functionality best of the testing chamber.
+The method used to combat the increase in complexity is a small introduction at the top of the script explaining where to input the testing conditions and exactly what variables this system is able to change, shown in Figure \ref{fig:code_intro}. 
+
+\begin{figure}[h!]
+\hfill\includegraphics[width=1\linewidth]{code_intro}\hspace*{\fill}
+\caption{The introduction to the code.}
+\label{fig:code_intro}
+\end{figure}
 
 The goal of the code was to control the internal environment of the chamber while measuring and storing the current voltage characteristics for analysis. To do this a Keithley 2400 was used to for these measurements. The advantage of using a Keithley is that it is also able to set a voltage bias across the cells and allow degradation to occur near maximum power point. This aspect is beyond the scope of the project, however, keeping this in mind would help those using it create modifications to suit their needs. 
 
 Initial communication issues derailed attempts to use the Keithley 2400 with the Raspberry Pi, therefore the measurements for the leak tests were conducted using a simple multi-meter. \footnote{Due to COVID-19, obtaining a Keithley for the leak tests took time, meaning that the testing of the code was unable to take place till late on in the process. With the code not working, a decision was made to prioritise the chamber testing, with the code being an aspect someone could develop further.} 
 
-One of the important things was to ensure that the data is saved regularly (outside the script) so that if the test is interrupted for any reason (accidental removal, power cut or error) the data that has been collected will be available for recovery and analysis. To do this, at every measurement point the data is saved to a CSV file, thereby insuring that even if the test is compromised, the data will be saved. Furthermore, to ensure that the information container in the CSV file is readable for those outside the group, formatting is explained at the start of the CSV file with the start date and time also recorded within the file. This can be seen in Figure \ref{fig:csv}.
-
-The development of the code allowed the project to move on to the next steps, including testing
-
-Conclusion of manufacturing chapter
+One of the important things was to ensure that the data is saved regularly (outside the script) so that if the test is interrupted for any reason (accidental removal, power cut or error) the data that has been collected will be available for recovery and analysis. To do this, at every measurement point the data is saved to a CSV file, thereby insuring that even if the test is compromised, the data will be saved. Furthermore, to ensure that the information container in the CSV file is readable for those outside the group, formatting is also explained in Figure\ref{fig:code_intro}.
 
 
 \chapter{Chamber Testing and Simulations}
@@ -564,22 +593,18 @@ Once finished, the following step was to attempt to run some of the code I had w
 \begin{subfigure}{0.5\textwidth}
 \includegraphics[width=0.9\linewidth]{sc_1}
 \caption{Before image of the Solar Multiplexer}
+\label{fig:sc_1}
 \end{subfigure} \begin{subfigure}{0.5\textwidth}
 \includegraphics[width=0.9\linewidth]{sc_2}
 \caption{The Solar Multiplexer after the edits.} 
+\label{fig:sc_2}
 \end{subfigure}
 \caption{Showing the edited Solar Multiplexer PCB}
 \label{fig:sc}
 \end{figure}
 
 
-This step was only done after PCB manufacturing; therefore, I took the decision to solder wires to \emph{short-circuit} the MCP23S17. The before and after of this can be seen in Figures \ref{fig:sc_1} and \ref{fig:sc_2}. Once this was complete, the test code was run again, this time using the GPIO zero package to switch the SSRs on and off, thereby allowing the LEDs to light up. This can be seen in Figure \ref{fig:LEDs} as well as the video linked \href{http://www.latex-tutorial.com}{here}.
-
-\begin{figure}[h!]
-\hfill\includegraphics[width=0.7\linewidth]{LEDs}\hspace*{\fill}
-\caption{Showing the LEDs lighting up}
-\label{fig:LEDs}
-\end{figure}
+This step was only done after PCB manufacturing; therefore, I took the decision to solder wires to \emph{short-circuit} the MCP23S17. The before and after of this can be seen in Figures \ref{fig:sc_1} and \ref{fig:sc_2}. Once this was complete, the test code was run again, this time using the GPIO zero package to switch the SSRs on and off, thereby allowing the LEDs to light up, proving that the code and PCBs worked.
 
 This concluded the testing for the PCBs as did it not only show the Relays and raspberry Pi working well together, but it also illustrated that it would be possible to set all the cells to specific voltage bias for enhanced degradation, followed by the ability to cycle through each one to conduct measurements. 
 
@@ -633,7 +658,7 @@ To enable easy attachment of the substrate to the substate holder, the decision 
 
 Once this was completed, I attempted to assemble the chamber again. However, there was a problem which prevented the assembly from working as planned. The substrate holder was deformed slightly from the hair dryer and heating required to dry out the porous ABS material. This meant that the substrate no longer sat well inside the substrate holder creating poor electrical connections that would work for a short period of time, but with a tiny bit of disturbance would sever and require a reassembly of the chamber.
 
-To mitigate this, I attempted to order a part made out of PEEK from the engineering department, however, the part never arrived. Therefore, I decided to use crocodile clips clipped onto the calcium substrate, to connect it to the wires within the chamber. This worked well with the assembly shown clearly in Figure \ref{fig:calc_test_assembly}.
+To mitigate this, I attempted to order a part made out of PEEK from the engineering department (as mentioned in Section \ref{sec:ICM}), however, the part never arrived. Therefore, I decided to use crocodile clips clipped onto the calcium substrate, to connect it to the wires within the chamber. This worked well with the assembly shown clearly in Figure \ref{fig:calc_test_assembly}.
 
 \begin{figure}[h!]
 \hfill\includegraphics[width=0.7\linewidth]{ calc_test_assembly}\hspace*{\fill}
@@ -665,7 +690,8 @@ Once these leaks were filled, a further water test\footnote{Again with washing u
 
 There were no more tests conducted due to a lack of lab time available, meaning that the only leak tests conducted, that were passed, were water-based tests. This, however, is not a failure; the lack of bubbles indicate that if there is a leak, it is very small, meaning that if the user holds the chamber at a slight overpressure (using MFCs), outside air will not be able to enter the chamber allowing the degradation tests to go ahead as planned.\footnote{The reason behind only two calcium leak tests is due to lab regulation surrounding COVID-19. A user could only access the AFMD physics labs for half of a week, meaning that if an experiment takes 2 days to set up (such as leaving the chamber unsealed, in a vacuum overnight, one must wait another week to conduct another one.} 
 
-The leak tests were conducted late on in the year, meaning that it was not possible to conduct an overall test of the chamber using a working solar cell. This is something that will be spoken about further in the conclusion. 
+The leak tests were conducted late on in the year, meaning that it was not possible to conduct an overall test of the chamber using a working solar cell. However, the basis is in place for those who want to use the chamber to continue with the work, which is spoken about further in the conclusion.
+
 
 \chapter{Conclusion}
 
@@ -673,14 +699,16 @@ In conclusion, this set-up has been a partial success in the development of an a
 
 The work in the Testing Chapter, shows that the concept and designs work well, even if there were some small issues to iron out. The PCBs were a success, they were able to \emph{choose} a cell\footnote{In the test conducted, an LED} to allow current through as the project required. The chamber itself was easily assembled within the glovebox and was able to fit inside the small 150 mm diameter load-lock. The gas inlets were leakproof \footnote{This was inspected visually through the water based leak test.} as was the lid mechanism. Even though the GUI was not created, the code was simple and easily editable, creating the basis for a programmable atmosphere to be developed with further work.
 
-As mentioned, there were two points on the specification that were not achieved; being leakproof to outside air and allowing electrical connections to connect to the substrate. Upon further consideration, a small modification could be made to ensure a better seal between the electronic windows and the chamber\footnote{This is because when conducting the water based leak test, it was the seal between the electronic windows and the chamber that was leaking, as opposed to the seal which prevents a leak occurring where the wires are based.}. Rather than use glue gun glue to seal the outer edge of the electrical windows, a system closer to the lid would have been a better method – using an o-ring to create the airtight seal with screw holes to tighten the electronic windows into place. This modification can be seen in Figure \ref{fig:modified}.
 \begin{figure}[h!]
 \hfill\includegraphics[width=0.7\linewidth]{modified}\hspace*{\fill}
 \caption{Showing an updated model of the electronic window.}
 \label{fig:modified}
 \end{figure}
 
-Furthermore, the substrate holder was never fully tested due to COVID-19 and lead times longer than expected. The pins were never inserted or soldered onto the wires which take the connections out of the chamber. Therefore, if one wants to use the chamber, they need to ensure they insert the electrical contact pins into the substrate holder, then solder the wires from the D-sub connections onto the pins embedded in the substrate holder.
+As mentioned, there were two points on the specification that were not achieved; being leakproof to outside air and allowing electrical connections to connect to the substrate. Upon further consideration, a small modification could be made to ensure a better seal between the electronic windows and the chamber\footnote{This is because when conducting the water based leak test, it was the seal between the electronic windows and the chamber that was leaking, as opposed to the seal which prevents a leak occurring where the wires are based.}. Rather than use glue gun glue to seal the outer edge of the electrical windows, a system closer to the lid would have been a better method – using an o-ring to create the airtight seal with screw holes to tighten the electronic windows into place. This modification can be seen in Figure \ref{fig:modified}.
+
+
+Furthermore, the substrate holder was never fully tested due to COVID-19 and lead times longer than expected. The pins were never inserted or soldered onto the wires which take the connections out of the chamber. Therefore, if one wants to use the chamber, they need to ensure they insert the electrical contact pins into the substrate holder, then solder the wires from the D-sub connections onto the pins embedded in the substrate holder. 
 
 The results however, are extremely positive and should enable researchers to conduct simple degradation experiments, thereby accelerating organic solar cell development worldwide. 
 
@@ -694,8 +722,8 @@ The results however, are extremely positive and should enable researchers to con
 \end{singlespace}
 
 \appendix
-\appendixpage
 \begin{appendix}
+\appendixpage
 \addcontentsline{toc}{chapter}{Appendix}
 \begin{figure}[h!]
 \includegraphics[width=1.4\linewidth, angle=270]{Appendix_1}
@@ -720,6 +748,13 @@ The results however, are extremely positive and should enable researchers to con
 \caption{The edited version of the multiplexer schematic in Appendix 2 showing the changes I made}
 \label{fig:appendix4}
 \end{figure}
+
+\begin{figure}[h!]
+\includegraphics[width=1\linewidth]{Appendix_5}
+\caption{The schematic for the PCB which isolated mains from the board named base, used to control the cartridge heater.}
+\label{fig:appendix5}
+\end{figure}
+
 
 \begin{figure}[h!]
 \includegraphics[width=1.6\linewidth, angle=270]{Gantt}
@@ -753,4 +788,25 @@ The results however, are extremely positive and should enable researchers to con
 
 
 \end{appendix}
+
+\chapter{Risk Assessments}
+\begin{figure}[h!]
+\hfill\includegraphics[width=0.85\linewidth]{computer_risk_assessment}\hspace*{\fill}
+\caption{My computer risk assessment}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[width=1.4\linewidth, angle=270]{p1_risk_assessment}
+\caption{P1 of my risk assessment}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[width=1.4\linewidth, angle=270]{p2_risk_assessment}
+\caption{P2 of my risk assessment}
+\end{figure}
+
+
+
+
+
 \end{document}
