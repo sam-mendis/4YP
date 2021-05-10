@@ -1,4 +1,4 @@
-\begin{thebibliography}{28}
+\begin{thebibliography}{29}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -24,6 +24,14 @@ Askari~Mohammad Bagher.
 \newblock Comparison of organic solar cells and inorganic solar cells.
 \newblock \emph{International Journal of Renewable and Sustainable Energy},
   3\penalty0 (3):\penalty0 53--58, 2014.
+
+\bibitem[El-Ahmar et~al.()El-Ahmar, El-Sayed, and Hemeida]{RN84}
+MH~El-Ahmar, Abou-Hashema~M El-Sayed, and AM~Hemeida.
+\newblock Mathematical modeling of photovoltaic module and evalute the effect
+  of varoius paramenters on its performance.
+\newblock In \emph{2016 Eighteenth International Middle East Power Systems
+  Conference (MEPCON)}, pages 741--746. IEEE.
+\newblock ISBN 1467390631.
 
 \bibitem[Zhao et~al.(2013)Zhao, Ke, Huang, and Sun]{RN58}
 DW~Zhao, L~Ke, W~Huang, and XW~Sun.
