@@ -534,13 +534,15 @@ The tests conducted range from heat and flow simulations to leak testing. The le
 \section{Heat and Flow Simulations}
 \label{sec:sims}
 
-The simulations were undertaken in SOLIDWORKS, this is because it was very simple to run the simulations in the same software as some of the designs. Initially, heat simulations were undertaken. These were designed to emulate the conditions across the substrate and within the substrate holder. The simulations were conducted using SOLIDWORKS heat simulations, where many different conditions could be placed upon the chamber. Both heat and flow simulations were conducted using Finite Element Analysis (FEA). FEA uses numerical methods to solve differential equations by discretising elements to form a mesh. The finer the mesh, the more detailed and accurate the results. However, finer meshes require higher computational powers, meaning that there needs to be a compromise when running the simulations to ensure the clearest picture can be built without using too much computational power. 
+The simulations were undertaken in SOLIDWORKS, this is because it was very simple to run the simulations in the same software as some of the designs. Initially, heat simulations were undertaken. These were designed to emulate the conditions across the substrate and within the substrate holder. The simulations were conducted using SOLIDWORKS heat simulations, where many different conditions could be placed upon the chamber. 
 
-When modelling the temperature within the chamber, the FEA used the heat equation, \ref{eq:heat} to find the temperature distribution across the substrate holder, where $U(x,y,z,t)$ is the a the temperature at a given point at a given time. 
+To predict the temperature distribution across the substrate holder, the heat equation (equation \ref{eq:heat}) was used. $U(x,y,z,t)$ gives the temperature at a given point in space at a specific time. 
 
 \begin{equation}\label{eq:heat}
 \frac{\partial U}{\partial t} = \Delta U
 \end{equation}
+
+To solve the heat equation in 3D, the simulations used Finite Element Analysis (FEA). FEA is a technique that generates numerical solutions to differential equations. It involves discretising elements to form a mesh, and solving the resultant algabraic equations to produce an approximate solution for the equation. However, as the mesh becomes finer, the computational cost of solving the resulting equations increases. It is therefore an important task to balance these two factors in order to generate sufficiently accurate results with the available computing power. 
 
 The objective of the heat simulations was to find a heater temperature which would keep the substrate at a steady state temperature of 120$^o$C. The parameters for the initial simulation were as follows: ambient temperature of 25$^o$C, heater temperature 200$^o$C and a convective heat transfer coefficient of 2.5 Wm$^{-2}$L$^{-1}$. The value of 2.5 Wm$^{-2}$L$^{-1}$ was chosen as a lower bound of natural convection from Kosky et al.\cite[p.~264]{RN76}. These values, the test was run with a cylindrical cartridge heater. This simulation was modelling the heat distribution within the chamber. The result shown in Figure \ref{fig:heat_sim_1} shows the temperature variation across the substrate holder. 
 
@@ -562,7 +564,7 @@ A further simulation was conducted, this time setting the Aluminium plate to 180
 
 It can be clearly seen that the substrate (marked at point \textbf{s}) has non uniform temperature distribution. However, the temperature distribution across where the cells would be found (shown in Figure \ref{fig:sub_layout}) illustrates that there is a uniform temperature distribution across the solar cells themselves with a temperature of 120$^o$C. This is the desired temperature for the cells and indicates that a cartridge heater, heated to 200 $^o$C should cause the substrate to be heated up to the temperature set out in the specification. 
 
-As well as heat simulations, flow simulations were also conducted. This was to understand the mechanism in which input gases would flow inside the chamber and around the substrate. SOLIDWORKS flow simulation was used for these simulations. The flow simulations  also used FEA and were solving the Navier-Stokes equations. These use continuity of energy, momentum and mass to define differential equations describing the flow of fluid. The Navier-Stokes equations are significantly more complicated than the heat equation meaning the computation power needed for this modelling was significantly more. Therefore, the mesh used for the flow modelling was more coarse, meaning the results were less accurate. The gas was modelled as an ideal gas, allowing the assumptions of the gas particles having no intermolecular forces and random movement (further simplifying the problem). To understand the movement of the gas particles, the simulation was set up to show the trace of multiple singular particles over a time period of minutes. 
+As well as heat simulations, flow simulations were also conducted. The flow simulations were undertaken to understand the mechanism in which input gases would flow inside the chamber and around the substrate. To model the flow of gases, the Navier-Stokes equations were used, these using continuity of energy, momentum and mass to define differential equations describing the flow of fluids. The Navier-Stokes equations are significantly more complicated than the heat equation meaning the computation power needed for this modelling was significantly more. Therefore, the mesh used for the flow modelling was more coarse, meaning the results were less accurate. To simplify the problem (therefore reduce computation time) he gas was modelled as an ideal gas, allowing the assumptions of the gas particles having no intermolecular forces and random movement. To understand the movement of the gas particles, the simulation was set up to show the trace of multiple singular particles over a time period of minutes. 
 
 \begin{figure}[h!]
 \hfill\includegraphics[width=0.7\linewidth]{flow_sim_1}\hspace*{\fill}
@@ -659,7 +661,7 @@ To enable easy attachment of the substrate to the substate holder, the decision 
 
 \begin{figure}[h!]
 \hfill\includegraphics[width=0.7\linewidth]{D_sub}\hspace*{\fill}
-\caption{The D-sub plugs connected to the wires exiting the chamber}
+\caption{The D-sub plugs connected to the wires exiting the chamber. Label \textbf{A} shows the D-Sub plugs soldered onto the yellow wires. The yellow wires are intended to be soldered to the pins in the substrate holder.}
 \label{fig:D_sub}
 \end{figure}
 
