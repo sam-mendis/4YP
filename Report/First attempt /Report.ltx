@@ -71,7 +71,7 @@ Currently the market leader in solar cells are crystalline silicon photovoltaics
 \label{fig:IV}
 \end{figure}
 
-Solar cells are semiconductor devices which exploit the photoelectric effect to extract energy from a light source. The Current/Voltage graph for a conventional solar cell is shown in Figure \ref{fig:IV}. The Open Circuit Voltage (V$_{oc}$) and Short Circuit Current (J$_{sc}$) are useful to categorise different solar cells as they provide values which can be related to the maximum power extraction using Fill Factor. Fill Factor is defined below in Equation \ref{eq:FF} with P$_{max}$ indicating the maximum power point shown in Figure\ref{fig:IV}. 
+Solar cells are semiconductor devices which exploit the photoelectric effect to extract energy from a light source. The Current/Voltage graph for a conventional solar cell is shown in Figure \ref{fig:IV}. The Open Circuit Voltage ($V_{oc}$) and Short Circuit Current ($J_{sc}$) are useful to categorise different solar cells as they provide values which can be related to the maximum power extraction using Fill Factor. Fill Factor is defined below in Equation \ref{eq:FF} with $P_{max}$ indicating the maximum power point shown in Figure\ref{fig:IV}. 
 
 \begin{equation}\label{eq:FF}
 FF = \frac{P_{max}}{V_{oc}J_{sc}}
@@ -126,9 +126,9 @@ Figure \ref{fig:HT3_fig2} has been taken from Reese et al. \cite{RN53} and outli
 \end{figure}
 
 
-From these two sets of guidelines, basic functionality for the container could be drawn up. This includes: temperature variation with a minimum maximum temperature of 85$^o$C, ability to vary humidity, regular measurement of Voc (open circuit voltage)and Jsc (short circuit current) and light conditions which would vary from a solar simulator to outdoor sunlight to darkness. Both sets of guidelines reference temperatures below ambient room temperature; however, this would require some sort of refrigerant running through the device, connected to pumping systems and a heat exchanger. This would cause the box to be particularly cumbersome as it would require significantly more components, space and complexity meaning it would struggle to fit the requirement of easily replicable. Thereby, the decision was made to not have testing conditions below ambient room temperature and to have a chamber that could exceed the high temperature testing requirements with a substrate temperature of 120$^o$C. 
+From these two sets of guidelines, basic functionality for the container could be drawn up. This includes: temperature variation with a minimum maximum temperature of 85$^o$C, ability to vary humidity, regular measurement of $V_{oc}$ (open circuit voltage)and $J_{sc}$ (short circuit current) and light conditions which would vary from a solar simulator to outdoor sunlight to darkness. Both sets of guidelines reference temperatures below ambient room temperature; however, this would require some sort of refrigerant running through the device, connected to pumping systems and a heat exchanger. This would cause the box to be particularly cumbersome as it would require significantly more components, space and complexity meaning it would struggle to fit the requirement of easily replicable. Thereby, the decision was made to not have testing conditions below ambient room temperature and to have a chamber that could exceed the high temperature testing requirements with a substrate temperature of 120$^o$C. 
 
-Another integral consideration was sampling time. For accurate results, it would be desirable to have regular short interval (measurements every minute) measurements of Voc and Jsc. However, due to the differences across different devices and degradation conditions having a singular sampling time would create either too much data, or be too long to create an accurate enough picture of the device. The Figures \ref{fig:O2_deg} and \ref{fig:N2_deg} show the differences in degradation for the same solar cells in different conditions. 
+Another integral consideration was sampling time. For accurate results, it would be desirable to have regular short interval (measurements every minute) measurements of $V_{oc}$ and $J_{sc}$. However, due to the differences across different devices and degradation conditions having a singular sampling time would create either too much data, or be too long to create an accurate enough picture of the device. The Figures \ref{fig:O2_deg} and \ref{fig:N2_deg} show the differences in degradation for the same solar cells in different conditions. 
 
 \begin{figure}[h]
 \begin{subfigure}{0.45\textwidth}
@@ -141,7 +141,7 @@ Another integral consideration was sampling time. For accurate results, it would
 \caption{Solar cell exposed humid nitrogen atmosphere\footnotemark, taken from Kawano et al. \cite{RN83}}
 \label{fig:N2_deg}
 \end{subfigure}
-\caption{Normalised photovoltaic performance characteristics for an unencapsulated solar cells as a function of exposure time. FF is Fill Factor, which represents ratio of maximum power to Jsc$\times$Voc.}
+\caption{Normalised photovoltaic performance characteristics for an unencapsulated solar cells as a function of exposure time. FF is Fill Factor, which represents ratio of maximum power to $J_{sc}\times V_{oc}$.}
 \label{fig:degs}
 \end{figure}
 From Figures \ref{fig:O2_deg} and \ref{fig:N2_deg} it is clear to see that it would be impossible to create a singular sampling time for different conditions without creating the issues mentioned. This is an important factor that should be considered when designing the measurement system and will be discussed in Section \ref{sec:code_development}. 
@@ -267,15 +267,15 @@ A further modification is the gap under where the substrate is supposed to sit, 
 \section{Electrical Specification} 
 \label{section:Electrical_spec}
 
-This section will take a more in depth look at the electrical requirements of the chamber. From the pin layout, it is clear that there needs to be 20 wires connected to the cell. For this particular substrate layout, there are 6 separate OPV cells which means a PCB needs to be manufactured which is able to choose which of these cells to measure. Each cell needs to be measured to find the value of the Voc and Jsc recorded with the time, temperature and gas composition the substrate is subjected to. 
+This section will take a more in depth look at the electrical requirements of the chamber. From the pin layout, it is clear that there needs to be 20 wires connected to the cell. For this particular substrate layout, there are 6 separate OPV cells which means a PCB needs to be manufactured which is able to choose which of these cells to measure. Each cell needs to be measured to find the value of the $V_{oc}$ and $J_{sc}$ recorded with the time, temperature and gas composition the substrate is subjected to. 
 
 Adding to this, a measurement device needed to be chosen, along with a controller to run and record the data. After discussion with the AFMD group, Dr. Christophoro and my supervisors Professors Riede and Morris the following electrical specification was drawn up:
 
 \begin{itemize}
 \item[-] The set-up requires a method of differentiating the cell voltages and currents (ideally through the use of a multiplexer);
 \item[-] The set-up requires a method of controlling the heat and gas composition within the chamber as well as  the measurement intervals;
-\item[-] The set-up requires a method to record Voc and Jsc measurements;
-\item[-] The set-up requires a method of measuring the Voc and Jsc;
+\item[-] The set-up requires a method to record $V_{oc}$ and $J_{sc}$ measurements;
+\item[-] The set-up requires a method of measuring the $V_{oc}$ and $J_{sc}$;
 \item[-] The set-up requires a method of measuring the temperature conditions within the container.
 \end{itemize}
 This specification is non-exhaustive but does provide a clear structure to what is needed for the successful manufacturing of the chamber.
