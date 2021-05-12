@@ -32,7 +32,7 @@
 \setlength{\parindent}{0pt} %No indent in paragraphs
 \setlength{\parskip}{1\baselineskip} % double line spacing at the end or a paragraph
 
-\title{Open Science Hardware Setup for investigating the Stability of Organic Solar Cells}
+\title{Open Science Hardware Setup for Investigating the Stability of Organic Solar Cells}
 \author{Samuel Mendis}
 \affil{Department of Engineering Science, University of Oxford}
 \date{\today}
@@ -42,18 +42,16 @@
 
 \begin{abstract}
 
-In order to develop next generation organic solar cells, laboratory research needs to be conducted to reduce degradation as well as increase efficiency. Accurately measuring organic solar cell degradation is difficult and there are not many affordable set-ups available to conduct this type of research. This project developed a set-up which can be used to further organic solar cell degradation research. 
+In order to develop next generation organic solar cells, laboratory research needs to be conducted to reduce degradation as well as increase efficiency. Accurately measuring organic solar cell degradation is difficult, this project looks at developing a system which fills a gap in the market. A chamber was developed that can be used to further organic solar cell degradation research. The chamber needed to be able to measure the photovoltaic characteristics of organic solar cells, given different environmental conditions. This meant the chamber needed to be leakproof, contain a heater and temperature controller as well as the capability to integrate mass flow controllers into the set-up.
 
-The set-up designed is a leakproof aluminium chamber which has a glass window, a 3D printed holder located inside for the substrate to sit on, 3 PCBs to control the measurements and internal environment of the chamber as well as a raspberry pi which runs the code to control the measurements and internal environment. Simulations show that the substrate temperature (which holds the organic solar cells) can reach up to 120$^o$C, while a leak test conducted indicates there is no leakage into or out of the chamber when submerged in water. 
-
-The chamber is not fully complete due to COVID-19 complications, however, the report clearly lays out the further work needed to ensure that the chamber has the capability to measure and degrade organic solar cells. 
+The set-up developed in this project is a leakproof aluminium chamber which has a glass window, a 3D printed holder located inside for the substrate (which in this case is a glass plate that holds six organic solar cells) to sit on, 3 printed circuit boards (PCBs) to control the measurements and internal environment of the chamber as well as a raspberry pi. Python code was also developed so that a user can run tests on the solar cell using the raspberry pi as a controller, that could also store results.  Simulations show that the substrate temperature (which holds the organic solar cells) can reach up to 120$^o$C, while a leak test conducted indicates there is no leakage into or out of the chamber when submerged in water. In the future this system can be used to test and characterise solar cells worldwide. 
 
 
 \end{abstract}
 
 \renewcommand{\abstractname}{Acknowledgements}
 \begin{abstract}
-I would like to acknowledge and thank, my supervisors Professor Stephen Morris and Professor Moritz Riede, for their continued help and support throughout the project, alongside their commitment to ensuring this project is affected as minimally as possible by COVID-19. I would also like to thank Peter Walters, for his assistance with the 3D printing during the project and Stuart Higgs for his guidance with PCB development. Lastly, I would like to thank Dr. Greyson Christophoro for his time and help with many different aspects of this project. 
+I would like to thank my supervisors, Professor Stephen Morris (Department of Engineering Science) and Professor Moritz Riede (Department of Physics) for their continued help and support throughout the project, alongside their commitment to ensuring this project was affected as minimally as possible by COVID-19. I would also like to thank Peter Walters, for his assistance with the 3D printing during the project and Stuart Higgs for his guidance with PCB development. Lastly, I would like to thank Dr. Greyson Christophoro (Department of Physics) for his time and help with many different aspects of this project. 
 \end{abstract}
 
 \tableofcontents
@@ -63,7 +61,7 @@ I would like to acknowledge and thank, my supervisors Professor Stephen Morris a
 \chapter{Introduction}
 The energy outlook for the 21st century is almost certainly going to be renewable. With the World’s largest economies pledging to be carbon neutral within this century, the energy they require needs to be renewable. Solar energy is one of the answers to this problem; the sun is a source of inexhaustible free energy which can be harnessed to address the needs of the world \cite[p.~894]{RN82}
 
-Currently the market leader in solar cells are crystalline silicon photovoltaics which hold a dominant 95\% market share in the solar energy sector \cite{RN54}. Commercial silicon solar cell modules have greater than 20\% efficiencies. To disrupt this market organic solar cells need to provide versatile light-weight devices which have little material consumption and low temperature processing, while ensuring similar efficiencies to their silicon counterparts \cite{RN54}. This, alongside the fact that the materials required for organic photovoltaics are already widely manufactured, means that they have the potential to be significantly lower cost than their silicon counterparts \cite[p.~54]{RN81}. However, the current problems with organic solar cells boil down to long term stability, low power outputs and lower efficiencies relative to silicon photovoltaics \cite{RN54}. Presently, singe organic solar cells have efficiencies of around 18\%, with researchers believing that efficiencies of 20\% are achievable with both laboratory and commercial modules \cite{RN54}. This project looks at creating a method to help solve the issue of long-term stability by developing a low-cost system which can simulate a lifetime (10-20 years) of outdoor degradation in a matter of months.
+Currently the market leader in solar cells are crystalline silicon photovoltaics which hold a dominant 95\% market share in the solar energy sector \cite{RN54}. Commercial silicon solar cell modules have greater than 20\% efficiencies. To disrupt this market, organic solar cells need to provide versatile light-weight devices which have little material consumption and low temperature processing, while ensuring similar efficiencies to their silicon counterparts \cite{RN54}. This, alongside the fact that the materials required for organic photovoltaics are already widely manufactured, means that they have the potential to be significantly lower cost than their silicon counterparts \cite[p.~54]{RN81}. However, the current problems with organic solar cells boil down to long term stability, low power outputs and lower efficiencies relative to silicon photovoltaics \cite{RN54}. Presently, singe organic solar cells have efficiencies of around 18\%, with researchers believing that efficiencies of 20\% are achievable with both laboratory and commercial modules \cite{RN54}. This project looks at creating a method to help solve the issue of long-term stability by developing a low-cost system which can simulate a lifetime (10-20 years) of outdoor degradation in a matter of months.
 
 \begin{figure}[h]
 \hfill\includegraphics[width=0.5\linewidth]{IV}\hspace*{\fill}
@@ -534,7 +532,7 @@ The tests conducted range from heat and flow simulations to leak testing. The le
 \section{Heat and Flow Simulations}
 \label{sec:sims}
 
-The simulations were undertaken in SOLIDWORKS, this is because it was very simple to run the simulations in the same software as some of the designs. Initially, heat simulations were undertaken. These were designed to emulate the conditions across the substrate and within the substrate holder. The simulations were conducted using SOLIDWORKS heat simulations, where many different conditions could be placed upon the chamber. 
+The simulations were undertaken in SOLIDWORKS, this is because it was very simple to run the simulations in the same software as some of the designs. Heat simulations were undertaken to model the temperature distribution across the substrate holder, as well as to find the steady state cartridge heater temperature needed o keep the substrate (and therefore organic solar cells) at 120$^o$C. 
 
 To predict the temperature distribution across the substrate holder, the heat equation (equation \ref{eq:heat}) was used. $U(x,y,z,t)$ gives the temperature at a given point in space at a specific time. 
 
@@ -544,7 +542,7 @@ To predict the temperature distribution across the substrate holder, the heat eq
 
 To solve the heat equation in 3D, the simulations used Finite Element Analysis (FEA). FEA is a technique that generates numerical solutions to differential equations. It involves discretising elements to form a mesh, and solving the resultant algabraic equations to produce an approximate solution for the equation. However, as the mesh becomes finer, the computational cost of solving the resulting equations increases. It is therefore an important task to balance these two factors in order to generate sufficiently accurate results with the available computing power. 
 
-The objective of the heat simulations was to find a heater temperature which would keep the substrate at a steady state temperature of 120$^o$C. The parameters for the initial simulation were as follows: ambient temperature of 25$^o$C, heater temperature 200$^o$C and a convective heat transfer coefficient of 2.5 Wm$^{-2}$L$^{-1}$. The value of 2.5 Wm$^{-2}$L$^{-1}$ was chosen as a lower bound of natural convection from Kosky et al.\cite[p.~264]{RN76}. These values, the test was run with a cylindrical cartridge heater. This simulation was modelling the heat distribution within the chamber. The result shown in Figure \ref{fig:heat_sim_1} shows the temperature variation across the substrate holder. 
+The objective of the heat simulations was to find a heater temperature which would keep the substrate at a steady state temperature of 120$^o$C. The parameters for the initial simulation were as follows: ambient temperature of 25$^o$C, heater temperature 200$^o$C and a convective heat transfer coefficient of 2.5 Wm$^{-2}$L$^{-1}$. The value of 2.5 Wm$^{-2}$L$^{-1}$ was chosen as a lower bound of natural convection from Kosky et al.\cite[p.~264]{RN76}. Using these values a simulation was run, with the results illustrated in Figure \ref{fig:heat_sim_1}. 
 
 \begin{figure}[h!]
 \hfill\includegraphics[width=0.7\linewidth]{heat_sim_1}\hspace*{\fill}
@@ -564,7 +562,7 @@ A further simulation was conducted, this time setting the Aluminium plate to 180
 
 It can be clearly seen that the substrate (marked at point \textbf{s}) has non uniform temperature distribution. However, the temperature distribution across where the cells would be found (shown in Figure \ref{fig:sub_layout}) illustrates that there is a uniform temperature distribution across the solar cells themselves with a temperature of 120$^o$C. This is the desired temperature for the cells and indicates that a cartridge heater, heated to 200 $^o$C should cause the substrate to be heated up to the temperature set out in the specification. 
 
-As well as heat simulations, flow simulations were also conducted. The flow simulations were undertaken to understand the mechanism in which input gases would flow inside the chamber and around the substrate. To model the flow of gases, the Navier-Stokes equations were used, these using continuity of energy, momentum and mass to define differential equations describing the flow of fluids. The Navier-Stokes equations are significantly more complicated than the heat equation meaning the computation power needed for this modelling was significantly more. Therefore, the mesh used for the flow modelling was more coarse, meaning the results were less accurate. To simplify the problem (therefore reduce computation time) he gas was modelled as an ideal gas, allowing the assumptions of the gas particles having no intermolecular forces and random movement. To understand the movement of the gas particles, the simulation was set up to show the trace of multiple singular particles over a time period of minutes. 
+As well as heat simulations, flow simulations were also conducted. The flow simulations were undertaken to understand the mechanism in which input gases would flow inside the chamber and around the substrate. To model the flow of gases, the Navier-Stokes equations were used. These use continuity of energy, momentum and mass to define differential equations describing the flow of fluids. The Navier-Stokes equations are significantly more complicated than the heat equation meaning the computation power needed for this modelling was significantly more. Therefore, the mesh used for the flow modelling was more coarse, meaning the results were less accurate. To simplify the problem (therefore reduce computation time) the gas was modelled as an ideal gas, allowing the assumptions of the gas particles having no intermolecular forces and random movement. To understand the movement of the gas particles, the simulation was set up to show the trace of multiple singular particles over a time period of minutes. 
 
 \begin{figure}[h!]
 \hfill\includegraphics[width=0.7\linewidth]{flow_sim_1}\hspace*{\fill}
@@ -628,7 +626,7 @@ The water-based leak test was conducted by filling a sink full of water and plac
 
 Once this was completed the chamber was ready for the calcium test. This test is similar to the one mentioned in Klumbies paper on Encapsulations for Organic Devices \cite{RN78}. The testing procedure was measuring the resistance of calcium deposited on a glass substrate. If the box was leakproof, the calcium wouldn’t degrade as there would be no oxygen and water within the chamber, thereby keeping the resistance low (and the calcium plate shiny). However, if there was a leak, the resistance would increase until the point where the calcium would have oxidised to either CaO or Ca(OH)$_2$, both of which are insulators. 
 
-The plan initially was to use a keithley 2400 to run the tests, this would be done by setting the current to a specific value, then continually measuring and recording the voltage. The setup can be seen below in Figure \ref{fig:calc_test1}.
+The plan initially was to use a Keithley 2400 to run the tests, this would be done by setting the current to a specific value, then continually measuring and recording the voltage. The setup can be seen below in Figure \ref{fig:calc_test1}.
 
 \begin{figure}[h!]
 \hfill\includegraphics[width=0.5\linewidth]{calc_test1}\hspace*{\fill}
@@ -636,7 +634,7 @@ The plan initially was to use a keithley 2400 to run the tests, this would be do
 \label{fig:calc_test1}
 \end{figure}
 
-The equations \ref{eq:resistivity} and \ref{eq:voltage} were used to calculate the source current given the minimum voltage which I wanted the keithley 2400 to measure was 0.5 V.
+The equations \ref{eq:resistivity} and \ref{eq:voltage} were used to calculate the source current given the minimum voltage which I wanted the Keithley 2400 to measure was 0.5 V.
 
 \begin{equation}\label{eq:resistivity}
 R = \frac{\rho L}{A}
@@ -704,22 +702,28 @@ The chamber was subject to a variety of different tests to prove that it meets t
 
 \chapter{Conclusion and Future work}
 
-In conclusion, the project has created a chamber with the capability to run controlled degradation experiments of an organic solar cell. The work conducted in Chapter \ref{chp:testing}  illustrates that the set-up designed works well and would be suitable for experimentation with a few modifications, discussed in Section \ref{sec:future}. 
+In conclusion, the project has created a chamber with the capability to run controlled degradation experiments of an organic solar cell. The work conducted in Chapter \ref{chp:testing}  illustrates that the set-up designed works well and would be suitable for experimentation with a few modifications, as discussed in Section \ref{sec:future}. 
 
 A chamber, was constructed out of Aluminium, with a clear lid and sealing mechanism. The chamber fits within the 150 mm diameter load lock and can be assembled within a glovebox with relative ease. A substrate holder was 3D printed out of a high temperature resin, with a fully functioning mechanism to ensure clean contacting between the cell electrodes and the pins to be inserted. Furthermore, wiring within the chamber was successful in taking electrical connections from inside to the outside of the chamber. 
 
-Additionally, the PCBs were a success, they were able to \emph{choose} a cell\footnote{In the test conducted, an LED} to allow current through as the project required. The gas inlets were leakproof \footnote{This was inspected visually through the water based leak test.} as was the lid mechanism. A functioning code was developed allowing the selection of a cell to measure, while also having the capability to set the cells at a specific voltage bias. The heat simulations illustrate that a cartridge heater is able to heat the substrate to 120$^o$C, while the flow simulations confirmed that to ensure the gases are well mixed within the chamber, the mixing mechanism relied on will be diffusion. 
+Additionally, the PCBs were a success: they were able to \emph{choose} a cell\footnote{In the test conducted, an LED} to allow current through as the project required. The gas inlets were leakproof \footnote{This was inspected visually through the water based leak test.} as was the lid mechanism. A functioning code was developed allowing the selection of a cell to measure, while also having the capability to set the cells at a specific voltage bias. The heat simulations illustrate that a cartridge heater is able to heat the substrate to 120$^o$C, while the flow simulations confirmed that to ensure the gases are well mixed within the chamber, the mixing mechanism relied on will be diffusion. The entire system can be seen fully connected in Figure\ref{fig:finish}.
+
+\begin{figure}[h!]
+\hfill\includegraphics[width=0.7\linewidth]{finish}\hspace*{\fill}
+\caption{The entire system connected together, showing the Raspberry Pi, Chamber and the two assembled PCBs.}
+\label{fig:finish}
+\end{figure}
 
 \section{Future Work}
 \label{sec:future}
-This section discusses future work tat can be done to ensure the entire set-up works as required. Importantly, further calcium leak tests need to be conducted. This can be with the same procedure as conducted in Section \ref{sec:leak}. From experience of the water based leak tests, the point at where leaks were occurring the most was the outer edge of the electronic windows. An alternative solution would be to use a similar sealing mechanism as used for the lid, where there is an o-ring fitted to each of the electronic windows which are then screwed into place. A model for the alternative part can be seen in Figure\ref{fig:modified}. 
+This section discusses future work that can be done to ensure the entire set-up works as required. Importantly, further calcium leak tests need to be conducted. This can be with the same procedure as conducted in Section \ref{sec:leak}. From experience of the water based leak tests, the point at where leaks were occurring the most was the outer edge of the electronic windows. An alternative solution would be to use a similar sealing mechanism as used for the lid, where there is an o-ring fitted to each of the electronic windows which are then screwed into place. A model for the alternative part can be seen in Figure\ref{fig:modified}. 
 \begin{figure}[h!]
-\hfill\includegraphics[width=0.4\linewidth]{modified}\hspace*{\fill}
+\hfill\includegraphics[width=0.5\linewidth]{modified}\hspace*{\fill}
 \caption{Showing an updated model of the electronic window.}
 \label{fig:modified}
 \end{figure}
 
-Additionally, due to COVID-19 and the resultant extended lead times, the final iteration of the substrate holder was never fully completed. Electrical pins need to be inserted into the pin holes (labelled in Figure \ref{fig:substrate_HT}), then soldered to the wires connected to the D-sub connectors. Once this has been completed a test can be conducted with a LEDs to ensure that current an voltage are being correctly transmitted to the pins. After the successful conclusion of this test, the chamber will be ready for testing a working organic solar cell.
+Additionally, due to COVID-19 and the resulting extended lead times, the final iteration of the substrate holder was never fully completed. Electrical pins need to be inserted into the pin holes (labelled in Figure \ref{fig:substrate_HT}), then soldered to the wires connected to the D-sub connectors. Once this has been completed a test can be conducted with a LEDs to ensure that current an voltage are being correctly transmitted to the pins. After the successful conclusion of this test, the chamber will be ready for testing a working organic solar cell.
 
 Lastly, further work can be conducted to allow the cells to be monitored using a Keithley 2400. The code developed does not have the capacity to use the Keithley 2400 to measure the organic solar cells. For this to be a function, researchers would need to modify the code, as well as ensure the Raspberry-Pi is set up to work with the Keithley 2400, communicating over either GPIB or RS-232. 
 
